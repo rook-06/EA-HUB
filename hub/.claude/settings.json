@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": ["Read", "Edit", "Write", "Glob", "Grep", "PowerShell"]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:\\Users\\damnm\\ai-assistants\\hub\\tts-hook.js"
+          }
+        ]
+      }
+    ]
+  }
+}

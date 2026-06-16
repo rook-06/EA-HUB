@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "telegram": {
+      "command": "C:\\Users\\damnm\\.bun\\bin\\bun.exe",
+      "args": ["run", "--cwd", "C:\\Users\\damnm\\ai-assistants\\hub\\tools\\telegram-plugin", "--shell=bun", "--silent", "start"]
+    }
+  }
+}

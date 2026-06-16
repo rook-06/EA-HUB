@@ -1,0 +1,11 @@
+{
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "telegram"
+  ],
+  "permissions": {
+    "allow": [
+      "mcp__telegram__reply"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+Start-Process powershell -WindowStyle Hidden -ArgumentList "-NonInteractive", "-File", "C:/Users/damnm/ai-assistants/tools/tts/_watcher_mci.ps1"

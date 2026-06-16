@@ -1,0 +1,3 @@
+Kokoro TTS server starting on port 5050...
+Kokoro loaded.
+Ready.

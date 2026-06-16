@@ -1,0 +1,10 @@
+{
+  "name": "tts-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "msedge-tts": "^2.0.5"
+  }
+}

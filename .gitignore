@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets
+.env
+.env.*
+
+# Local overrides
+*.local
+CLAUDE.local.md
+
+# Claude local settings
+.claude/settings.local.json
+
+# TTS temp files
+_tts_output.mp3
+_tts_text.txt
+*.mp3
+
+# Temp repo clone used by plugin installer
+hub/tools/_repo_tmp/
+
+# Telegram inbox (transient message attachments)
+hub/tools/telegram-plugin/inbox/
+
+# TTS temp/build artifacts
+tools/tts/_mci_*.ps1
+tools/tts/_*.log
+tools/tts/_*.ps1
+tools/tts/_*.txt
+hub/_tts_text.txt
+hub/_tts_output.mp3
+
+# TTS large model files (too big for GitHub)
+tools/tts/*.onnx
+tools/tts/*.bin
+tools/tts/voice_samples/
+
+# OS
+.DS_Store
+Thumbs.db
