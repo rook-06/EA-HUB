@@ -1,0 +1,19 @@
+{
+  "id": "JOB-2026-001",
+  "type": "piecework",
+  "business": "Above the Norm",
+  "status": "closed",
+  "client": {
+    "name": "",
+    "phone": "",
+    "email": "",
+    "address": ""
+  },
+  "job": {
+    "description": "Garden bed cleanup",
+    "location": "",
+    "date": "",
+    "price": 0
+  },
+  "notes": "Client wants job done this week. Damien is out of city June 17-22. Target: confirm Monday June 16. Fallback: Saturday June 21. Closed July 3, 2026 — Damien exited Above the Norm, no longer his concern."
+}

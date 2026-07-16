@@ -1,0 +1,29 @@
+{
+  "month": "2026-06",
+  "entries": [
+    {
+      "id": "INC-2026-002",
+      "date": "2026-06-23",
+      "source": "Unknown client",
+      "description": "Garden cleanout — 180 Waverly St",
+      "invoice": null,
+      "job_id": "JOB-2026-003",
+      "amount": 140.00,
+      "payment_method": "cash",
+      "business": "Above the Norm",
+      "notes": "Client name not yet on file. Cash payment — no GST collected."
+    },
+    {
+      "id": "INC-2026-001",
+      "date": "2026-06-22",
+      "source": "George Howell",
+      "description": "Cottage renovation — 33h @ $25/h",
+      "invoice": "INV-2026-001",
+      "job_id": "JOB-2026-002",
+      "amount": 866.25,
+      "payment_method": "e-transfer",
+      "business": "Independent",
+      "notes": "Paid 13 days early. Includes 5% GST ($41.25)."
+    }
+  ]
+}

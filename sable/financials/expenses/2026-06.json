@@ -1,0 +1,93 @@
+{
+  "month": "2026-06",
+  "entries": [
+    {
+      "id": "EXP-2026-003",
+      "date": "2026-06-13",
+      "category": "subscriptions",
+      "description": "Claude Pro monthly subscription",
+      "merchant": "Anthropic",
+      "amount": 28.00,
+      "payment_method": "debit",
+      "business_expense": true,
+      "notes": "Recurring — pulls 13th each month"
+    },
+    {
+      "id": "EXP-2026-004",
+      "date": "2026-06-14",
+      "category": "subscriptions",
+      "description": "iCloud+ monthly subscription",
+      "merchant": "Apple",
+      "amount": 3.99,
+      "payment_method": "debit",
+      "business_expense": false,
+      "notes": "Recurring — pulls 14th each month"
+    },
+    {
+      "id": "EXP-2026-005",
+      "date": "2026-06-15",
+      "category": "subscriptions",
+      "description": "Google One monthly subscription",
+      "merchant": "Google",
+      "amount": 2.93,
+      "payment_method": "debit",
+      "business_expense": false,
+      "notes": "Recurring — pulls 15th each month"
+    },
+    {
+      "id": "EXP-2026-006",
+      "date": "2026-06-17",
+      "category": "subscriptions",
+      "description": "Planet Fitness monthly membership",
+      "merchant": "Planet Fitness",
+      "amount": 31.58,
+      "payment_method": "credit_card",
+      "business_expense": false,
+      "notes": "Recurring — pulls 17th each month. Pay credit card by 10th of following month."
+    },
+    {
+      "id": "EXP-2026-001",
+      "date": "2026-06-18",
+      "category": "subscriptions",
+      "description": "Amazon Prime monthly subscription",
+      "merchant": "Amazon",
+      "amount": 11.19,
+      "payment_method": "debit",
+      "business_expense": false,
+      "notes": "Auto-pull from Simplii chequing"
+    },
+    {
+      "id": "EXP-2026-002",
+      "date": "2026-06-22",
+      "category": "miscellaneous",
+      "description": "Miscellaneous cash spending",
+      "merchant": "Unknown",
+      "amount": 10.00,
+      "payment_method": "cash",
+      "business_expense": false,
+      "notes": "Remaining cash on hand spent"
+    },
+    {
+      "id": "EXP-2026-007",
+      "date": "2026-06-22",
+      "category": "food_drink",
+      "description": "Water",
+      "merchant": "Planet Fitness",
+      "amount": 4.48,
+      "payment_method": "debit",
+      "business_expense": false,
+      "notes": "Simplii chequing"
+    },
+    {
+      "id": "EXP-2026-008",
+      "date": "2026-06-23",
+      "category": "food_drink",
+      "description": "Snack",
+      "merchant": "Cantors",
+      "amount": 5.59,
+      "payment_method": "debit",
+      "business_expense": false,
+      "notes": "Simplii chequing"
+    }
+  ]
+}

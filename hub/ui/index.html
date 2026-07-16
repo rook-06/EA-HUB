@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUB // ONLINE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+/* ── TOKENS ────────────────────────────────────────────────────────────── */
+:root {
+  --bg:             #050208;
+  --surface:        #0B0616;
+  --border:         #190D2E;
+  --border-active:  #3B1060;
+  --accent-dim:     #5A1E90;
+  --accent:         #8B35D6;
+  --accent-bright:  #C07AFF;
+  --text-primary:   #E8DEFF;
+  --text-secondary: #5C3E80;
+  --text-dim:       #22103A;
+  --sable-tint:     #9AAAD8;
+  --atlas-tint:     #B898E0;
+  --danger:         #FF4488;
+}
+
+/* ── RESET ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── BASE ───────────────────────────────────────────────────────────────── */
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ── SCANLINES ──────────────────────────────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px, transparent 3px,
+    rgba(0,0,0,0.04) 3px, rgba(0,0,0,0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+#scanDrift {
+  position: fixed; left: 0; right: 0; height: 2px;
+  background: rgba(192, 122, 255, 0.055);
+  pointer-events: none; z-index: 9998;
+  opacity: 0; top: -2px;
+}
+@keyframes scanDrift {
+  0%   { top: -2px;  opacity: 0.08; }
+  94%  { opacity: 0.08; }
+  100% { top: 100vh; opacity: 0; }
+}
+
+/* ── DROP INDICATOR ─────────────────────────────────────────────────────── */
+#dropIndicator {
+  position: fixed;
+  width: 3px;
+  background: var(--accent-bright);
+  border-radius: 2px;
+  box-shadow: 0 0 14px var(--accent), 0 0 4px var(--accent-bright);
+  pointer-events: none;
+  z-index: 998;
+  display: none;
+  transition: left 0.08s ease;
+}
+
+/* ── DRAG GHOST ─────────────────────────────────────────────────────────── */
+.drag-ghost {
+  position: fixed;
+  pointer-events: none;
+  z-index: 997;
+  opacity: 0.72;
+  box-shadow: 0 12px 48px rgba(139,53,214,0.45), 0 0 0 1px var(--accent);
+  border-radius: 0;
+  transition: none !important;
+}
+
+/* ── ROOT LAYOUT ────────────────────────────────────────────────────────── */
+#hub {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+  gap: 8px;
+  opacity: 0;
+}
+#hub.booted { opacity: 1; }
+
+/* ── STATUS BAR ─────────────────────────────────────────────────────────── */
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  flex-shrink: 0;
+  position: relative;
+}
+.status-bar::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+  opacity: 0.35;
+}
+.brand {
+  color: var(--accent);
+  display: flex; align-items: center; gap: 9px;
+  flex-shrink: 0;
+}
+.status-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent-bright);
+  box-shadow: 0 0 8px var(--accent-bright);
+  animation: dotPulse 2.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--accent-bright); }
+  50%       { opacity: 0.45; box-shadow: 0 0 2px var(--accent); }
+}
+.ea-status { display: flex; gap: 20px; flex-shrink: 0; }
+.ea-badge  { display: flex; align-items: center; gap: 7px; }
+.ea-badge .name  { color: var(--text-secondary); letter-spacing: 0.1em; }
+.ea-badge .state {
+  font-size: 9px; padding: 1px 6px;
+  border: 1px solid var(--text-dim); color: var(--text-dim);
+  letter-spacing: 0.12em;
+  transition: border-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.ea-badge.active .name { color: var(--accent); }
+.ea-badge.active .state {
+  border-color: var(--accent); color: var(--accent);
+  box-shadow: 0 0 6px rgba(139,53,214,0.4);
+}
+
+/* layout switcher */
+.layout-switcher {
+  display: flex; gap: 5px; margin-left: auto;
+}
+.layout-btn {
+  background: none; border: 1px solid var(--text-dim);
+  color: var(--text-dim); font-family: inherit;
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.1em; padding: 2px 7px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.layout-btn:hover { border-color: var(--accent-dim); color: var(--accent-dim); }
+.layout-btn.active { border-color: var(--accent); color: var(--accent); }
+
+.layout-save {
+  background: none; border: 1px solid var(--text-dim);
+  color: var(--text-dim); font-family: inherit;
+  font-size: 12px; font-weight: 400; padding: 1px 6px;
+  cursor: pointer; transition: border-color 0.2s, color 0.2s;
+}
+.layout-save:hover { border-color: var(--accent-dim); color: var(--accent-dim); }
+
+.clock {
+  color: var(--text-secondary); font-weight: 300;
+  font-variant-numeric: tabular-nums; letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+/* ── PANELS CONTAINER ───────────────────────────────────────────────────── */
+.panels {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── PANEL ──────────────────────────────────────────────────────────────── */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+  opacity: 0;
+  transition: border-color 0.25s, box-shadow 0.25s, flex-basis 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+  flex-shrink: 0;
+}
+.panel.visible { opacity: 1; }
+.panel:hover   { border-color: var(--border-active); }
+.panel.glow {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(139,53,214,0.1), 0 0 16px rgba(139,53,214,0.08);
+}
+.panel.drop-target {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent), 0 0 20px rgba(139,53,214,0.2);
+}
+.panel.drag-source { opacity: 0.22; pointer-events: none; }
+
+/* ── COLLAPSED PANEL ────────────────────────────────────────────────────── */
+.panel.collapsed {
+  flex-basis: 36px !important;
+  min-width: 36px;
+  cursor: pointer;
+}
+.panel.collapsed .panel-body { display: none; }
+.panel.collapsed .panel-header .drag-handle,
+.panel.collapsed .panel-header .collapse-btn { display: none; }
+.panel.collapsed .panel-header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 16px 0;
+  border-bottom: none;
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+}
+.panel.collapsed .panel-header span { transform: rotate(180deg); }
+
+/* ── HUD CORNERS ────────────────────────────────────────────────────────── */
+.corner {
+  position: absolute; pointer-events: none; z-index: 5;
+  transition: border-color 0.25s;
+}
+.corner.tl {
+  top: 3px; left: 3px;
+  width: 0; height: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  transition: width 0.3s, height 0.3s, border-color 0.25s;
+}
+.corner.br {
+  bottom: 3px; right: 11px;
+  width: 0; height: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transition: width 0.3s, height 0.3s, border-color 0.25s;
+}
+.panel.brackets .corner.tl,
+.panel.brackets .corner.br { width: 12px; height: 12px; border-color: var(--accent-dim); }
+.panel:hover .corner.tl,
+.panel:hover .corner.br { border-color: var(--accent); width: 14px; height: 14px; }
+
+/* ── PANEL HEADER ───────────────────────────────────────────────────────── */
+.panel-header {
+  display: flex; align-items: center; gap: 7px;
+  padding: 7px 10px;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent-dim);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  user-select: none;
+}
+.drag-handle {
+  cursor: grab; color: var(--text-dim);
+  font-size: 13px; line-height: 1;
+  flex-shrink: 0;
+  transition: color 0.2s;
+  padding: 2px 0;
+}
+.drag-handle:hover { color: var(--accent-dim); }
+.drag-handle:active { cursor: grabbing; }
+.panel-header .title { flex: 1; }
+.collapse-btn {
+  background: none; border: none;
+  color: var(--text-dim); font-family: inherit;
+  font-size: 14px; font-weight: 300;
+  cursor: pointer; padding: 0 2px; line-height: 1;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+.collapse-btn:hover { color: var(--accent); }
+.panel-header .hdr-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--accent-dim); flex-shrink: 0;
+}
+
+/* ── PANEL BODY / SCROLL ────────────────────────────────────────────────── */
+.panel-body {
+  display: flex; flex-direction: column;
+  flex: 1; min-height: 0;
+}
+.scroll {
+  flex: 1; overflow-y: auto; min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-active) transparent;
+}
+.scroll::-webkit-scrollbar { width: 3px; }
+.scroll::-webkit-scrollbar-track { background: transparent; }
+.scroll::-webkit-scrollbar-thumb { background: var(--border-active); border-radius: 2px; }
+
+/* ── CONTEXT PANEL ──────────────────────────────────────────────────────── */
+.ctx-pad { padding: 10px 12px; }
+.ctx-section { margin-bottom: 18px; }
+.ctx-title {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--text-dim);
+  display: flex; align-items: center; gap: 6px;
+  margin-bottom: 7px;
+}
+.ctx-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.ctx-file {
+  display: flex; align-items: center; gap: 6px;
+  padding: 2px 0; font-size: 11px; color: var(--text-dim);
+  transition: color 0.3s;
+}
+.ctx-file::before { content: '>'; color: var(--accent-dim); font-size: 10px; flex-shrink: 0; }
+.ctx-file.loaded { color: var(--text-primary); }
+.mem-row {
+  display: flex; justify-content: space-between;
+  padding: 2px 0; font-size: 11px;
+}
+.mem-row .k { color: var(--text-secondary); }
+.mem-row .v { color: var(--accent-dim); }
+.bridge-val { font-size: 11px; color: var(--text-dim); font-style: italic; }
+
+/* ── TRANSCRIPT PANEL ───────────────────────────────────────────────────── */
+#panelTranscript { flex: 1 1 auto; }
+#panelTranscript .panel-body { overflow: hidden; }
+#transcript { padding: 16px 20px; display: flex; flex-direction: column; gap: 24px; }
+
+/* ── MESSAGE BLOCK ──────────────────────────────────────────────────────── */
+.msg { display: flex; flex-direction: column; gap: 5px; }
+.msg-header { display: flex; align-items: center; gap: 10px; }
+.ea-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.09em;
+  text-transform: uppercase; padding-left: 8px;
+  display: flex; align-items: center; gap: 8px;
+}
+.ea-label.sable { color: var(--sable-tint); border-left: 2px solid var(--sable-tint); }
+.ea-label.atlas { color: var(--atlas-tint); border-left: 2px solid var(--atlas-tint); }
+@keyframes labelFlash {
+  0%   { color: var(--accent-bright); text-shadow: 0 0 10px var(--accent-bright); }
+  100% { text-shadow: none; }
+}
+.ea-label.flash { animation: labelFlash 0.5s ease forwards; }
+.msg-ts { font-size: 10px; color: var(--text-dim); font-weight: 300; }
+
+/* TTS waveform */
+.wave {
+  display: none; align-items: flex-end; gap: 2px; height: 14px;
+}
+.wave.on { display: flex; }
+.wave .bar { width: 2px; border-radius: 1px; animation: waveBar 0.75s ease-in-out infinite; }
+.wave.sable .bar { background: var(--sable-tint); }
+.wave.atlas .bar { background: var(--atlas-tint); }
+.wave .bar:nth-child(1) { height: 4px;  animation-delay: 0s; }
+.wave .bar:nth-child(2) { height: 10px; animation-delay: 0.1s; }
+.wave .bar:nth-child(3) { height: 14px; animation-delay: 0.2s; }
+.wave .bar:nth-child(4) { height: 8px;  animation-delay: 0.3s; }
+.wave .bar:nth-child(5) { height: 5px;  animation-delay: 0.15s; }
+@keyframes waveBar {
+  0%, 100% { transform: scaleY(0.4); opacity: 0.4; }
+  50%       { transform: scaleY(1);   opacity: 1; }
+}
+
+/* message body */
+.msg-body {
+  font-size: 13px; line-height: 1.78; padding-left: 10px;
+  color: var(--text-primary); user-select: text;
+  white-space: pre-wrap; word-break: break-word;
+}
+.msg.sable .msg-body { color: color-mix(in srgb, var(--sable-tint) 16%, var(--text-primary)); }
+.msg.atlas .msg-body { color: color-mix(in srgb, var(--atlas-tint) 16%, var(--text-primary)); }
+.msg.user .msg-body  { color: var(--text-secondary); font-size: 12px; padding-left: 0; }
+.msg.user .msg-body::before { content: '> '; color: var(--accent-dim); }
+
+/* word-by-word fade animation */
+.word-in {
+  display: inline;
+  animation: wordIn 0.22s ease-out both;
+}
+@keyframes wordIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* stream cursor */
+.stream-cursor {
+  display: inline-block;
+  width: 7px; height: 14px;
+  background: var(--accent-bright);
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  box-shadow: 0 0 8px rgba(192,122,255,0.85);
+  animation: blink 530ms step-end infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* ── INPUT AREA ─────────────────────────────────────────────────────────── */
+.input-area {
+  border-top: 1px solid var(--border);
+  padding: 8px 20px;
+  display: flex; align-items: center; gap: 10px;
+  flex-shrink: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-area.focused {
+  border-top-color: var(--accent);
+  box-shadow: 0 -6px 20px rgba(139,53,214,0.06);
+}
+.input-prompt { color: var(--accent-dim); flex-shrink: 0; }
+.input-field {
+  flex: 1; background: none; border: none; outline: none;
+  color: var(--text-primary); font-family: inherit;
+  font-size: 13px; caret-color: var(--accent-bright);
+  letter-spacing: 0.02em; user-select: text;
+}
+.input-field::placeholder { color: var(--text-dim); }
+.input-hint { font-size: 10px; color: var(--text-dim); letter-spacing: 0.06em; flex-shrink: 0; }
+
+/* ── ACTIVITY PANEL ─────────────────────────────────────────────────────── */
+.act-pad { padding: 10px 12px; }
+.act-section { margin-bottom: 16px; }
+.act-title {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--text-dim);
+  display: flex; align-items: center; gap: 6px; margin-bottom: 7px;
+}
+.act-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.agent-item { padding: 5px 0; border-bottom: 1px solid rgba(25,13,46,0.7); margin-bottom: 4px; }
+.agent-name { font-size: 11px; color: var(--text-secondary); margin-bottom: 2px; }
+.agent-item.running .agent-name { color: var(--accent); }
+.agent-item.done    .agent-name { color: var(--text-dim); }
+.agent-prog { font-size: 10px; color: var(--accent-dim); }
+.agent-item.done .agent-prog { color: var(--text-dim); }
+@keyframes prog {
+  0%   { content: '[>         ]'; }
+  11%  { content: '[=>        ]'; }
+  22%  { content: '[==>       ]'; }
+  33%  { content: '[===>      ]'; }
+  44%  { content: '[====>     ]'; }
+  55%  { content: '[=====>    ]'; }
+  66%  { content: '[======>   ]'; }
+  77%  { content: '[=======>  ]'; }
+  88%  { content: '[========> ]'; }
+  100% { content: '[>         ]'; }
+}
+.prog-anim::after { content: '[>         ]'; animation: prog 1.8s linear infinite; }
+.act-placeholder { font-size: 11px; color: var(--text-dim); font-style: italic; }
+.sys-row { display: flex; justify-content: space-between; padding: 3px 0; font-size: 11px; }
+.sys-row .k { color: var(--text-dim); }
+.sys-row .v { color: var(--text-secondary); transition: color 0.3s; }
+.sys-row.on .v { color: var(--accent); }
+
+/* TTS toggle */
+.tts-toggle {
+  cursor: pointer;
+  padding: 1px 5px; border: 1px solid transparent;
+  letter-spacing: 0.08em;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tts-toggle:hover { border-color: var(--accent-dim); color: var(--accent-dim) !important; }
+.sys-row.on .tts-toggle { color: var(--accent) !important; }
+
+/* ── BOOT ───────────────────────────────────────────────────────────────── */
+@keyframes scanIn {
+  0%   { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); opacity: 0.3; }
+  100% { clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px)); opacity: 1; }
+}
+.panel.scanning { animation: scanIn 0.32s ease forwards; }
+
+/* ── GLITCH ─────────────────────────────────────────────────────────────── */
+@keyframes glitch {
+  0%   { transform: translateX(0);   filter: none; }
+  20%  { transform: translateX(2px); filter: saturate(0) brightness(1.15); }
+  60%  { transform: translateX(-1px); filter: saturate(0.1); }
+  100% { transform: translateX(0);   filter: none; }
+}
+.glitch-anim { animation: glitch 0.09s ease forwards; }
+  </style>
+</head>
+<body>
+<div id="scanDrift"></div>
+<div id="dropIndicator"></div>
+
+<div id="hub">
+
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <div class="brand">
+      <span class="status-dot"></span>
+      <span id="statusText"></span>
+    </div>
+    <div class="ea-status">
+      <div class="ea-badge" id="sableBadge">
+        <span class="name">SABLE</span>
+        <span class="state" id="sableState">STANDBY</span>
+      </div>
+      <div class="ea-badge" id="atlasBadge">
+        <span class="name">ATLAS</span>
+        <span class="state" id="atlasState">STANDBY</span>
+      </div>
+    </div>
+    <div class="layout-switcher">
+      <button class="layout-btn active" data-layout="STD">STD</button>
+      <button class="layout-btn" data-layout="FOCUS">FOCUS</button>
+      <button class="layout-btn" data-layout="WIDE">WIDE</button>
+      <button class="layout-save" title="Save layout">+</button>
+    </div>
+    <div class="clock" id="clock"></div>
+  </div>
+
+  <!-- PANELS -->
+  <div class="panels" id="panelsContainer">
+
+    <!-- LEFT: CONTEXT -->
+    <div class="panel" id="panelContext" data-panel="context" style="flex: 0 0 195px;">
+      <span class="corner tl"></span><span class="corner br"></span>
+      <div class="panel-header" id="hdrContext">
+        <span class="drag-handle" data-panel="context">⠿</span>
+        <span class="title">Context</span>
+        <button class="collapse-btn" data-panel="context" title="Collapse">−</button>
+        <span class="hdr-dot"></span>
+      </div>
+      <div class="panel-body">
+        <div class="scroll"><div class="ctx-pad">
+          <div class="ctx-section">
+            <div class="ctx-title">Loaded</div>
+            <div id="ctxFiles">
+              <div class="ctx-file" data-file="work.md">work.md</div>
+              <div class="ctx-file" data-file="me.md">me.md</div>
+              <div class="ctx-file" data-file="bridge.md">bridge.md</div>
+            </div>
+          </div>
+          <div class="ctx-section">
+            <div class="ctx-title">Memory</div>
+            <div class="mem-row"><span class="k">Sable</span><span class="v" id="sableMem">[—]</span></div>
+            <div class="mem-row"><span class="k">Atlas</span><span class="v" id="atlasMem">[—]</span></div>
+          </div>
+          <div class="ctx-section">
+            <div class="ctx-title">Bridge</div>
+            <div class="bridge-val" id="bridgeVal">none</div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- CENTER: TRANSCRIPT -->
+    <div class="panel" id="panelTranscript" data-panel="transcript" style="flex: 1 1 auto;">
+      <span class="corner tl"></span><span class="corner br"></span>
+      <div class="panel-header" id="hdrTranscript">
+        <span class="drag-handle" data-panel="transcript">⠿</span>
+        <span class="title">Transcript</span>
+        <button class="collapse-btn" data-panel="transcript" title="Collapse">−</button>
+        <span class="hdr-dot"></span>
+      </div>
+      <div class="panel-body">
+        <div class="scroll" id="transcriptScroll">
+          <div id="transcript"></div>
+        </div>
+        <div class="input-area" id="inputArea">
+          <span class="input-prompt">&gt;</span>
+          <input type="text" class="input-field" id="inputField"
+            placeholder="send a message..." autocomplete="off" spellcheck="false">
+          <span class="input-hint">[ENTER]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: ACTIVITY -->
+    <div class="panel" id="panelActivity" data-panel="activity" style="flex: 0 0 175px;">
+      <span class="corner tl"></span><span class="corner br"></span>
+      <div class="panel-header" id="hdrActivity">
+        <span class="drag-handle" data-panel="activity">⠿</span>
+        <span class="title">Live</span>
+        <button class="collapse-btn" data-panel="activity" title="Collapse">−</button>
+        <span class="hdr-dot"></span>
+      </div>
+      <div class="panel-body">
+        <div class="scroll"><div class="act-pad">
+          <div class="act-section">
+            <div class="act-title">Agents</div>
+            <div id="agentList">
+              <div class="act-placeholder" id="agentPlaceholder">none active</div>
+            </div>
+          </div>
+          <div class="act-section">
+            <div class="act-title">Sys</div>
+            <div class="sys-row" id="sysTts">
+              <span class="k">TTS</span>
+              <span class="v tts-toggle" id="ttsToggleBtn">OFF</span>
+            </div>
+            <div class="sys-row" id="sysWs">
+              <span class="k">WS</span><span class="v">—</span>
+            </div>
+            <div class="sys-row" id="sysPty">
+              <span class="k">PTY</span><span class="v">—</span>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+  </div><!-- /panels -->
+</div>
+
+<script>
+'use strict';
+/* ── HELPERS ──────────────────────────────────────────────────────────────── */
+const $ = id => document.getElementById(id);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+/* ── CLOCK ────────────────────────────────────────────────────────────────── */
+function fmtTime() {
+  return [new Date().getHours(), new Date().getMinutes(), new Date().getSeconds()]
+    .map(n => String(n).padStart(2,'0')).join(':');
+}
+$('clock').textContent = fmtTime();
+setInterval(() => $('clock').textContent = fmtTime(), 1000);
+
+/* ── STATE ────────────────────────────────────────────────────────────────── */
+const S = {
+  ws:              null,
+  currentBodyEl:   null,
+  streamCursorEl:  null,
+  wordBuf:         '',
+  wordQueue:       [],
+  wordTimer:       null,
+  ttsEnabled:      true,
+  ttsActiveEA:     null,
+  agents:          {},
+  drag:            null,
+};
+
+/* ── BOOT ─────────────────────────────────────────────────────────────────── */
+async function typeText(el, text, delay) {
+  el.textContent = '';
+  for (const ch of text) { el.textContent += ch; await sleep(delay); }
+}
+
+async function boot() {
+  $('hub').style.opacity = '1';
+  await typeText($('statusText'), 'HUB SYSTEM // ONLINE', 28);
+  await sleep(80);
+
+  const panels = [$('panelContext'), $('panelTranscript'), $('panelActivity')];
+  for (const p of panels) {
+    p.classList.add('scanning', 'visible');
+    await sleep(175);
+  }
+  await sleep(230);
+  panels.forEach(p => p.classList.add('brackets'));
+  await sleep(100);
+  $('hub').classList.add('booted');
+
+  loadLayout();
+  connectWS();
+}
+
+/* ── WEBSOCKET ────────────────────────────────────────────────────────────── */
+function connectWS() {
+  const wsRow = $('sysWs'), ptyRow = $('sysPty');
+  try {
+    S.ws = new WebSocket('ws://localhost:3000');
+    S.ws.onopen = () => { wsRow.querySelector('.v').textContent = 'LIVE'; wsRow.classList.add('on'); };
+    S.ws.onclose = () => {
+      wsRow.querySelector('.v').textContent = 'OFFLINE';
+      wsRow.classList.remove('on');
+      ptyRow.querySelector('.v').textContent = '—'; ptyRow.classList.remove('on');
+      setTimeout(connectWS, 3000);
+    };
+    S.ws.onerror = () => wsRow.querySelector('.v').textContent = 'ERR';
+    S.ws.onmessage = e => { try { dispatch(JSON.parse(e.data)); } catch(_) {} };
+  } catch(_) { wsRow.querySelector('.v').textContent = 'NO SERVER'; }
+}
+
+function sendWS(obj) {
+  if (S.ws && S.ws.readyState === WebSocket.OPEN) S.ws.send(JSON.stringify(obj));
+}
+
+/* ── DISPATCHER ───────────────────────────────────────────────────────────── */
+function dispatch(ev) {
+  switch (ev.type) {
+    case 'pty_ready':
+      $('sysPty').querySelector('.v').textContent = 'READY';
+      $('sysPty').classList.add('on'); break;
+    case 'status':       updateEAStatus(ev.sable, ev.atlas); break;
+    case 'message_start': startMessage(ev.ea); break;
+    case 'char':         enqueueChar(ev.char); break;
+    case 'message_end':  endMessage(); break;
+    case 'tts_start':    onTTSStart(ev.ea); break;
+    case 'tts_end':      onTTSEnd(); break;
+    case 'agent_start':  addAgent(ev.name); break;
+    case 'agent_done':   doneAgent(ev.name); break;
+    case 'context_loaded': updateContextFiles(ev.files); break;
+    case 'memory_counts': updateMemory(ev.sable, ev.atlas); break;
+  }
+}
+
+/* ── EA STATUS ────────────────────────────────────────────────────────────── */
+function updateEAStatus(sable, atlas) {
+  $('sableState').textContent = sable.toUpperCase();
+  $('atlasState').textContent = atlas.toUpperCase();
+  $('sableBadge').classList.toggle('active', sable === 'active');
+  $('atlasBadge').classList.toggle('active', atlas === 'active');
+}
+
+/* ── TRANSCRIPT ───────────────────────────────────────────────────────────── */
+const transcriptEl = $('transcript');
+const scrollEl = $('transcriptScroll');
+function scrollBottom() { scrollEl.scrollTop = scrollEl.scrollHeight; }
+
+function addUserMessage(text) {
+  const msg = document.createElement('div');
+  msg.className = 'msg user';
+  msg.innerHTML = `<div class="msg-body">${esc(text)}</div>`;
+  transcriptEl.appendChild(msg);
+  scrollBottom();
+}
+
+function startMessage(ea) {
+  endMessage();
+  const msg = document.createElement('div');
+  msg.className = `msg ${ea}`;
+  const wid = `w${Date.now()}`;
+  msg.innerHTML = `
+    <div class="msg-header">
+      <span class="ea-label ${ea} flash">
+        ${ea.toUpperCase()}
+        <span class="wave ${ea}" id="${wid}">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          <span class="bar"></span><span class="bar"></span>
+        </span>
+      </span>
+      <span class="msg-ts">${fmtTime()}</span>
+    </div>
+    <div class="msg-body"></div>`;
+  transcriptEl.appendChild(msg);
+  S.currentBodyEl = msg.querySelector('.msg-body');
+  S.streamCursorEl = document.createElement('span');
+  S.streamCursorEl.className = 'stream-cursor';
+  S.currentBodyEl.appendChild(S.streamCursorEl);
+  msg.dataset.waveId = wid;
+  scrollBottom();
+}
+
+/* ── WORD-BY-WORD ANIMATION ───────────────────────────────────────────────── */
+function enqueueChar(ch) {
+  if (ch === '\n') {
+    if (S.wordBuf) { S.wordQueue.push(S.wordBuf); S.wordBuf = ''; }
+    S.wordQueue.push('\n');
+  } else if (ch === ' ') {
+    S.wordBuf += ch;
+    S.wordQueue.push(S.wordBuf);
+    S.wordBuf = '';
+  } else {
+    S.wordBuf += ch;
+  }
+  if (!S.wordTimer) S.wordTimer = setInterval(drainWord, 22);
+}
+
+function drainWord() {
+  if (!S.wordQueue.length) {
+    clearInterval(S.wordTimer); S.wordTimer = null; return;
+  }
+  const item = S.wordQueue.shift();
+  if (!S.currentBodyEl || !S.streamCursorEl) return;
+
+  if (item === '\n') {
+    S.currentBodyEl.insertBefore(document.createElement('br'), S.streamCursorEl);
+  } else {
+    const span = document.createElement('span');
+    span.className = 'word-in';
+    span.textContent = item;
+    S.currentBodyEl.insertBefore(span, S.streamCursorEl);
+  }
+  scrollBottom();
+}
+
+function flushWordBuf() {
+  if (S.wordBuf) { S.wordQueue.push(S.wordBuf); S.wordBuf = ''; }
+  while (S.wordQueue.length) drainWord();
+  clearInterval(S.wordTimer); S.wordTimer = null;
+}
+
+function endMessage() {
+  flushWordBuf();
+  if (!S.streamCursorEl) return;
+  const cur = S.streamCursorEl; S.streamCursorEl = null; S.currentBodyEl = null;
+  let n = 0;
+  const iv = setInterval(() => {
+    cur.style.opacity = n++ % 2 ? '1' : '0';
+    if (n > 4) { clearInterval(iv); cur.remove(); }
+  }, 200);
+}
+
+/* ── TTS ──────────────────────────────────────────────────────────────────── */
+function onTTSStart(ea) {
+  S.ttsActiveEA = ea;
+  const row = $('sysTts');
+  row.querySelector('.v').textContent = (S.ttsEnabled ? ea?.toUpperCase() || 'ON' : 'MUTED');
+  if (S.ttsEnabled) {
+    row.classList.add('on');
+    const waves = transcriptEl.querySelectorAll(`.wave.${ea}`);
+    waves.forEach((w, i) => w.classList.toggle('on', i === waves.length - 1));
+  }
+}
+function onTTSEnd() {
+  S.ttsActiveEA = null;
+  $('sysTts').classList.remove('on');
+  $('sysTts').querySelector('.v').textContent = S.ttsEnabled ? 'OFF' : 'MUTED';
+  transcriptEl.querySelectorAll('.wave').forEach(w => w.classList.remove('on'));
+}
+
+/* TTS toggle */
+$('ttsToggleBtn').addEventListener('click', () => {
+  S.ttsEnabled = !S.ttsEnabled;
+  const btn = $('ttsToggleBtn');
+  btn.textContent = S.ttsEnabled ? (S.ttsActiveEA ? S.ttsActiveEA.toUpperCase() : 'OFF') : 'MUTED';
+  $('sysTts').classList.toggle('on', S.ttsEnabled && !!S.ttsActiveEA);
+  if (!S.ttsEnabled) transcriptEl.querySelectorAll('.wave').forEach(w => w.classList.remove('on'));
+  sendWS({ type: 'tts_toggle', enabled: S.ttsEnabled });
+});
+
+/* ── AGENTS ───────────────────────────────────────────────────────────────── */
+function addAgent(name) {
+  $('agentPlaceholder') && $('agentPlaceholder').remove();
+  if (S.agents[name]) { S.agents[name].className = 'agent-item running'; return; }
+  const el = document.createElement('div');
+  el.className = 'agent-item running';
+  el.innerHTML = `<div class="agent-name">${esc(name)}</div><div class="agent-prog"><span class="prog-anim"></span></div>`;
+  $('agentList').appendChild(el);
+  S.agents[name] = el;
+  $('panelActivity').classList.add('glow');
+}
+function doneAgent(name) {
+  const el = S.agents[name]; if (!el) return;
+  el.className = 'agent-item done';
+  el.querySelector('.agent-prog').textContent = 'DONE';
+  if (!Object.values(S.agents).some(a => a.classList.contains('running'))) {
+    $('panelActivity').classList.remove('glow');
+  }
+}
+
+/* ── CONTEXT LIVE UPDATES ─────────────────────────────────────────────────── */
+function updateContextFiles(files) {
+  const c = $('ctxFiles'); c.innerHTML = '';
+  files.forEach(f => {
+    const d = document.createElement('div');
+    d.className = 'ctx-file loaded'; d.textContent = f;
+    c.appendChild(d);
+  });
+}
+function updateMemory(sable, atlas) {
+  $('sableMem').textContent = `[${sable}]`;
+  $('atlasMem').textContent = `[${atlas}]`;
+}
+
+/* ── INPUT ────────────────────────────────────────────────────────────────── */
+const inputField = $('inputField'), inputArea = $('inputArea');
+inputField.addEventListener('focus', () => inputArea.classList.add('focused'));
+inputField.addEventListener('blur',  () => inputArea.classList.remove('focused'));
+inputField.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const text = inputField.value.trim(); if (!text) return;
+  inputField.value = '';
+  addUserMessage(text);
+  sendWS({ type: 'input', text });
+});
+
+/* ── PANEL COLLAPSE ───────────────────────────────────────────────────────── */
+document.querySelectorAll('.collapse-btn').forEach(btn => {
+  btn.addEventListener('click', e => { e.stopPropagation(); toggleCollapse(btn.dataset.panel); });
+});
+document.querySelectorAll('.panel').forEach(p => {
+  p.addEventListener('click', e => {
+    if (p.classList.contains('collapsed') && !e.target.classList.contains('drag-handle')) {
+      toggleCollapse(p.dataset.panel);
+    }
+  });
+});
+function toggleCollapse(panelId) {
+  const p = document.getElementById(`panel${cap(panelId)}`);
+  p.classList.toggle('collapsed');
+  saveLayout();
+}
+
+/* ── DRAG AND DROP ────────────────────────────────────────────────────────── */
+const dropIndicatorEl = $('dropIndicator');
+
+document.querySelectorAll('.drag-handle').forEach(h => {
+  h.addEventListener('pointerdown', e => {
+    e.preventDefault();
+    startDrag(e, h.dataset.panel);
+  });
+});
+
+function startDrag(e, panelId) {
+  const panel = document.getElementById(`panel${cap(panelId)}`);
+  const rect = panel.getBoundingClientRect();
+
+  // Ghost clone
+  const ghost = panel.cloneNode(true);
+  ghost.removeAttribute('id');
+  ghost.className = 'panel drag-ghost';
+  ghost.style.width  = rect.width  + 'px';
+  ghost.style.height = rect.height + 'px';
+  ghost.style.left   = rect.left   + 'px';
+  ghost.style.top    = rect.top    + 'px';
+  ghost.style.clipPath = getComputedStyle(panel).clipPath;
+  document.body.appendChild(ghost);
+
+  panel.classList.add('drag-source');
+  dropIndicatorEl.style.top    = (rect.top + 4)    + 'px';
+  dropIndicatorEl.style.height = (rect.height - 8) + 'px';
+
+  S.drag = {
+    panelId, panel, ghost,
+    offsetX: e.clientX - rect.left,
+    offsetY: e.clientY - rect.top,
+    targetBefore: null,
+  };
+
+  window.addEventListener('pointermove', onDragMove, { passive: true });
+  window.addEventListener('pointerup', onDragEnd);
+}
+
+function onDragMove(e) {
+  if (!S.drag) return;
+  const { ghost, offsetX, offsetY } = S.drag;
+  ghost.style.left = (e.clientX - offsetX) + 'px';
+  ghost.style.top  = (e.clientY - offsetY) + 'px';
+
+  // Find insert position
+  const panels = getOrderedPanels().filter(p => !p.classList.contains('drag-source'));
+  let insertBefore = null;
+  let indicatorX   = null;
+
+  for (let i = 0; i < panels.length; i++) {
+    const r = panels[i].getBoundingClientRect();
+    const mid = r.left + r.width / 2;
+    if (e.clientX < mid) {
+      insertBefore = panels[i];
+      indicatorX   = i === 0 ? r.left - 5 : (panels[i-1].getBoundingClientRect().right + r.left) / 2 - 1.5;
+      break;
+    }
+  }
+  if (!insertBefore && panels.length) {
+    const last = panels[panels.length - 1].getBoundingClientRect();
+    indicatorX = last.right + 3;
+  }
+
+  S.drag.targetBefore = insertBefore;
+
+  if (indicatorX !== null) {
+    dropIndicatorEl.style.left    = indicatorX + 'px';
+    dropIndicatorEl.style.display = 'block';
+  }
+
+  // Highlight target panel
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('drop-target'));
+  if (insertBefore) insertBefore.classList.add('drop-target');
+}
+
+function onDragEnd() {
+  if (!S.drag) return;
+  const { panel, ghost, targetBefore } = S.drag;
+
+  // Capture positions BEFORE move (FLIP: First)
+  const allPanels = getOrderedPanels();
+  const firstPos  = allPanels.map(p => p.getBoundingClientRect().left);
+
+  // Perform DOM move
+  const container = $('panelsContainer');
+  if (targetBefore && targetBefore !== panel) {
+    container.insertBefore(panel, targetBefore);
+  } else if (!targetBefore) {
+    container.appendChild(panel);
+  }
+
+  // Capture positions AFTER move (FLIP: Last)
+  const lastPos = allPanels.map(p => p.getBoundingClientRect().left);
+
+  // Invert: apply transforms to simulate old positions
+  allPanels.forEach((p, i) => {
+    const dx = firstPos[i] - lastPos[i];
+    if (Math.abs(dx) < 0.5) return;
+    p.style.transition = 'none';
+    p.style.transform  = `translateX(${dx}px)`;
+  });
+  void container.offsetHeight; // force reflow
+
+  // Play: animate to real positions
+  allPanels.forEach(p => {
+    p.style.transition = 'transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94)';
+    p.style.transform  = '';
+  });
+  setTimeout(() => {
+    allPanels.forEach(p => { p.style.transition = ''; p.style.transform = ''; });
+  }, 370);
+
+  // Cleanup
+  ghost.remove();
+  dropIndicatorEl.style.display = 'none';
+  panel.classList.remove('drag-source');
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('drop-target'));
+
+  window.removeEventListener('pointermove', onDragMove);
+  window.removeEventListener('pointerup', onDragEnd);
+  S.drag = null;
+  saveLayout();
+}
+
+function getOrderedPanels() {
+  return Array.from($('panelsContainer').children).filter(el => el.classList.contains('panel'));
+}
+
+/* ── LAYOUT CONFIGS ───────────────────────────────────────────────────────── */
+const PRESETS = {
+  STD:   { order: ['context','transcript','activity'], collapsed: [], flexes: { context: '195px', transcript: null, activity: '175px' } },
+  FOCUS: { order: ['context','transcript','activity'], collapsed: ['context','activity'], flexes: { context: '195px', transcript: null, activity: '175px' } },
+  WIDE:  { order: ['context','transcript','activity'], collapsed: ['activity'], flexes: { context: '260px', transcript: null, activity: '175px' } },
+};
+
+document.querySelectorAll('.layout-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.layout-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyPreset(btn.dataset.layout);
+    saveLayout();
+  });
+});
+
+document.querySelector('.layout-save').addEventListener('click', () => {
+  const name = prompt('Layout name:'); if (!name) return;
+  const saved = getSavedLayouts();
+  saved[name] = captureLayout();
+  localStorage.setItem('hub-layouts', JSON.stringify(saved));
+});
+
+function applyPreset(key) {
+  const preset = PRESETS[key]; if (!preset) return;
+  const container = $('panelsContainer');
+
+  // Reorder DOM
+  preset.order.forEach(id => {
+    const el = document.getElementById(`panel${cap(id)}`);
+    container.appendChild(el);
+  });
+
+  // Set flex + collapse state
+  preset.order.forEach(id => {
+    const el = document.getElementById(`panel${cap(id)}`);
+    const flex = preset.flexes[id];
+    el.style.flex = flex ? `0 0 ${flex}` : '1 1 auto';
+    el.classList.toggle('collapsed', preset.collapsed.includes(id));
+  });
+}
+
+function captureLayout() {
+  const panels = getOrderedPanels();
+  return {
+    order:     panels.map(p => p.dataset.panel),
+    collapsed: panels.filter(p => p.classList.contains('collapsed')).map(p => p.dataset.panel),
+    flexes:    Object.fromEntries(panels.map(p => [p.dataset.panel, p.style.flexBasis || null])),
+  };
+}
+
+function getSavedLayouts() {
+  try { return JSON.parse(localStorage.getItem('hub-layouts') || '{}'); } catch(_) { return {}; }
+}
+
+function saveLayout() {
+  localStorage.setItem('hub-current-layout', JSON.stringify(captureLayout()));
+}
+
+function loadLayout() {
+  try {
+    const raw = localStorage.getItem('hub-current-layout');
+    if (!raw) return;
+    const layout = JSON.parse(raw);
+    const container = $('panelsContainer');
+    layout.order.forEach(id => {
+      const el = document.getElementById(`panel${cap(id)}`);
+      if (el) container.appendChild(el);
+    });
+    layout.order.forEach(id => {
+      const el = document.getElementById(`panel${cap(id)}`); if (!el) return;
+      const flex = layout.flexes?.[id];
+      el.style.flex = flex ? `0 0 ${flex}` : '1 1 auto';
+      el.classList.toggle('collapsed', layout.collapsed?.includes(id) || false);
+    });
+    // Sync active layout button
+    document.querySelectorAll('.layout-btn').forEach(b => b.classList.remove('active'));
+  } catch(_) {}
+}
+
+/* ── AMBIENT EFFECTS ──────────────────────────────────────────────────────── */
+function triggerGlitch() {
+  const bodies = transcriptEl.querySelectorAll('.msg-body');
+  if (!bodies.length) return;
+  const last = bodies[bodies.length - 1];
+  last.classList.add('glitch-anim');
+  setTimeout(() => last.classList.remove('glitch-anim'), 120);
+}
+function scheduleGlitch() {
+  setTimeout(() => { triggerGlitch(); scheduleGlitch(); }, 90000 + Math.random() * 90000);
+}
+function scheduleDrift() {
+  setTimeout(() => {
+    const el = $('scanDrift');
+    el.style.animation = 'none'; void el.offsetHeight;
+    el.style.animation = 'scanDrift 1.3s linear forwards';
+    setTimeout(scheduleDrift, 1600);
+  }, 10000 + Math.random() * 4000);
+}
+
+/* ── INIT ─────────────────────────────────────────────────────────────────── */
+boot();
+scheduleGlitch();
+scheduleDrift();
+</script>
+</body>
+</html>

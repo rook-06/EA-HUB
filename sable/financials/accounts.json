@@ -1,0 +1,57 @@
+{
+  "last_updated": "2026-07-03",
+  "accounts": [
+    {
+      "name": "Simplii Chequing",
+      "type": "chequing",
+      "institution": "Simplii",
+      "balance": 314.93
+    },
+    {
+      "name": "Simplii Savings",
+      "type": "savings",
+      "institution": "Simplii",
+      "balance": 547.98,
+      "divisions": {
+        "cc_payoff": 31.58,
+        "gst_reserve": 41.25,
+        "savings": 475.15
+      },
+      "notes": "Divisions: CC payoff (pay credit card by 10th), GST reserve (do not touch), savings (emergency/building fund)"
+    },
+    {
+      "name": "Wealthsimple Trading",
+      "type": "investment",
+      "institution": "Wealthsimple",
+      "balance": 53.57,
+      "holdings": [
+        { "ticker": "NVDA", "name": "Nvidia", "value": 52.78 }
+      ]
+    },
+    {
+      "name": "Cash",
+      "type": "cash",
+      "balance": 140.00,
+      "notes": "JOB-2026-003 payment received June 23"
+    },
+    {
+      "name": "Credit Card",
+      "type": "credit_card",
+      "balance": -31.58,
+      "notes": "Planet Fitness charge June 17. Pay by July 10."
+    },
+    {
+      "name": "Personal Loan (Grandmother)",
+      "type": "loan",
+      "institution": "Family — no fixed term",
+      "balance": -2000.00,
+      "notes": "Approximate — Damien reported '$2k' on July 3, 2026, tied to an unspecified incident. Informal, no interest, no due date — an open system he pays into whenever he can. Exact amount not confirmed."
+    }
+  ],
+  "totals": {
+    "liquid": 1002.91,
+    "invested": 53.57,
+    "liabilities": 2031.58,
+    "net_worth": -975.10
+  }
+}

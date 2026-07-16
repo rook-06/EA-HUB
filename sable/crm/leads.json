@@ -1,0 +1,43 @@
+{
+  "leads": [
+    {
+      "id": "LEAD-2026-003",
+      "name": "Unknown (half-sleeve inquiry)",
+      "business": "Dametime Tattoos",
+      "service_interest": "Half-sleeve — Doberman piece (dark gothic, skull jaw, thorns) + angel/demon multi-figure composition",
+      "status": "deferred",
+      "first_contact": "2026-06-20",
+      "last_contact": "2026-06-22",
+      "linked_job": null,
+      "phone": "",
+      "email": "",
+      "notes": "Agreed to defer half-sleeve and explore other ideas first. Both will share ideas and come to an agreement. Keep warm — reconnect when client reaches out or when Damien has ideas to share."
+    },
+    {
+      "id": "LEAD-2026-001",
+      "name": "Unknown (garden bed client)",
+      "business": "Above the Norm",
+      "service_interest": "Garden bed cleanup",
+      "status": "closed",
+      "first_contact": "2026-06-14",
+      "last_contact": "2026-06-14",
+      "linked_job": "JOB-2026-001",
+      "phone": "",
+      "email": "",
+      "notes": "Closed July 3, 2026 — Damien exited Above the Norm, no longer his concern."
+    },
+    {
+      "id": "LEAD-2026-002",
+      "name": "Unknown (soft lead)",
+      "business": "Above the Norm",
+      "service_interest": "TBD — said might call back in the future",
+      "status": "closed",
+      "first_contact": "2026-06-14",
+      "last_contact": "2026-06-14",
+      "linked_job": null,
+      "phone": "",
+      "email": "",
+      "notes": "Closed July 3, 2026 — Damien exited Above the Norm, no longer his concern."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "last_updated": "2026-06-22",
+  "note": "Fixed monthly subscriptions and bills. Use this to project future expenses and flag upcoming pulls.",
+  "subscriptions": [
+    {
+      "name": "Claude Pro",
+      "merchant": "Anthropic",
+      "amount": 28.00,
+      "payment_method": "debit",
+      "pull_day": 13,
+      "business_expense": true
+    },
+    {
+      "name": "iCloud+",
+      "merchant": "Apple",
+      "amount": 3.99,
+      "payment_method": "debit",
+      "pull_day": 14,
+      "business_expense": false
+    },
+    {
+      "name": "Google One",
+      "merchant": "Google",
+      "amount": 2.93,
+      "payment_method": "debit",
+      "pull_day": 15,
+      "business_expense": false
+    },
+    {
+      "name": "Planet Fitness",
+      "merchant": "Planet Fitness",
+      "amount": 31.58,
+      "payment_method": "credit_card",
+      "pull_day": 17,
+      "pay_by_day": 10,
+      "business_expense": false,
+      "notes": "Credit card charge — pay off by the 10th of the following month"
+    },
+    {
+      "name": "Amazon Prime",
+      "merchant": "Amazon",
+      "amount": 11.19,
+      "payment_method": "debit",
+      "pull_day": 18,
+      "business_expense": false
+    }
+  ],
+  "totals": {
+    "monthly_fixed": 77.69,
+    "debit_pull": 46.11,
+    "credit_card_pull": 31.58
+  }
+}

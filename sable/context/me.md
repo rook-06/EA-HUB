@@ -1,6 +1,7 @@
 # About Me
 
 **Name:** Damien
+**Location:** Winnipeg, Manitoba, Canada
 **Timezone:** Central Time (CT)
 **Role:** Entrepreneur and multi-business owner
 

@@ -1,0 +1,37 @@
+{
+  "contacts": [
+    {
+      "id": "CON-2026-001",
+      "name": "George Howell",
+      "type": "client",
+      "business": "Independent",
+      "phone": "431-999-1489",
+      "email": "",
+      "address": "79 Geoffrey Bay, Arnes, MB",
+      "linked_jobs": ["JOB-2026-002"],
+      "notes": "Primary billing contact for cottage renovation job."
+    },
+    {
+      "id": "CON-2026-002",
+      "name": "Rachel",
+      "type": "client",
+      "business": "Independent",
+      "phone": "204-218-3586",
+      "email": "",
+      "address": "79 Geoffrey Bay, Arnes, MB",
+      "linked_jobs": ["JOB-2026-002"],
+      "notes": "Secondary contact, same property as George Howell. Last name unconfirmed."
+    },
+    {
+      "id": "CON-2026-003",
+      "name": "Dustin",
+      "type": "client",
+      "business": "Dametime Tattoos",
+      "phone": "204-390-6443",
+      "email": "",
+      "address": "",
+      "linked_jobs": ["JOB-2026-005"],
+      "notes": "Last name unconfirmed. Tattoo session pencilled for July 30, 2026."
+    }
+  ]
+}

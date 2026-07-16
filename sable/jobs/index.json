@@ -1,0 +1,70 @@
+{
+  "jobs": [
+    {
+      "id": "JOB-2026-001",
+      "type": "piecework",
+      "business": "Above the Norm",
+      "status": "closed",
+      "client_name": "",
+      "description": "Garden bed cleanup",
+      "date": "",
+      "price": 0,
+      "notes": "Closed July 3, 2026 — Damien exited Above the Norm",
+      "file": "piecework/JOB-2026-001.json"
+    },
+    {
+      "id": "JOB-2026-003",
+      "type": "piecework",
+      "business": "Above the Norm",
+      "status": "paid",
+      "client_name": "",
+      "description": "Garden cleanout — weed and unwanted plant removal",
+      "start_date": "2026-06-22",
+      "end_date": "2026-06-23",
+      "price": 140,
+      "file": "piecework/JOB-2026-003.json"
+    },
+    {
+      "id": "JOB-2026-002",
+      "type": "hourly",
+      "business": "Independent",
+      "status": "paid",
+      "client_name": "George and Rachel Punzalan",
+      "description": "Interior and exterior cabin renovations",
+      "start_date": "2026-06-16",
+      "end_date": "2026-06-19",
+      "total_hours": 33,
+      "hourly_rate": 25,
+      "total": 825,
+      "file": "hourly/JOB-2026-002.json"
+    }
+  ,
+    {
+      "id": "JOB-2026-004",
+      "type": "piecework",
+      "business": "Above the Norm",
+      "status": "closed",
+      "client_name": "",
+      "address": "Academy Rd, Winnipeg (full address TBD)",
+      "description": "Repaint window shutters + replace front step pillar",
+      "start_date": "2026-06-30",
+      "end_date": "",
+      "price": 0,
+      "notes": "Closed July 3, 2026 — Damien exited Above the Norm, no longer his concern",
+      "file": "piecework/JOB-2026-004.json"
+    },
+    {
+      "id": "JOB-2026-005",
+      "type": "hourly",
+      "business": "Dametime Tattoos",
+      "status": "scheduled",
+      "client_name": "Dustin",
+      "description": "Tattoo session — details TBD",
+      "date": "2026-07-30",
+      "hourly_rate": 100,
+      "total": 0,
+      "notes": "Tentative — follow up with client weekend of July 25-26 to lock in",
+      "file": "hourly/JOB-2026-005.json"
+    }
+  ]
+}

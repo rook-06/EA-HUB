@@ -1,0 +1,19 @@
+{
+  "last_invoice_number": "INV-2026-001",
+  "invoices": [
+    {
+      "id": "INV-2026-001",
+      "job_id": "JOB-2026-002",
+      "client": "George Howell",
+      "date_issued": "2026-06-20",
+      "due_date": "2026-07-05",
+      "amount": 866.25,
+      "subtotal": 825.00,
+      "gst": 41.25,
+      "status": "paid",
+      "date_paid": "2026-06-22",
+      "file": "invoices/INV-2026-001.pdf",
+      "notes": "Final invoice. 33h @ $25/h + 5% GST. Paid June 22, 2026 — 13 days early."
+    }
+  ]
+}

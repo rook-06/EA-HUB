@@ -49,7 +49,7 @@ $file = '${outFile.replace(/\\/g, '\\\\')}'
 [MCI]::mciSendString("close clip", $null, 0, [IntPtr]::Zero) | Out-Null
 `);
 
-  execSync(`powershell -NonInteractive -File "${psScript}"`, { stdio: 'inherit' });
+  execSync(`powershell -NonInteractive -File "${psScript}"`, { stdio: 'inherit', windowsHide: true });
   fs.unlinkSync(psScript);
 
   console.log(`[${character.toUpperCase()}] Done.`);

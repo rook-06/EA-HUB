@@ -1,0 +1,21 @@
+{
+  "id": "JOB-2026-005",
+  "type": "hourly",
+  "business": "Dametime Tattoos",
+  "status": "scheduled",
+  "client": {
+    "name": "Dustin",
+    "phone": "204-390-6443",
+    "email": "",
+    "address": ""
+  },
+  "job": {
+    "description": "Tattoo session — details TBD",
+    "location": "",
+    "date": "2026-07-30",
+    "hours": 0,
+    "hourly_rate": 100,
+    "total": 0
+  },
+  "notes": "Pencilled in July 3. Date is tentative — Damien to follow up with client the weekend before (July 25-26) to lock it in. Client is Dustin — not the same as the deferred half-sleeve lead (LEAD-2026-003, name unknown); no phone/email on file yet."
+}

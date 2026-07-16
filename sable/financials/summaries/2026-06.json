@@ -1,0 +1,26 @@
+{
+  "month": "2026-06",
+  "total_income": 0,
+  "total_expenses": 0,
+  "net": 0,
+  "income_by_source": {
+    "Above the Norm": 0,
+    "Dametime Tattoos": 0,
+    "Dametime Marketing": 0,
+    "Personal": 0
+  },
+  "expenses_by_category": {
+    "food": 0,
+    "fuel": 0,
+    "supplies": 0,
+    "equipment": 0,
+    "rent": 0,
+    "utilities": 0,
+    "subscriptions": 0,
+    "personal": 0,
+    "entertainment": 0,
+    "other": 0
+  },
+  "business_expenses_total": 0,
+  "personal_expenses_total": 0
+}

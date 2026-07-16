@@ -1,0 +1,25 @@
+{
+  "id": "JOB-2026-003",
+  "type": "piecework",
+  "business": "Above the Norm",
+  "status": "paid",
+  "client": {
+    "name": "",
+    "phone": "",
+    "email": "",
+    "address": "180 Waverly St, Winnipeg, MB"
+  },
+  "job": {
+    "description": "Garden cleanout — weed and unwanted plant removal",
+    "location": "180 Waverly St, Winnipeg, MB",
+    "start_date": "2026-06-22",
+    "end_date": "2026-06-23",
+    "work_log": [
+      { "date": "2026-06-22", "notes": "Partial garden cleanout completed" },
+      { "date": "2026-06-23", "notes": "Job wrapped up. Paid $140." }
+    ],
+    "price": 140,
+    "rate_structure": "piecework"
+  },
+  "notes": "Client name still unknown — needs to be logged. Address: 180 Waverly St. Cash payment, no GST."
+}

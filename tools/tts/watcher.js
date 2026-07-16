@@ -4,7 +4,7 @@
  * sentence-sized chunks, and fires TTS for each. Chunks play sequentially
  * (next starts only after current finishes).
  */
-import { watch, statSync, openSync, readSync, closeSync } from 'fs';
+import { watch, statSync, openSync, readSync, closeSync, existsSync } from 'fs';
 import { readdir, stat } from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -69,7 +69,10 @@ Remove-Item -Force "${escaped}" -ErrorAction SilentlyContinue
   }
 }
 
+const DISABLED_FLAG = 'C:/Users/damnm/ai-assistants/hub/_tts_disabled';
+
 async function synthesizeAndEnqueue(text, voice) {
+  if (existsSync(DISABLED_FLAG)) return;
   try {
     await ensureServer();
     const res = await fetch(`${TTS_URL}/speak`, {

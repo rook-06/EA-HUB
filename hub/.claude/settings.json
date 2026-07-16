@@ -9,7 +9,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node C:\\Users\\damnm\\ai-assistants\\hub\\tts-hook.js"
+            "command": "node C:/Users/damnm/ai-assistants/hub/tts-hook.js"
           }
         ]
       }

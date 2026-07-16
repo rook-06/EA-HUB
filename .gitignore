@@ -36,6 +36,9 @@ tools/tts/*.onnx
 tools/tts/*.bin
 tools/tts/voice_samples/
 
+# Standalone client project repos (versioned separately on their own GitHub repos)
+sable/projects/kmm-property-maintenance-website/
+
 # OS
 .DS_Store
 Thumbs.db

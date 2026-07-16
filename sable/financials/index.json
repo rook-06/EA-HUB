@@ -1,0 +1,43 @@
+{
+  "last_updated": "2026-06-19",
+  "income_sources": {
+    "jobs_directory": "../jobs/index.json",
+    "note": "Completed/paid jobs pull from the jobs directory. Additional income logged manually."
+  },
+  "counters": {
+    "income": 0,
+    "expenses": 1
+  },
+  "running_totals": {
+    "total_income": 0,
+    "total_expenses": 11.19,
+    "net": -11.19
+  },
+  "jobs_income_snapshot": {
+    "as_of": "2026-06-18",
+    "in_progress": [
+      {
+        "id": "JOB-2026-002",
+        "client": "George and Rachel Punzalan",
+        "description": "Interior and exterior cabin renovations",
+        "earned_to_date": 330,
+        "status": "in_progress",
+        "expected_completion": "2026-06-19"
+      }
+    ],
+    "pipeline": [
+      {
+        "id": "JOB-2026-001",
+        "description": "Garden bed cleanup",
+        "status": "quoted",
+        "value": 0
+      }
+    ],
+    "paid": []
+  },
+  "monthly": {},
+  "recent_income": [],
+  "recent_expenses": [
+    { "id": "EXP-2026-001", "date": "2026-06-18", "merchant": "Amazon", "amount": 11.19, "category": "subscriptions" }
+  ]
+}

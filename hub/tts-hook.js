@@ -60,23 +60,17 @@ function getLastAssistantText(transcriptPath) {
     .split('\n')
     .filter(l => l.trim());
 
-  // Prefer the last assistant text that contains a Sable/Atlas label.
-  // Fall back to the last assistant text of any kind.
-  let fallback = null;
   for (let i = lines.length - 1; i >= 0; i--) {
     try {
       const entry = JSON.parse(lines[i]);
       if (entry.type === 'assistant' && entry.message?.content) {
         const textBlock = entry.message.content.find(b => b.type === 'text');
-        if (textBlock?.text) {
-          if (LABEL_RE.test(textBlock.text)) return textBlock.text;
-          if (!fallback) fallback = textBlock.text;
-        }
+        if (textBlock?.text && LABEL_RE.test(textBlock.text)) return textBlock.text;
       }
     } catch (_) {}
   }
 
-  return fallback;
+  return null;
 }
 
 function readStdin() {
@@ -94,6 +88,12 @@ function log(msg) {
 }
 
 readStdin().then(raw => {
+  // Respect TTS mute flag written by the UI server when the user toggles TTS off
+  if (fs.existsSync(path.join(__dirname, '_tts_disabled'))) {
+    log('TTS disabled by UI flag, skipping');
+    process.exit(0);
+  }
+
   log('hook fired, raw length=' + raw.length);
   let input;
   try { input = JSON.parse(raw); } catch (_) { log('bad json, exiting'); process.exit(0); }
@@ -116,7 +116,7 @@ readStdin().then(raw => {
     log(`speaking: voice=${voice} text="${text.substring(0, 60)}"`);
     fs.writeFileSync(tmpFile, text, 'utf8');
     try {
-      execSync(`node "${TTS_SCRIPT}" ${voice} --file "${tmpFile}"`, { stdio: 'inherit' });
+      execSync(`node "${TTS_SCRIPT}" ${voice} --file "${tmpFile}"`, { stdio: 'inherit', windowsHide: true });
       log('execSync done');
     } catch(e) {
       log('execSync error: ' + e.message);
