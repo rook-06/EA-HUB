@@ -30,10 +30,13 @@ async function speak(character, text) {
 
   fs.writeFileSync(outFile, Buffer.concat(chunks));
 
-  // Play headlessly via Win32 MCI API — no window, no UI dependencies
-  const psScript = path.join(__dirname, '_tts_play.ps1');
+  if (process.platform === 'darwin') {
+    execSync(`afplay "${outFile}"`, { stdio: 'inherit' });
+  } else if (process.platform === 'win32') {
+    // Play headlessly via Win32 MCI API — no window, no UI dependencies
+    const psScript = path.join(__dirname, '_tts_play.ps1');
 
-  fs.writeFileSync(psScript, `
+    fs.writeFileSync(psScript, `
 Add-Type @"
 using System;
 using System.Text;
@@ -49,8 +52,11 @@ $file = '${outFile.replace(/\\/g, '\\\\')}'
 [MCI]::mciSendString("close clip", $null, 0, [IntPtr]::Zero) | Out-Null
 `);
 
-  execSync(`powershell -NonInteractive -File "${psScript}"`, { stdio: 'inherit', windowsHide: true });
-  fs.unlinkSync(psScript);
+    execSync(`powershell -NonInteractive -File "${psScript}"`, { stdio: 'inherit', windowsHide: true });
+    fs.unlinkSync(psScript);
+  } else {
+    execSync(`paplay "${outFile}" 2>/dev/null || aplay "${outFile}" 2>/dev/null || mpg123 "${outFile}"`, { stdio: 'inherit', shell: '/bin/sh' });
+  }
 
   console.log(`[${character.toUpperCase()}] Done.`);
 }

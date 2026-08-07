@@ -4,20 +4,32 @@
  * sentence-sized chunks, and fires TTS for each. Chunks play sequentially
  * (next starts only after current finishes).
  */
-import { watch, statSync, openSync, readSync, closeSync, existsSync } from 'fs';
+import { watch, statSync, openSync, readSync, closeSync, existsSync, unlinkSync } from 'fs';
 import { readdir, stat } from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
+import { homedir } from 'os';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const HUB_DIR = join(__dirname, '..', '..', 'hub');
+
+// Mirrors Claude Code's project-dir naming: absolute path with drive-letter
+// colon and separators collapsed to "-" (e.g. C:\a\b -> c--a-b, /a/b -> -a-b).
+function projectDirName(absPath) {
+  let p = absPath.replace(/\\/g, '/');
+  p = p.replace(/^([A-Za-z]):/, (_, d) => d.toLowerCase() + ':');
+  return p.replace(/[:/]/g, '-');
+}
 
 process.on('uncaughtException', e => console.error('[watcher] uncaughtException:', e.message, e.stack));
 process.on('unhandledRejection', e => console.error('[watcher] unhandledRejection:', e?.message ?? e));
 
-const TRANSCRIPT_DIR = 'C:/Users/damnm/.claude/projects/c--Users-damnm-ai-assistants-hub';
+const TRANSCRIPT_DIR = join(homedir(), '.claude', 'projects', projectDirName(HUB_DIR));
 const TTS_URL = 'http://127.0.0.1:5050';
-const PYTHON = 'C:/Users/damnm/AppData/Local/Programs/Python/Python312/python.exe';
+const PYTHON = process.env.EA_PYTHON || (process.platform === 'win32'
+  ? 'C:/Users/damnm/AppData/Local/Programs/Python/Python312/python.exe'
+  : 'python3');
 const TTS_SCRIPT = join(__dirname, 'tts_server.py').replace(/\\/g, '/');
 
 // --- Python TTS server ---
@@ -50,17 +62,30 @@ async function playNext() {
   playing = true;
   const audioPath = queue.shift();
   try {
-    const escaped = audioPath.replace(/\\/g, '\\\\');
-    const script = `
+    if (process.platform === 'darwin') {
+      await new Promise((resolve) => {
+        const p = spawn('afplay', [audioPath], { stdio: 'ignore' });
+        p.on('close', resolve);
+      });
+    } else if (process.platform === 'win32') {
+      const escaped = audioPath.replace(/\\/g, '\\\\');
+      const script = `
 Add-Type -AssemblyName System.Windows.Forms
 $player = New-Object System.Media.SoundPlayer "${escaped}"
 $player.PlaySync()
 Remove-Item -Force "${escaped}" -ErrorAction SilentlyContinue
 `;
-    await new Promise((resolve) => {
-      const p = spawn('powershell', ['-NonInteractive', '-WindowStyle', 'Hidden', '-Command', script], { stdio: 'ignore', windowsHide: true });
-      p.on('close', resolve);
-    });
+      await new Promise((resolve) => {
+        const p = spawn('powershell', ['-NonInteractive', '-WindowStyle', 'Hidden', '-Command', script], { stdio: 'ignore', windowsHide: true });
+        p.on('close', resolve);
+      });
+    } else {
+      await new Promise((resolve) => {
+        const p = spawn('sh', ['-c', `paplay "${audioPath}" 2>/dev/null || aplay "${audioPath}"`], { stdio: 'ignore' });
+        p.on('close', resolve);
+      });
+    }
+    if (process.platform !== 'win32') { try { unlinkSync(audioPath); } catch (_) {} }
   } catch (e) {
     console.error('[watcher] playback error:', e.message);
   } finally {
@@ -69,7 +94,7 @@ Remove-Item -Force "${escaped}" -ErrorAction SilentlyContinue
   }
 }
 
-const DISABLED_FLAG = 'C:/Users/damnm/ai-assistants/hub/_tts_disabled';
+const DISABLED_FLAG = join(HUB_DIR, '_tts_disabled');
 
 async function synthesizeAndEnqueue(text, voice) {
   if (existsSync(DISABLED_FLAG)) return;

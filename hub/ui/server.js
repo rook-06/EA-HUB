@@ -2,6 +2,7 @@
 
 const http   = require('http');
 const fs     = require('fs');
+const os     = require('os');
 const path   = require('path');
 const pty    = require('node-pty');
 const { WebSocketServer } = require('ws');
@@ -58,13 +59,23 @@ wss.on('connection', ws => {
 });
 
 // ── PTY ───────────────────────────────────────────────────────────────────────
-const term = pty.spawn('cmd.exe', ['/c', 'claude.cmd --channels plugin:telegram@claude-plugins-official'], {
-  name: 'xterm-256color',
-  cols: 220,
-  rows: 50,
-  cwd: HUB_DIR,
-  env: { ...process.env, PATH: process.env.PATH + ';C:\\Users\\damnm\\.bun\\bin', FORCE_COLOR: '0' },
-});
+const isWin = process.platform === 'win32';
+const bunBin = path.join(os.homedir(), '.bun', 'bin');
+const term = isWin
+  ? pty.spawn('cmd.exe', ['/c', 'claude.cmd --channels plugin:telegram@claude-plugins-official'], {
+      name: 'xterm-256color',
+      cols: 220,
+      rows: 50,
+      cwd: HUB_DIR,
+      env: { ...process.env, PATH: process.env.PATH + ';' + bunBin, FORCE_COLOR: '0' },
+    })
+  : pty.spawn('/bin/sh', ['-c', 'claude --channels plugin:telegram@claude-plugins-official'], {
+      name: 'xterm-256color',
+      cols: 220,
+      rows: 50,
+      cwd: HUB_DIR,
+      env: { ...process.env, PATH: process.env.PATH + ':' + bunBin, FORCE_COLOR: '0' },
+    });
 
 // ── OUTPUT PARSER (stateful, lookahead) ───────────────────────────────────────
 // Strategy: scan for **Sable:** / **Atlas:** labels. Everything between one label

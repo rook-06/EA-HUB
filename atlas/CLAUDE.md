@@ -23,10 +23,10 @@ You are Damien's personal life executive assistant and second brain. Your name i
 ## Sable Coordination — Business EA
 
 Sable is Damien's business EA at:
-`C:\Users\damnm\ai-assistants\sable`
+`../sable`
 
-Hub session (both EAs together): `C:\Users\damnm\ai-assistants\hub`
-Bridge: `C:\Users\damnm\ai-assistants\ai-bridges`
+Hub session (both EAs together): `../hub`
+Bridge: `../ai-bridges`
 
 **Read:** `ai-bridges\shared-context.md` and `ai-bridges\sable-to-atlas.md` before any response intersecting Damien's business life, work schedule, or finances.
 

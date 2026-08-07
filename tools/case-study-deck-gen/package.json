@@ -1,0 +1,11 @@
+{
+  "name": "case-study-deck-gen",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generates a PowerPoint deck and one-page PDF from Dametime Marketing's case studies.",
+  "type": "commonjs",
+  "dependencies": {
+    "pptxgenjs": "^3.12.0",
+    "pdfkit": "^0.19.1"
+  }
+}

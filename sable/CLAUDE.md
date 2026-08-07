@@ -27,10 +27,10 @@ No active integrations yet. Add MCP servers and tool connections here as they co
 ## Atlas Coordination — Personal Life EA
 
 Atlas is Damien's personal life EA at:
-`C:\Users\damnm\ai-assistants\atlas`
+`../atlas`
 
-Hub session (both EAs together): `C:\Users\damnm\ai-assistants\hub`
-Bridge: `C:\Users\damnm\ai-assistants\ai-bridges`
+Hub session (both EAs together): `../hub`
+Bridge: `../ai-bridges`
 
 **Read:** `ai-bridges\shared-context.md` and `ai-bridges\atlas-to-sable.md` before any response intersecting personal life, Damien's schedule, or personal finances.
 

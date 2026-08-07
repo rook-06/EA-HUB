@@ -14,7 +14,7 @@ Read: `context/me.md`, `context/health.md`, `context/relationships.md`, `context
 
 ### Step 2 — Check the bridge
 
-Read `C:\Users\damnm\ai-assistants\ai-bridges\shared-context.md` and `C:\Users\damnm\ai-assistants\ai-bridges\sable-to-atlas.md` for anything from Sable that's relevant to how this week went.
+Read `../../../ai-bridges/shared-context.md` and `../../../ai-bridges/sable-to-atlas.md` for anything from Sable that's relevant to how this week went.
 
 ### Step 3 — Run the reflection
 

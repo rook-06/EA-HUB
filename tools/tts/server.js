@@ -2,18 +2,19 @@
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
-import { writeFileSync } from 'fs';
+import { writeFileSync, unlinkSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const PYTHON = 'C:/Users/damnm/AppData/Local/Programs/Python/Python312/python.exe';
+const PYTHON = process.env.EA_PYTHON || (process.platform === 'win32'
+  ? 'C:/Users/damnm/AppData/Local/Programs/Python/Python312/python.exe'
+  : 'python3');
 const TTS_SCRIPT = join(__dirname, 'tts_server.py');
 const TTS_PORT = 5050;
 const TTS_URL = `http://127.0.0.1:${TTS_PORT}`;
-const PLAY_SCRIPT = join(__dirname, '_play.ps1');
 
 // --- Python TTS server lifecycle ---
 
@@ -78,9 +79,15 @@ async function generateMp3(text, voice) {
   return data.path; // forward-slash path to MP3
 }
 
-function writeMciScript(mp3Path) {
-  const mciPs1 = join(__dirname, `_mci_${Date.now()}.ps1`).replace(/\\/g, '/');
-  writeFileSync(mciPs1, `
+// Plays audio in the background (fire-and-forget) and cleans up the file after.
+function playAudio(mp3Path) {
+  if (process.platform === 'darwin') {
+    const p = spawn('afplay', [mp3Path], { stdio: 'ignore', detached: true });
+    p.on('close', () => { try { unlinkSync(mp3Path); } catch (_) {} });
+    p.unref();
+  } else if (process.platform === 'win32') {
+    const mciPs1 = join(__dirname, `_mci_${Date.now()}.ps1`).replace(/\\/g, '/');
+    writeFileSync(mciPs1, `
 Add-Type @"
 using System;
 using System.Text;
@@ -96,7 +103,13 @@ public class MCI {
 Remove-Item -Force "${mp3Path}" -ErrorAction SilentlyContinue
 Remove-Item -Force "${mciPs1}" -ErrorAction SilentlyContinue
 `);
-  return mciPs1;
+    const p = spawn('powershell', ['-NonInteractive', '-WindowStyle', 'Hidden', '-File', mciPs1], { stdio: 'ignore', windowsHide: true, detached: true });
+    p.unref();
+  } else {
+    const p = spawn('sh', ['-c', `paplay "${mp3Path}" 2>/dev/null || aplay "${mp3Path}"`], { stdio: 'ignore', detached: true });
+    p.on('close', () => { try { unlinkSync(mp3Path); } catch (_) {} });
+    p.unref();
+  }
 }
 
 // --- Main speak logic ---
@@ -107,12 +120,7 @@ async function speak(text, voice) {
 
   // Python server handles phrase splitting + parallel generation + concatenation
   const mp3Path = await generateMp3(clean, voice);
-  const mciScript = writeMciScript(mp3Path);
-
-  writeFileSync(PLAY_SCRIPT,
-    `Start-Process powershell -WindowStyle Hidden -ArgumentList "-NonInteractive", "-File", "${mciScript}"`);
-
-  return PLAY_SCRIPT.replace(/\\/g, '/');
+  playAudio(mp3Path);
 }
 
 // --- MCP server ---
@@ -125,7 +133,7 @@ const server = new Server(
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [{
     name: 'speak',
-    description: 'Prepare speech audio for an EA response. Generates the MP3 and writes a play script. Returns the path to the play script — you MUST then immediately run it via the PowerShell tool: `powershell -NonInteractive -File "C:/Users/damnm/ai-assistants/tools/tts/_play.ps1"`',
+    description: 'Speak an EA response aloud. Generates the audio and plays it in the background immediately — fire-and-forget, no follow-up tool call needed.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -140,8 +148,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
   if (request.params.name !== 'speak') throw new Error(`Unknown tool: ${request.params.name}`);
   const { text, voice } = request.params.arguments;
-  const scriptPath = await speak(text, voice);
-  return { content: [{ type: 'text', text: scriptPath }] };
+  await speak(text, voice);
+  return { content: [{ type: 'text', text: 'played' }] };
 });
 
 const transport = new StdioServerTransport();
