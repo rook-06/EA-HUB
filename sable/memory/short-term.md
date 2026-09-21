@@ -17,12 +17,12 @@ Damien shared an artifact with his full reconciled financial state as of Sept 7-
 - Updated `context/current-priorities.md` with the new financial position and three flagged unknowns
 - Posted to `ai-bridges/sable-to-atlas.md` — Eva TFSA, grandmother loan resolution, and the new SCU loan all flagged as more Atlas's lane than mine
 
-### Open questions for Damien — not yet resolved
-1. **SCU Loan ($4,885.83)** — what is this, when was it taken out, what's the interest rate? Wasn't in this system at all before today.
-2. **Grandmother loan** — confirm it's actually settled/paid off, not just dropped from tracking.
-3. **Who is Eva?** — TFSA held in Damien's name, earmarked for her. No prior mention anywhere.
-4. **KMM website retainer ($175)** — one-time or recurring? No job/invoice record for it.
-5. **September's $520 partial income** — source not itemized in what he shared; needs daily hours per the new payment workflow to properly log.
+### Resolved same day (2026-09-21)
+1. **Eva** is Damien's daughter — the TFSA is money he's holding for her until she's old enough. Not a mystery, not his to spend.
+2. **Grandmother loan** — confirmed fully settled/paid off.
+3. **SCU Loan ($4,885.83)** — Damien said it doesn't need more detail than what's already on file. Not pursuing further.
+4. Invoice records reverted — Damien said leave `invoices.json` as it was; I'd added proxy payment dates that weren't real data. Backed those out, `date_paid` back to null.
+5. **Set aside for now, per Damien:** the KMM website retainer ($175, one-time vs. recurring) and September's unitemized $520 partial income. Not chasing either right now.
 
 ---
 

@@ -25,7 +25,7 @@
       "type": "tfsa",
       "institution": "Simplii",
       "balance": 470.63,
-      "notes": "Held in Damien's name but earmarked for someone named Eva — not his to spend. Counts toward net worth on paper only. Who Eva is hasn't been confirmed in this system yet."
+      "notes": "Eva is Damien's daughter. Held in his name, set aside for her until she's old enough. Not his to spend — counts toward net worth on paper only."
     },
     {
       "name": "SCU Savings",
@@ -77,7 +77,7 @@
       "type": "loan",
       "institution": "SCU",
       "balance": -4885.83,
-      "notes": "NEW TO THIS SYSTEM as of 2026-09-21 — not previously tracked here. Auto-pays $173.53 on the 30th of each month, drawn from SCU Savings. At that rate, clears in ~28 months before interest. Origin, date taken out, and interest rate not yet confirmed with Damien."
+      "notes": "Auto-pays $173.53 on the 30th of each month, drawn from SCU Savings. At that rate, clears in ~28 months before interest."
     },
     {
       "name": "Capital One Credit",
@@ -97,7 +97,7 @@
       "type": "loan",
       "institution": "Family — no fixed term",
       "balance": 0,
-      "notes": "Reported as settled per Damien's Sept 7-8 reconciliation. Previously tracked at ~-$2,000 (unconfirmed exact figure). Confirm with Damien that this is fully paid off, not just no longer tracked."
+      "notes": "Settled — confirmed paid off by Damien 2026-09-21."
     }
   ],
   "totals": {

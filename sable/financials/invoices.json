@@ -38,9 +38,9 @@
           "gst": 0,
           "amount": 700.00,
           "status": "paid",
-          "date_paid": "2026-08-16",
+          "date_paid": null,
           "file": "invoices/INV-2026-003.pdf",
-          "notes": "35h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21). Date is a proxy (job end date) reconstructed from the Sept 8 ledger reconciliation — exact payment date not logged."
+          "notes": "35h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21) — exact payment date and method not logged."
         },
         {
           "id": "INV-2026-004",
@@ -52,9 +52,9 @@
           "gst": 0,
           "amount": 720.00,
           "status": "paid",
-          "date_paid": "2026-08-23",
+          "date_paid": null,
           "file": "invoices/INV-2026-004.pdf",
-          "notes": "36h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21). Date is a proxy (job end date) reconstructed from the Sept 8 ledger reconciliation — exact payment date not logged."
+          "notes": "36h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21) — exact payment date and method not logged."
         },
         {
           "id": "INV-2026-005",
@@ -66,9 +66,9 @@
           "gst": 0,
           "amount": 920.00,
           "status": "paid",
-          "date_paid": "2026-08-30",
+          "date_paid": null,
           "file": "invoices/INV-2026-005.pdf",
-          "notes": "46h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21). Date is a proxy (job end date) reconstructed from the Sept 8 ledger reconciliation — exact payment date not logged."
+          "notes": "46h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21) — exact payment date and method not logged."
         }
       ]
     }

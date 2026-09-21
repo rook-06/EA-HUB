@@ -12,10 +12,7 @@
 
 Per Damien's Sept 7-8, 2026 reconciliation ("The September Ledger," shared 2026-09-21): **net worth is positive for the first time on record, +$591.18** — up from -$975.10 on July 3. Driven by KMM income and an SCU Savings balance ($3,965.44) not previously tracked in this system.
 
-**Two items surfaced in that reconciliation still need Damien's confirmation — flagged, not yet resolved:**
-- An **SCU Loan of -$4,885.83** (auto-pays $173.53/mo on the 30th from SCU Savings) that was not in this system before. Origin, date taken out, and interest rate unconfirmed.
-- The **grandmother loan** (previously tracked at ~$2,000) now shows as **settled** — needs confirmation that it's actually paid off.
-- A Simplii TFSA balance ($470.63) is held in Damien's name but earmarked for someone named "Eva" — not previously referenced anywhere in this system.
+Confirmed by Damien 2026-09-21: the grandmother loan is fully settled. The Simplii TFSA ($470.63) is his daughter Eva's — held in his name until she's old enough, not his to spend. The SCU Loan (-$4,885.83, auto-pays $173.53/mo) needs no further detail tracked.
 
 See `financials/accounts.json` for full detail.
 
