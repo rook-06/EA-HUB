@@ -15,9 +15,10 @@
       "divisions": {
         "cc_payoff": 31.58,
         "gst_reserve": 41.25,
-        "savings": 475.15
+        "savings": 475.15,
+        "tax_reserve": 0
       },
-      "notes": "Divisions: CC payoff (pay credit card by 10th), GST reserve (do not touch), savings (emergency/building fund)"
+      "notes": "Divisions: CC payoff (pay credit card by 10th), GST reserve (do not touch), savings (emergency/building fund), tax reserve (new 2026-09-21 — 30% of income per new payment workflow, not yet funded pending split % correction, see references/payment-workflow.md)"
     },
     {
       "name": "Wealthsimple Trading",

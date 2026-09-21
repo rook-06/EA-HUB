@@ -2,8 +2,11 @@
 
 Tracks invoicing for completed jobs, generates PDFs, monitors payment status, and follows up on overdue accounts. Damien doesn't naturally track this — this skill compensates.
 
+**Standing process (since 2026-09-21):** see `references/payment-workflow.md`. Damien logs hours daily into `financials/hours/[week-start].json`; current work defaults to KMM unless noted. He's paid day-of, so income is logged as soon as hours are logged — not when the invoice goes out. Every Sunday, tally the week and generate the invoice (formality, not the payment trigger). The steps below still apply for the invoice/PDF side of that weekly cycle.
+
 ## When to use
 
+- Sunday — weekly tally and invoice generation (see standing process above)
 - A job is marked "completed" in the job tracker
 - Damien asks about unpaid invoices
 - Weekly Review flags unpaid completed jobs
@@ -18,6 +21,8 @@ Tracks invoicing for completed jobs, generates PDFs, monitors payment status, an
 Read `jobs/index.json`. Look for any job with status "completed" but no corresponding income entry in `financials/income/`.
 
 Flag these — they're money that hasn't been collected yet.
+
+For the weekly KMM cycle specifically: read the current week's file in `financials/hours/`, confirm all logged days have matching income entries (they should, since income posts day-of), then proceed to generate the formal invoice for the week's total.
 
 ### Step 2 — Generate invoice
 

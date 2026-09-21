@@ -4,6 +4,18 @@
 
 ---
 
+## [2026-09-21] — New Standing Payment Workflow
+
+Damien established a permanent process (session context had been lost, so he re-specified it directly):
+- Log hours daily into `financials/hours/[week-start].json` (current week file created: `2026-09-21.json`)
+- Every Sunday: tally Mon-Sun hours, generate the formal invoice — default client is KMM unless a day says otherwise
+- He's paid day-of — income counts as soon as hours are logged, invoice is formality only, not the payment trigger
+- Split on every payment: 10% Simplii Savings, 30% tax reserve, 70% Simplii Chequing
+- **Flagged to Damien: 10+30+70 = 110%, not 100%. Waiting on correction before applying any split.**
+- Documented in full at `references/payment-workflow.md`; `invoice-collections` skill and `accounts.json` (added `tax_reserve` division, unfunded) updated to match
+
+---
+
 ## [2026-09-21] — KMM Piecework Invoices Logged (Previously Untracked)
 
 - Damien uploaded 4 invoice PDFs. INV-2026-001 (Howell, paid) matched the existing record exactly.

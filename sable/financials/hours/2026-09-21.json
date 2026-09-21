@@ -1,0 +1,9 @@
+{
+  "week_start": "2026-09-21",
+  "week_end": "2026-09-27",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [],
+  "status": "open",
+  "notes": "Log each day worked as it happens. Tally and invoice Sunday 2026-09-27 per references/payment-workflow.md."
+}
