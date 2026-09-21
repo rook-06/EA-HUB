@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22",
+  "last_updated": "2026-09-09",
   "note": "Fixed monthly subscriptions and bills. Use this to project future expenses and flag upcoming pulls.",
   "subscriptions": [
     {
@@ -27,16 +27,6 @@
       "business_expense": false
     },
     {
-      "name": "Planet Fitness",
-      "merchant": "Planet Fitness",
-      "amount": 31.58,
-      "payment_method": "credit_card",
-      "pull_day": 17,
-      "pay_by_day": 10,
-      "business_expense": false,
-      "notes": "Credit card charge — pay off by the 10th of the following month"
-    },
-    {
       "name": "Amazon Prime",
       "merchant": "Amazon",
       "amount": 11.19,
@@ -46,8 +36,8 @@
     }
   ],
   "totals": {
-    "monthly_fixed": 77.69,
+    "monthly_fixed": 46.11,
     "debit_pull": 46.11,
-    "credit_card_pull": 31.58
+    "credit_card_pull": 0
   }
 }
