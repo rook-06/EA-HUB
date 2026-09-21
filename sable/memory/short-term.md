@@ -17,6 +17,11 @@ Damien shared an artifact with his full reconciled financial state as of Sept 7-
 - Updated `context/current-priorities.md` with the new financial position and three flagged unknowns
 - Posted to `ai-bridges/sable-to-atlas.md` — Eva TFSA, grandmother loan resolution, and the new SCU loan all flagged as more Atlas's lane than mine
 
+### New standing rule (2026-09-21): KMM invoices auto-marked paid
+- Damien: mark KMM invoices paid by due date as soon as they're sent — no need to chase confirmation, KMM always pays on time
+- Applied retroactively: INV-2026-003/004/005 date_paid set to each invoice's due date (Aug 31 / Sep 10 / Sep 14)
+- Documented in `references/payment-workflow.md` and `invoice-collections` SKILL.md — KMM only, other clients still need real confirmation
+
 ### Resolved same day (2026-09-21)
 1. **Eva** is Damien's daughter — the TFSA is money he's holding for her until she's old enough. Not a mystery, not his to spend.
 2. **Grandmother loan** — confirmed fully settled/paid off.

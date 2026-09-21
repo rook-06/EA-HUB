@@ -19,6 +19,10 @@ Damien logs hours worked each day into the current week's file in `financials/ho
 
 Damien is paid **day of** — the day he logs the hours, he's been paid for them. Income is counted (logged to `financials/income/`) as soon as hours are logged, not when the Sunday invoice goes out. The invoice is paperwork, not a payment trigger.
 
+## Invoice Status — KMM specifically
+
+Standing rule (2026-09-21): KMM invoices are marked **paid** automatically the moment they're sent, with `date_paid` set to the invoice's due date. No need to chase confirmation from Damien on these — KMM always pays by the due date. This applies to KMM only; other clients still need actual confirmation before marking paid.
+
 ## Income Split — every payment, on receipt
 
 - **10%** → Simplii Savings
