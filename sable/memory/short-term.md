@@ -10,9 +10,9 @@ Damien established a permanent process (session context had been lost, so he re-
 - Log hours daily into `financials/hours/[week-start].json` (current week file created: `2026-09-21.json`)
 - Every Sunday: tally Mon-Sun hours, generate the formal invoice — default client is KMM unless a day says otherwise
 - He's paid day-of — income counts as soon as hours are logged, invoice is formality only, not the payment trigger
-- Split on every payment: 10% Simplii Savings, 30% tax reserve, 70% Simplii Chequing
-- **Flagged to Damien: 10+30+70 = 110%, not 100%. Waiting on correction before applying any split.**
-- Documented in full at `references/payment-workflow.md`; `invoice-collections` skill and `accounts.json` (added `tax_reserve` division, unfunded) updated to match
+- Split on every payment: 10% Simplii Savings, 30% tax reserve, 60% Simplii Chequing (confirmed 2026-09-21 — original 70% was a typo)
+- Documented in full at `references/payment-workflow.md`; `invoice-collections` skill and `accounts.json` (added `tax_reserve` division) updated to match
+- Still waiting on payment date/method for the $2,340 KMM backlog before the split can actually be posted to income/accounts
 
 ---
 
