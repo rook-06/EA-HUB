@@ -4,6 +4,28 @@
 
 ---
 
+## [2026-09-21] — Full Financial Reconciliation ("The September Ledger")
+
+Damien shared an artifact with his full reconciled financial state as of Sept 7-8, 2026. Synced into the system:
+
+- **Net worth: +$591.18** (up from -$975.10 on July 3) — positive for the first time on record
+- `financials/accounts.json` fully rewritten to match: added SCU Savings ($3,965.44, 72% of liquid funds), SCU/NCU chequing/savings (all $0), Wealthsimple Chequing ($0.20), Simplii TFSA held for "Eva" ($470.63), SCU Loan (-$4,885.83, new to this system), Capital One Credit (-$51.45), SCU Credit ($0)
+- Simplii Chequing now $735.12, Simplii Savings $303.50 (divisions: Capital One hold $51.45, GST reserve $41.25, free $210.80)
+- Grandmother loan now shows **balance 0, tagged "settled"** — previously tracked ~$2,000
+- Tax reserve: $910.50 owed (30% of KMM income), unfunded — no dedicated account exists
+- Logged `financials/income/2026-08.json` (INC-2026-003/004/005 for the KMM backlog, dated to job end dates as proxy since exact payment dates were never given; INC-2026-006 for a previously-unknown "KMM website retainer" $175) and `financials/income/2026-09.json` (empty, $520 partial-month figure noted but not itemized — source unclear)
+- Updated `context/current-priorities.md` with the new financial position and three flagged unknowns
+- Posted to `ai-bridges/sable-to-atlas.md` — Eva TFSA, grandmother loan resolution, and the new SCU loan all flagged as more Atlas's lane than mine
+
+### Open questions for Damien — not yet resolved
+1. **SCU Loan ($4,885.83)** — what is this, when was it taken out, what's the interest rate? Wasn't in this system at all before today.
+2. **Grandmother loan** — confirm it's actually settled/paid off, not just dropped from tracking.
+3. **Who is Eva?** — TFSA held in Damien's name, earmarked for her. No prior mention anywhere.
+4. **KMM website retainer ($175)** — one-time or recurring? No job/invoice record for it.
+5. **September's $520 partial income** — source not itemized in what he shared; needs daily hours per the new payment workflow to properly log.
+
+---
+
 ## [2026-09-21] — New Standing Payment Workflow
 
 Damien established a permanent process (session context had been lost, so he re-specified it directly):

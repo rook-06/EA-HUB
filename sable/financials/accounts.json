@@ -1,24 +1,62 @@
 {
-  "last_updated": "2026-07-03",
+  "last_updated": "2026-09-08",
+  "source_note": "Reconciled from Damien's own ledger artifact (\"The September Ledger\"), shared 2026-09-21, dated as of Sept 7-8, 2026. Balances recorded as reported, not independently verified.",
   "accounts": [
     {
       "name": "Simplii Chequing",
       "type": "chequing",
       "institution": "Simplii",
-      "balance": 314.93
+      "balance": 735.12
     },
     {
       "name": "Simplii Savings",
       "type": "savings",
       "institution": "Simplii",
-      "balance": 547.98,
+      "balance": 303.50,
       "divisions": {
-        "cc_payoff": 31.58,
+        "capital_one_hold": 51.45,
         "gst_reserve": 41.25,
-        "savings": 475.15,
-        "tax_reserve": 0
+        "savings": 210.80
       },
-      "notes": "Divisions: CC payoff (pay credit card by 10th), GST reserve (do not touch), savings (emergency/building fund), tax reserve (new 2026-09-21 — 30% of income per new payment workflow: 10% savings / 30% tax / 60% chequing, see references/payment-workflow.md). Not yet funded — pending payment date/method for the $2,340 KMM backlog to post the split."
+      "notes": "Divisions: Capital One card hold, GST reserve (do not touch), free savings."
+    },
+    {
+      "name": "Simplii TFSA (Eva)",
+      "type": "tfsa",
+      "institution": "Simplii",
+      "balance": 470.63,
+      "notes": "Held in Damien's name but earmarked for someone named Eva — not his to spend. Counts toward net worth on paper only. Who Eva is hasn't been confirmed in this system yet."
+    },
+    {
+      "name": "SCU Savings",
+      "type": "savings",
+      "institution": "SCU",
+      "balance": 3965.44,
+      "notes": "72% of all liquid funds. This is also the account the SCU Loan auto-pay draws from on the 30th each month — the loan payment erodes this balance directly."
+    },
+    {
+      "name": "SCU Chequing",
+      "type": "chequing",
+      "institution": "SCU",
+      "balance": 0
+    },
+    {
+      "name": "NCU Chequing",
+      "type": "chequing",
+      "institution": "NCU",
+      "balance": 0
+    },
+    {
+      "name": "NCU Savings",
+      "type": "savings",
+      "institution": "NCU",
+      "balance": 0
+    },
+    {
+      "name": "Wealthsimple Chequing",
+      "type": "chequing",
+      "institution": "Wealthsimple",
+      "balance": 0.20
     },
     {
       "name": "Wealthsimple Trading",
@@ -32,27 +70,50 @@
     {
       "name": "Cash",
       "type": "cash",
-      "balance": 140.00,
-      "notes": "JOB-2026-003 payment received June 23"
+      "balance": 0
     },
     {
-      "name": "Credit Card",
+      "name": "SCU Loan",
+      "type": "loan",
+      "institution": "SCU",
+      "balance": -4885.83,
+      "notes": "NEW TO THIS SYSTEM as of 2026-09-21 — not previously tracked here. Auto-pays $173.53 on the 30th of each month, drawn from SCU Savings. At that rate, clears in ~28 months before interest. Origin, date taken out, and interest rate not yet confirmed with Damien."
+    },
+    {
+      "name": "Capital One Credit",
       "type": "credit_card",
-      "balance": -31.58,
-      "notes": "Planet Fitness charge June 17. Pay by July 10."
+      "institution": "Capital One",
+      "balance": -51.45,
+      "notes": "Pay in full monthly. Held against by the $51.45 Simplii Savings division above."
+    },
+    {
+      "name": "SCU Credit",
+      "type": "credit_card",
+      "institution": "SCU",
+      "balance": 0
     },
     {
       "name": "Personal Loan (Grandmother)",
       "type": "loan",
       "institution": "Family — no fixed term",
-      "balance": -2000.00,
-      "notes": "Approximate — Damien reported '$2k' on July 3, 2026, tied to an unspecified incident. Informal, no interest, no due date — an open system he pays into whenever he can. Exact amount not confirmed."
+      "balance": 0,
+      "notes": "Reported as settled per Damien's Sept 7-8 reconciliation. Previously tracked at ~-$2,000 (unconfirmed exact figure). Confirm with Damien that this is fully paid off, not just no longer tracked."
     }
   ],
   "totals": {
-    "liquid": 1002.91,
+    "liquid": 5528.46,
     "invested": 53.57,
-    "liabilities": 2031.58,
-    "net_worth": -975.10
+    "liabilities": 4937.28,
+    "net_worth": 591.18,
+    "note": "Net worth positive for the first time on record — up $1,566.28 from -$975.10 on July 3, 2026."
+  },
+  "reserves": {
+    "tax_reserve_owed": 910.50,
+    "tax_reserve_funded": 0,
+    "notes": "30% of KMM income per payment workflow (references/payment-workflow.md). Currently unfunded — mixed into general balances, not set aside. No dedicated tax account exists yet."
+  },
+  "discretionary": {
+    "truly_free": 4001.06,
+    "notes": "Liquid, less Eva's TFSA, the tax reserve owed, the Capital One hold, and the GST reserve."
   }
 }
