@@ -1,19 +1,76 @@
 {
-  "last_invoice_number": "INV-2026-001",
-  "invoices": [
+  "last_invoice_number": "INV-2026-005",
+  "clients": [
     {
-      "id": "INV-2026-001",
-      "job_id": "JOB-2026-002",
       "client": "George Howell",
-      "date_issued": "2026-06-20",
-      "due_date": "2026-07-05",
-      "amount": 866.25,
-      "subtotal": 825.00,
-      "gst": 41.25,
-      "status": "paid",
-      "date_paid": "2026-06-22",
-      "file": "invoices/INV-2026-001.pdf",
-      "notes": "Final invoice. 33h @ $25/h + 5% GST. Paid June 22, 2026 — 13 days early."
+      "business": "Independent",
+      "invoices": [
+        {
+          "id": "INV-2026-001",
+          "job_id": "JOB-2026-002",
+          "date_issued": "2026-06-20",
+          "due_date": "2026-07-05",
+          "subtotal": 825.00,
+          "gst": 41.25,
+          "amount": 866.25,
+          "status": "paid",
+          "date_paid": "2026-06-22",
+          "file": "invoices/INV-2026-001.pdf",
+          "notes": "Final invoice. 33h @ $25/h + 5% GST. Paid June 22, 2026 — 13 days early."
+        }
+      ]
+    },
+    {
+      "client": "KMM Property Maintenance",
+      "business": "Independent",
+      "contact": {
+        "phone": "(431) 777-4871",
+        "email": "Dylanklassen2005@gmail.com"
+      },
+      "invoices": [
+        {
+          "id": "INV-2026-003",
+          "job_id": null,
+          "description": "General labour, Aug 10-16, 2026",
+          "date_issued": "2026-08-16",
+          "due_date": "2026-08-31",
+          "subtotal": 700.00,
+          "gst": 0,
+          "amount": 700.00,
+          "status": "paid",
+          "date_paid": null,
+          "file": "invoices/INV-2026-003.pdf",
+          "notes": "35h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21) — exact payment date and method not yet logged."
+        },
+        {
+          "id": "INV-2026-004",
+          "job_id": null,
+          "description": "General labour, Aug 17-23, 2026",
+          "date_issued": "2026-08-26",
+          "due_date": "2026-09-10",
+          "subtotal": 720.00,
+          "gst": 0,
+          "amount": 720.00,
+          "status": "paid",
+          "date_paid": null,
+          "file": "invoices/INV-2026-004.pdf",
+          "notes": "36h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21) — exact payment date and method not yet logged."
+        },
+        {
+          "id": "INV-2026-005",
+          "job_id": null,
+          "description": "General labour, Aug 24-30, 2026",
+          "date_issued": "2026-08-30",
+          "due_date": "2026-09-14",
+          "subtotal": 920.00,
+          "gst": 0,
+          "amount": 920.00,
+          "status": "paid",
+          "date_paid": null,
+          "file": "invoices/INV-2026-005.pdf",
+          "notes": "46h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21) — exact payment date and method not yet logged."
+        }
+      ]
     }
   ]
 }

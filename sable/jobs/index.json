@@ -65,6 +65,51 @@
       "total": 0,
       "notes": "Tentative — follow up with client weekend of July 25-26 to lock in",
       "file": "hourly/JOB-2026-005.json"
+    },
+    {
+      "id": "JOB-2026-006",
+      "type": "hourly",
+      "business": "Independent",
+      "status": "paid",
+      "client_name": "KMM Property Maintenance",
+      "description": "General labour",
+      "start_date": "2026-08-10",
+      "end_date": "2026-08-16",
+      "total_hours": 35,
+      "hourly_rate": 20,
+      "total": 700,
+      "notes": "Invoiced INV-2026-003, due 2026-08-31. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
+      "file": "hourly/JOB-2026-006.json"
+    },
+    {
+      "id": "JOB-2026-007",
+      "type": "hourly",
+      "business": "Independent",
+      "status": "paid",
+      "client_name": "KMM Property Maintenance",
+      "description": "General labour",
+      "start_date": "2026-08-17",
+      "end_date": "2026-08-23",
+      "total_hours": 36,
+      "hourly_rate": 20,
+      "total": 720,
+      "notes": "Invoiced INV-2026-004, due 2026-09-10. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
+      "file": "hourly/JOB-2026-007.json"
+    },
+    {
+      "id": "JOB-2026-008",
+      "type": "hourly",
+      "business": "Independent",
+      "status": "paid",
+      "client_name": "KMM Property Maintenance",
+      "description": "General labour",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-30",
+      "total_hours": 46,
+      "hourly_rate": 20,
+      "total": 920,
+      "notes": "Invoiced INV-2026-005, due 2026-09-14. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
+      "file": "hourly/JOB-2026-008.json"
     }
   ]
 }

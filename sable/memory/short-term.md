@@ -4,6 +4,21 @@
 
 ---
 
+## [2026-09-21] — KMM Piecework Invoices Logged (Previously Untracked)
+
+- Damien uploaded 4 invoice PDFs. INV-2026-001 (Howell, paid) matched the existing record exactly.
+- Three were **new to the system** — general labour piecework for KMM Property Maintenance in August 2026, separate from the earlier KMM website build project:
+  - INV-2026-003: $700 (35h @ $20/h), Aug 10-16, due Aug 31 — **overdue**
+  - INV-2026-004: $720 (36h @ $20/h), Aug 17-23, due Sep 10 — **overdue**
+  - INV-2026-005: $920 (46h @ $20/h), Aug 24-30, due Sep 14 — **overdue**
+  - **Total outstanding: $2,340** — none of these PDFs indicate payment status
+- Added: JOB-2026-006/007/008 (jobs/index.json, status "invoiced"), CON-2026-004 KMM contact (crm/contacts.json), all three invoices under KMM in financials/invoices.json (restructured invoices.json to group by client per Damien's request)
+- Invoice files saved to `financials/invoices/INV-2026-003.pdf`, `-004.pdf`, `-005.pdf`
+- **Not yet done:** logging income, updating account balances — payment status unconfirmed. Waiting on Damien to confirm which of these three are actually paid.
+- **Flag:** $2,340 sitting unconfirmed and past due while net worth is negative and he's chasing a 9-5 — worth a direct nudge to follow up with KMM if unpaid.
+
+---
+
 ## [2026-07-13] — KMM Property Maintenance Website Build
 
 ### New client website project — v1 built
