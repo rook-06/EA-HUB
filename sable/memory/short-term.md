@@ -4,6 +4,17 @@
 
 ---
 
+## [2026-09-23] — First Week Under New Payment Workflow
+
+Damien logged hours for the current week (KMM, per standing workflow):
+- Sept 21: 11h ($220), Sept 22: 6h ($120), Sept 23: 6h ($120) — 23h / $460 so far
+- Logged to `financials/hours/2026-09-21.json`, income entries INC-2026-007/008/009 in `financials/income/2026-09.json`, split 10/30/60 applied per entry
+- `accounts.json` updated: Simplii Chequing $1,011.12 (added `tax_reserve` division: $138 earmarked, $873.12 free), Simplii Savings $349.50, tax reserve owed now $1,048.50 ($138 funded, $910.50 backlog still unfunded), net worth **+$1,051.18** (up from +$591.18 on Sept 8)
+- Week isn't over — Sunday 2026-09-27 still needs the formal tally + invoice per the workflow
+- Also clarified same session: the KMM website rebuild (`sable/projects/marketing-portfolio/site/`) was never deployed — it's a portfolio spec build, not KMM's real live site. The only live KMM site is their original Jobber one. Session has no outbound web access, so couldn't fetch/audit it directly — flagged to Damien, waiting on his call on how to proceed.
+
+---
+
 ## [2026-09-21] — Full Financial Reconciliation ("The September Ledger")
 
 Damien shared an artifact with his full reconciled financial state as of Sept 7-8, 2026. Synced into the system:

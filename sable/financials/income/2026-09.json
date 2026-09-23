@@ -1,5 +1,46 @@
 {
   "month": "2026-09",
-  "entries": [],
-  "notes": "September's ledger snapshot (Sept 8) shows $520.00 recorded so far this month, source not itemized in the reconciliation Damien shared. Month is not closed. No individual entries logged yet — needs daily hours per the new payment-workflow.md process, or the underlying detail from whatever reconciliation produced the $520 figure."
+  "entries": [
+    {
+      "id": "INC-2026-007",
+      "date": "2026-09-21",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 11h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 220.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 22.00, "tax_reserve": 66.00, "chequing": 132.00 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27."
+    },
+    {
+      "id": "INC-2026-008",
+      "date": "2026-09-22",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 6h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 120.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 12.00, "tax_reserve": 36.00, "chequing": 72.00 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27."
+    },
+    {
+      "id": "INC-2026-009",
+      "date": "2026-09-23",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 6h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 120.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 12.00, "tax_reserve": 36.00, "chequing": 72.00 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27."
+    }
+  ],
+  "week_reference": "financials/hours/2026-09-21.json",
+  "notes": "September's Sept 8 ledger snapshot showed $520 partial-month income not itemized in this system (predates these entries, not double-counted here). These three entries (Sept 21-23) are new, logged live as hours come in."
 }
