@@ -6,22 +6,22 @@
       "name": "Simplii Chequing",
       "type": "chequing",
       "institution": "Simplii",
-      "balance": 1011.12,
+      "balance": 1311.12,
       "divisions": {
-        "tax_reserve": 138.00,
-        "free": 873.12
+        "tax_reserve": 192.00,
+        "free": 1119.12
       },
-      "notes": "tax_reserve division added 2026-09-23 — 30% of KMM income logged this week, earmarked not spendable, no dedicated tax account exists yet."
+      "notes": "tax_reserve division added 2026-09-23, updated 2026-09-25 — 30% of KMM income logged this week, earmarked not spendable, no dedicated tax account exists yet. (Correction 2026-09-25: the 2026-09-23 entry under-added this balance by $138 — the tax-reserved portion was carved out of the 60% chequing share instead of added on top of it. Fixed here; see short-term memory for the note.)"
     },
     {
       "name": "Simplii Savings",
       "type": "savings",
       "institution": "Simplii",
-      "balance": 349.50,
+      "balance": 367.50,
       "divisions": {
         "capital_one_hold": 51.45,
         "gst_reserve": 41.25,
-        "savings": 256.80
+        "savings": 274.80
       },
       "notes": "Divisions: Capital One card hold, GST reserve (do not touch), free savings."
     },
@@ -106,19 +106,19 @@
     }
   ],
   "totals": {
-    "liquid": 5988.46,
+    "liquid": 6168.46,
     "invested": 53.57,
     "liabilities": 4937.28,
-    "net_worth": 1051.18,
-    "note": "Updated 2026-09-23 with $460 in new KMM income (Sept 21-23, 23h logged). Net worth up from +$591.18 on Sept 8."
+    "net_worth": 1231.18,
+    "note": "Updated 2026-09-25 with $180 in new KMM income (Sept 25, 9h logged), plus a $138 correction to the Sept 23 entry. Net worth up from +$591.18 on Sept 8."
   },
   "reserves": {
-    "tax_reserve_owed": 1048.50,
-    "tax_reserve_funded": 138.00,
-    "notes": "30% of KMM income per payment workflow (references/payment-workflow.md). $138 now actually set aside (Simplii Chequing tax_reserve division) as of 2026-09-23 income. The $910.50 backlog from before is still unfunded — no dedicated tax account exists yet, still worth setting one up."
+    "tax_reserve_owed": 1102.50,
+    "tax_reserve_funded": 192.00,
+    "notes": "30% of KMM income per payment workflow (references/payment-workflow.md). $192 now actually set aside (Simplii Chequing tax_reserve division). The $910.50 backlog from before Sept 21 is still unfunded — no dedicated tax account exists yet, still worth setting one up."
   },
   "discretionary": {
-    "truly_free": 4323.06,
+    "truly_free": 4449.06,
     "notes": "Liquid cash (excludes Wealthsimple Trading), less Eva's TFSA, the tax reserve owed, the Capital One hold, and the GST reserve."
   }
 }

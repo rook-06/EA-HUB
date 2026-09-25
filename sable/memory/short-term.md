@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-09-25] — Sept 25 hours logged + caught a bookkeeping error
+
+- Damien logged 9h today (Sept 25). No hours logged for Sept 24. Week total now 32h / $640.
+- **Caught and fixed an error from the Sept 23 entry:** I'd carved the 30% tax reserve ($138) out of the 60% chequing share instead of adding it on top, which silently shorted Simplii Chequing's balance by $138. Fixed before it compounded — corrected balance is $1,311.12 as of this entry (was wrongly $1,011.12 → should have been $1,149.12 before today's addition).
+- Updated `accounts.json`: Simplii Chequing $1,311.12 (tax_reserve division $192, free $1,119.12), Simplii Savings $367.50, tax reserve owed $1,102.50 ($192 funded), net worth **+$1,231.18**
+- `financials/hours/2026-09-21.json` and `financials/income/2026-09.json` (INC-2026-010) updated to match
+
+---
+
 ## [2026-09-23] — First Week Under New Payment Workflow
 
 Damien logged hours for the current week (KMM, per standing workflow):
