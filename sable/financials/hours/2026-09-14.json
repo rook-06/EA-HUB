@@ -1,0 +1,13 @@
+{
+  "week_start": "2026-09-14",
+  "week_end": "2026-09-20",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [
+    { "date": "2026-09-18", "hours": 6, "client": "KMM Property Maintenance", "rate": 20, "amount": 120.00 }
+  ],
+  "hours_to_date": 6,
+  "amount_to_date": 120.00,
+  "status": "open",
+  "notes": "Backfilled 2026-09-28 — historical entry, predates the payment-workflow system (started 2026-09-21). This date is after the Sept 8 reconciliation snapshot, so no double-count risk — logged as new income."
+}

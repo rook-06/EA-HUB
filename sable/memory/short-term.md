@@ -4,6 +4,16 @@
 
 ---
 
+## [2026-09-28] — Two backfilled historical entries: Sept 8 and Sept 18
+
+Damien logged two dates that predate the payment-workflow system (started Sept 21) and predate most of this month's tracked weeks:
+- **Sept 8: 7h ($140)** — week of Sept 7-13, new file `financials/hours/2026-09-07.json`. **NOT posted to income/accounts** — Sept 8 is the exact date of Damien's "September Ledger" reconciliation, which already showed $520 in unitemized partial-September income as of that day. This $140 may already be inside that $520. Held pending Damien's confirmation to avoid double-counting real money.
+- **Sept 18: 6h ($120)** — week of Sept 14-20, new file `financials/hours/2026-09-14.json`. Postdates the Sept 8 snapshot, so no double-count risk — logged as INC-2026-012, split applied, accounts.json updated. Net worth now **+$1,491.18**.
+
+**Open question for Damien:** was the Sept 8 $140 already counted in the $520 partial-September figure from the ledger reconciliation, or is it separate? Answer determines whether it gets added on top.
+
+---
+
 ## [2026-09-28] — First week under new workflow closed out: INV-2026-006
 
 - Damien logged Sept 26: 7h ($140). No hours Sept 24 or Sept 27.

@@ -65,6 +65,19 @@
       "business": "Independent",
       "split": { "savings": 14.00, "tax_reserve": 42.00, "chequing": 84.00 },
       "notes": "Logged per new payment-workflow.md — paid day-of. Closes out the Sept 21-27 week (39h / $780 total), formalized as INV-2026-006."
+    },
+    {
+      "id": "INC-2026-012",
+      "date": "2026-09-18",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 6h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 120.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 12.00, "tax_reserve": 36.00, "chequing": 72.00 },
+      "notes": "Backfilled 2026-09-28 from a historical entry, week of Sept 14-20 (financials/hours/2026-09-14.json). Post-dates the Sept 8 reconciliation, so no double-count risk."
     }
   ],
   "week_reference": "financials/hours/2026-09-21.json",

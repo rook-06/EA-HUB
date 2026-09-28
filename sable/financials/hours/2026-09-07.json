@@ -1,0 +1,13 @@
+{
+  "week_start": "2026-09-07",
+  "week_end": "2026-09-13",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [
+    { "date": "2026-09-08", "hours": 7, "client": "KMM Property Maintenance", "rate": 20, "amount": 140.00 }
+  ],
+  "hours_to_date": 7,
+  "amount_to_date": 140.00,
+  "status": "open",
+  "notes": "Backfilled 2026-09-28 — historical entry, predates the payment-workflow system (started 2026-09-21). Sept 8, 2026 is also the date of Damien's 'September Ledger' reconciliation, which already showed $520 in unitemized partial-September income as of that day. This $140 may already be part of that $520 — flagged to Damien, NOT yet posted to income/accounts to avoid a possible double-count. Income logging held pending his answer."
+}
