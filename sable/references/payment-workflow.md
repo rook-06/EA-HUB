@@ -26,10 +26,10 @@ Standing rule (2026-09-21): KMM invoices are marked **paid** automatically the m
 ## Income Split — every payment, on receipt
 
 - **10%** → Simplii Savings
-- **30%** → Tax reserve
-- **60%** → Simplii Chequing
+- **16%** → Tax reserve
+- **74%** → Spending (Simplii Chequing)
 
-Confirmed with Damien 2026-09-21 (original figure of 70% chequing was a typo — corrected same day).
+Revised 2026-09-28 (was 10% / 30% / 60%, confirmed 2026-09-21). Applied retroactively to every KMM income entry logged in the system at the time of the change, not just going forward.
 
 ## Default Client
 

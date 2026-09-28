@@ -11,8 +11,8 @@
       "amount": 220.00,
       "payment_method": "day-of",
       "business": "Independent",
-      "split": { "savings": 22.00, "tax_reserve": 66.00, "chequing": 132.00 },
-      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27."
+      "split": { "savings": 22.00, "tax_reserve": 35.20, "chequing": 162.80 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
     },
     {
       "id": "INC-2026-008",
@@ -24,8 +24,8 @@
       "amount": 120.00,
       "payment_method": "day-of",
       "business": "Independent",
-      "split": { "savings": 12.00, "tax_reserve": 36.00, "chequing": 72.00 },
-      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27."
+      "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
     },
     {
       "id": "INC-2026-009",
@@ -37,8 +37,8 @@
       "amount": 120.00,
       "payment_method": "day-of",
       "business": "Independent",
-      "split": { "savings": 12.00, "tax_reserve": 36.00, "chequing": 72.00 },
-      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27."
+      "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
     },
     {
       "id": "INC-2026-010",
@@ -50,8 +50,8 @@
       "amount": 180.00,
       "payment_method": "day-of",
       "business": "Independent",
-      "split": { "savings": 18.00, "tax_reserve": 54.00, "chequing": 108.00 },
-      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Sept 24 had no hours logged."
+      "split": { "savings": 18.00, "tax_reserve": 28.80, "chequing": 133.20 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Sept 24 had no hours logged. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
     },
     {
       "id": "INC-2026-011",
@@ -63,8 +63,8 @@
       "amount": 140.00,
       "payment_method": "day-of",
       "business": "Independent",
-      "split": { "savings": 14.00, "tax_reserve": 42.00, "chequing": 84.00 },
-      "notes": "Logged per new payment-workflow.md — paid day-of. Closes out the Sept 21-27 week (39h / $780 total), formalized as INV-2026-006."
+      "split": { "savings": 14.00, "tax_reserve": 22.40, "chequing": 103.60 },
+      "notes": "Logged per new payment-workflow.md — paid day-of. Closes out the Sept 21-27 week (39h / $780 total), formalized as INV-2026-006. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
     },
     {
       "id": "INC-2026-012",
@@ -76,8 +76,8 @@
       "amount": 120.00,
       "payment_method": "day-of",
       "business": "Independent",
-      "split": { "savings": 12.00, "tax_reserve": 36.00, "chequing": 72.00 },
-      "notes": "Backfilled 2026-09-28 from a historical entry, week of Sept 14-20 (financials/hours/2026-09-14.json). Post-dates the Sept 8 reconciliation, so no double-count risk."
+      "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
+      "notes": "Backfilled 2026-09-28 from a historical entry, week of Sept 14-20 (financials/hours/2026-09-14.json). Post-dates the Sept 8 reconciliation, so no double-count risk. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
     }
   ],
   "week_reference": "financials/hours/2026-09-21.json",

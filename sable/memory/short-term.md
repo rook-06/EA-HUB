@@ -4,6 +4,18 @@
 
 ---
 
+## [2026-09-28] — Income split revised: 10/16/74 (was 10/30/60)
+
+Damien: resplit all KMM income as 10% savings / 16% tax / 74% spending. Applied retroactively:
+- Savings % unchanged, so Simplii Savings balance ($393.50) untouched
+- Re-split all 6 logged income entries (INC-2026-007 through 012, total $900) in `financials/income/2026-09.json` — new split fields recorded on each
+- Simplii Chequing total balance unchanged ($1,545.12) — only the internal tax_reserve/free division shifted: tax_reserve $270→$144, free $1,275.12→$1,401.12
+- Pre-Sept-21 backlog recomputed too: 16% of the $3,035 KMM income in the Sept 8 reconciliation = **$485.60** (was $910.50 at 30%)
+- `accounts.json` reserves updated: tax_reserve_owed $629.60 ($485.60 backlog + $144 funded), truly_free discretionary figure up to $5,235.53
+- Updated `references/payment-workflow.md` and `context/current-priorities.md` to match. Net worth itself unaffected (this only moves money between labeled buckets, doesn't change total assets).
+
+---
+
 ## [2026-09-28] — Two backfilled historical entries: Sept 8 and Sept 18
 
 Damien logged two dates that predate the payment-workflow system (started Sept 21) and predate most of this month's tracked weeks:

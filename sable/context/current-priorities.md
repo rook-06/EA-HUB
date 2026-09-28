@@ -4,7 +4,7 @@
 
 1. **Landing a reliable 9-5** — Damien exited Above the Norm July 3, 2026 (mutual agreement, cash flow couldn't sustain itself or fund tattooing). He needs steady income to cover bills and fund tattooing. Resume sent same day, stored at `atlas/projects/resume/`. Still open — KMM piecework has kept income flowing since, but it's one client.
 2. **KMM piecework is the main income source right now** — General labour, weekly cycle (log hours daily, invoice Sundays, paid day-of). See `references/payment-workflow.md`. Three-quarters of everything earned in 2026 has come from this one client — a concentration risk worth watching.
-3. **Funding the tax reserve** — 30% of KMM income should be set aside and isn't. $910.50 owed and unfunded as of the Sept 8, 2026 reconciliation. No dedicated account exists for it yet.
+3. **Funding the tax reserve** — 16% of KMM income should be set aside (revised 2026-09-28, was 30%). $485.60 of the pre-Sept-21 backlog is still unfunded; $144 from income since Sept 21 is actually set aside. No dedicated account exists for it yet.
 4. **Tattooing (Dametime Tattoos / Rook)** — The actual goal ATN was funding. JOB-2026-005 (Dustin, tentative July 30) is on the books.
 5. **Dametime Marketing** — Still waiting on case studies; not active priority.
 
