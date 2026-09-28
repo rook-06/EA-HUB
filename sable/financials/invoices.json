@@ -1,5 +1,5 @@
 {
-  "last_invoice_number": "INV-2026-005",
+  "last_invoice_number": "INV-2026-006",
   "clients": [
     {
       "client": "George Howell",
@@ -69,6 +69,20 @@
           "date_paid": "2026-09-14",
           "file": "invoices/INV-2026-005.pdf",
           "notes": "46h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21). Per standing rule (2026-09-21): KMM invoices are marked paid as of due date automatically once sent."
+        },
+        {
+          "id": "INV-2026-006",
+          "job_id": null,
+          "description": "General labour, Sept 21-27, 2026 (week)",
+          "date_issued": "2026-09-27",
+          "due_date": "2026-10-12",
+          "subtotal": 780.00,
+          "gst": 0,
+          "amount": 780.00,
+          "status": "paid",
+          "date_paid": "2026-10-12",
+          "file": null,
+          "notes": "First invoice under the new weekly workflow (references/payment-workflow.md). 39h @ $20/h: Sept 21 (11h), 22 (6h), 23 (6h), 25 (9h), 26 (7h). No hours Sept 24 or 27. Marked paid per standing KMM rule. PDF not generated yet — JSON record is authoritative; say the word if you want the PDF for your own files."
         }
       ]
     }

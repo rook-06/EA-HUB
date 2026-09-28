@@ -4,6 +4,16 @@
 
 ---
 
+## [2026-09-28] — First week under new workflow closed out: INV-2026-006
+
+- Damien logged Sept 26: 7h ($140). No hours Sept 24 or Sept 27.
+- Since Sunday (Sept 27) passed without a session, tallied and invoiced retroactively on the 28th: **39h / $780 total** for the week of Sept 21-27
+- Created **INV-2026-006** in `financials/invoices.json` — $780, no GST, issued 2026-09-27, due 2026-10-12, marked paid per the standing KMM auto-paid rule (date_paid = due date). PDF not generated — JSON record only, offered to build the PDF if Damien wants one.
+- Closed `financials/hours/2026-09-21.json` (status: closed, linked to INV-2026-006), opened new week file `financials/hours/2026-09-28.json` (week of Sept 28 - Oct 4)
+- Final `accounts.json` for this week: Simplii Chequing $1,437.12 (tax_reserve $234, free $1,203.12), Simplii Savings $381.50, tax reserve funded $234 of $1,144.50 owed, **net worth +$1,371.18**
+
+---
+
 ## [2026-09-25] — Sept 25 hours logged + caught a bookkeeping error
 
 - Damien logged 9h today (Sept 25). No hours logged for Sept 24. Week total now 32h / $640.

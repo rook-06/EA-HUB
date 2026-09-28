@@ -52,6 +52,19 @@
       "business": "Independent",
       "split": { "savings": 18.00, "tax_reserve": 54.00, "chequing": 108.00 },
       "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Sept 24 had no hours logged."
+    },
+    {
+      "id": "INC-2026-011",
+      "date": "2026-09-26",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 7h @ $20/h",
+      "invoice": "INV-2026-006",
+      "job_id": null,
+      "amount": 140.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 14.00, "tax_reserve": 42.00, "chequing": 84.00 },
+      "notes": "Logged per new payment-workflow.md — paid day-of. Closes out the Sept 21-27 week (39h / $780 total), formalized as INV-2026-006."
     }
   ],
   "week_reference": "financials/hours/2026-09-21.json",
