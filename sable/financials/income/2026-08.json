@@ -1,0 +1,54 @@
+{
+  "month": "2026-08",
+  "source_note": "Reconstructed from Damien's Sept 7-8, 2026 reconciliation ('The September Ledger'). Exact daily payment dates not logged — dated to each job's end date as the closest known proxy.",
+  "entries": [
+    {
+      "id": "INC-2026-003",
+      "date": "2026-08-16",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 35h @ $20/h, Aug 10-16",
+      "invoice": "INV-2026-003",
+      "job_id": "JOB-2026-006",
+      "amount": 700.00,
+      "payment_method": "unconfirmed",
+      "business": "Independent",
+      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy."
+    },
+    {
+      "id": "INC-2026-004",
+      "date": "2026-08-23",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 36h @ $20/h, Aug 17-23",
+      "invoice": "INV-2026-004",
+      "job_id": "JOB-2026-007",
+      "amount": 720.00,
+      "payment_method": "unconfirmed",
+      "business": "Independent",
+      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy."
+    },
+    {
+      "id": "INC-2026-005",
+      "date": "2026-08-30",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 46h @ $20/h, Aug 24-30",
+      "invoice": "INV-2026-005",
+      "job_id": "JOB-2026-008",
+      "amount": 920.00,
+      "payment_method": "unconfirmed",
+      "business": "Independent",
+      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy."
+    },
+    {
+      "id": "INC-2026-006",
+      "date": "2026-08-31",
+      "source": "KMM Property Maintenance",
+      "description": "Website build retainer",
+      "invoice": null,
+      "job_id": null,
+      "amount": 175.00,
+      "payment_method": "unconfirmed",
+      "business": "Independent",
+      "notes": "Appears in Sept 8 reconciliation as 'KMM — website retainer'. Not previously logged anywhere in this system. No job/invoice record exists for it — date is estimated as end of August. Needs confirmation: one-time or recurring?"
+    }
+  ]
+}

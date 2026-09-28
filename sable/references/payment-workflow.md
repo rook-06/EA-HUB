@@ -1,0 +1,45 @@
+# Payment Workflow — Standing Process
+
+*Established 2026-09-21. This supersedes ad hoc invoicing — follow this for all ongoing work unless Damien says otherwise.*
+
+---
+
+## Daily
+
+Damien logs hours worked each day into the current week's file in `financials/hours/`.
+
+## Weekly (every Sunday)
+
+1. Tally the week's hours, Monday through Sunday.
+2. Generate an invoice for the week via `tools/invoice-gen/generate.js` — client defaults to **KMM** unless the day's log says otherwise.
+3. Invoice is a formality — see Income Timing below.
+4. Archive the week's hours file, start a fresh one for the new week.
+
+## Income Timing
+
+Damien is paid **day of** — the day he logs the hours, he's been paid for them. Income is counted (logged to `financials/income/`) as soon as hours are logged, not when the Sunday invoice goes out. The invoice is paperwork, not a payment trigger.
+
+## Invoice Status — KMM specifically
+
+Standing rule (2026-09-21): KMM invoices are marked **paid** automatically the moment they're sent, with `date_paid` set to the invoice's due date. No need to chase confirmation from Damien on these — KMM always pays by the due date. This applies to KMM only; other clients still need actual confirmation before marking paid.
+
+## Income Split — every payment, on receipt
+
+- **10%** → Simplii Savings
+- **16%** → Tax reserve
+- **74%** → Spending (Simplii Chequing)
+
+Revised 2026-09-28 (was 10% / 30% / 60%, confirmed 2026-09-21). Applied retroactively to every KMM income entry logged in the system at the time of the change, not just going forward.
+
+## Default Client
+
+Unless a day's log says otherwise, current work logged here is under **KMM Property Maintenance**.
+
+---
+
+## File Locations
+
+- Daily hours: `financials/hours/[week-start-date].json`
+- Invoices: `financials/invoices.json` (grouped by client) + PDF in `financials/invoices/`
+- Income: `financials/income/[month].json`
+- Account balances: `financials/accounts.json`

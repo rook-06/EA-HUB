@@ -1,0 +1,85 @@
+{
+  "month": "2026-09",
+  "entries": [
+    {
+      "id": "INC-2026-007",
+      "date": "2026-09-21",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 11h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 220.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 22.00, "tax_reserve": 35.20, "chequing": 162.80 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
+    },
+    {
+      "id": "INC-2026-008",
+      "date": "2026-09-22",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 6h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 120.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
+    },
+    {
+      "id": "INC-2026-009",
+      "date": "2026-09-23",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 6h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 120.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
+    },
+    {
+      "id": "INC-2026-010",
+      "date": "2026-09-25",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 9h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 180.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 18.00, "tax_reserve": 28.80, "chequing": 133.20 },
+      "notes": "Logged per new payment-workflow.md — paid day-of, formal invoice to follow Sunday 2026-09-27. Sept 24 had no hours logged. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
+    },
+    {
+      "id": "INC-2026-011",
+      "date": "2026-09-26",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 7h @ $20/h",
+      "invoice": "INV-2026-006",
+      "job_id": null,
+      "amount": 140.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 14.00, "tax_reserve": 22.40, "chequing": 103.60 },
+      "notes": "Logged per new payment-workflow.md — paid day-of. Closes out the Sept 21-27 week (39h / $780 total), formalized as INV-2026-006. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
+    },
+    {
+      "id": "INC-2026-012",
+      "date": "2026-09-18",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 6h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 120.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
+      "notes": "Backfilled 2026-09-28 from a historical entry, week of Sept 14-20 (financials/hours/2026-09-14.json). Post-dates the Sept 8 reconciliation, so no double-count risk. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
+    }
+  ],
+  "week_reference": "financials/hours/2026-09-21.json",
+  "notes": "September's Sept 8 ledger snapshot showed $520 partial-month income not itemized in this system (predates these entries, not double-counted here). These three entries (Sept 21-23) are new, logged live as hours come in."
+}

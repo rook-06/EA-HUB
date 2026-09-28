@@ -4,6 +4,112 @@
 
 ---
 
+## [2026-09-28] — Income split revised: 10/16/74 (was 10/30/60)
+
+Damien: resplit all KMM income as 10% savings / 16% tax / 74% spending. Applied retroactively:
+- Savings % unchanged, so Simplii Savings balance ($393.50) untouched
+- Re-split all 6 logged income entries (INC-2026-007 through 012, total $900) in `financials/income/2026-09.json` — new split fields recorded on each
+- Simplii Chequing total balance unchanged ($1,545.12) — only the internal tax_reserve/free division shifted: tax_reserve $270→$144, free $1,275.12→$1,401.12
+- Pre-Sept-21 backlog recomputed too: 16% of the $3,035 KMM income in the Sept 8 reconciliation = **$485.60** (was $910.50 at 30%)
+- `accounts.json` reserves updated: tax_reserve_owed $629.60 ($485.60 backlog + $144 funded), truly_free discretionary figure up to $5,235.53
+- Updated `references/payment-workflow.md` and `context/current-priorities.md` to match. Net worth itself unaffected (this only moves money between labeled buckets, doesn't change total assets).
+
+---
+
+## [2026-09-28] — Two backfilled historical entries: Sept 8 and Sept 18
+
+Damien logged two dates that predate the payment-workflow system (started Sept 21) and predate most of this month's tracked weeks:
+- **Sept 8: 7h ($140)** — week of Sept 7-13, new file `financials/hours/2026-09-07.json`. **NOT posted to income/accounts** — Sept 8 is the exact date of Damien's "September Ledger" reconciliation, which already showed $520 in unitemized partial-September income as of that day. This $140 may already be inside that $520. Held pending Damien's confirmation to avoid double-counting real money.
+- **Sept 18: 6h ($120)** — week of Sept 14-20, new file `financials/hours/2026-09-14.json`. Postdates the Sept 8 snapshot, so no double-count risk — logged as INC-2026-012, split applied, accounts.json updated. Net worth now **+$1,491.18**.
+
+**Open question for Damien:** was the Sept 8 $140 already counted in the $520 partial-September figure from the ledger reconciliation, or is it separate? Answer determines whether it gets added on top.
+
+---
+
+## [2026-09-28] — First week under new workflow closed out: INV-2026-006
+
+- Damien logged Sept 26: 7h ($140). No hours Sept 24 or Sept 27.
+- Since Sunday (Sept 27) passed without a session, tallied and invoiced retroactively on the 28th: **39h / $780 total** for the week of Sept 21-27
+- Created **INV-2026-006** in `financials/invoices.json` — $780, no GST, issued 2026-09-27, due 2026-10-12, marked paid per the standing KMM auto-paid rule (date_paid = due date). PDF not generated — JSON record only, offered to build the PDF if Damien wants one.
+- Closed `financials/hours/2026-09-21.json` (status: closed, linked to INV-2026-006), opened new week file `financials/hours/2026-09-28.json` (week of Sept 28 - Oct 4)
+- Final `accounts.json` for this week: Simplii Chequing $1,437.12 (tax_reserve $234, free $1,203.12), Simplii Savings $381.50, tax reserve funded $234 of $1,144.50 owed, **net worth +$1,371.18**
+
+---
+
+## [2026-09-25] — Sept 25 hours logged + caught a bookkeeping error
+
+- Damien logged 9h today (Sept 25). No hours logged for Sept 24. Week total now 32h / $640.
+- **Caught and fixed an error from the Sept 23 entry:** I'd carved the 30% tax reserve ($138) out of the 60% chequing share instead of adding it on top, which silently shorted Simplii Chequing's balance by $138. Fixed before it compounded — corrected balance is $1,311.12 as of this entry (was wrongly $1,011.12 → should have been $1,149.12 before today's addition).
+- Updated `accounts.json`: Simplii Chequing $1,311.12 (tax_reserve division $192, free $1,119.12), Simplii Savings $367.50, tax reserve owed $1,102.50 ($192 funded), net worth **+$1,231.18**
+- `financials/hours/2026-09-21.json` and `financials/income/2026-09.json` (INC-2026-010) updated to match
+
+---
+
+## [2026-09-23] — First Week Under New Payment Workflow
+
+Damien logged hours for the current week (KMM, per standing workflow):
+- Sept 21: 11h ($220), Sept 22: 6h ($120), Sept 23: 6h ($120) — 23h / $460 so far
+- Logged to `financials/hours/2026-09-21.json`, income entries INC-2026-007/008/009 in `financials/income/2026-09.json`, split 10/30/60 applied per entry
+- `accounts.json` updated: Simplii Chequing $1,011.12 (added `tax_reserve` division: $138 earmarked, $873.12 free), Simplii Savings $349.50, tax reserve owed now $1,048.50 ($138 funded, $910.50 backlog still unfunded), net worth **+$1,051.18** (up from +$591.18 on Sept 8)
+- Week isn't over — Sunday 2026-09-27 still needs the formal tally + invoice per the workflow
+- Also clarified same session: the KMM website rebuild (`sable/projects/marketing-portfolio/site/`) was never deployed — it's a portfolio spec build, not KMM's real live site. The only live KMM site is their original Jobber one. Session has no outbound web access, so couldn't fetch/audit it directly — flagged to Damien, waiting on his call on how to proceed.
+
+---
+
+## [2026-09-21] — Full Financial Reconciliation ("The September Ledger")
+
+Damien shared an artifact with his full reconciled financial state as of Sept 7-8, 2026. Synced into the system:
+
+- **Net worth: +$591.18** (up from -$975.10 on July 3) — positive for the first time on record
+- `financials/accounts.json` fully rewritten to match: added SCU Savings ($3,965.44, 72% of liquid funds), SCU/NCU chequing/savings (all $0), Wealthsimple Chequing ($0.20), Simplii TFSA held for "Eva" ($470.63), SCU Loan (-$4,885.83, new to this system), Capital One Credit (-$51.45), SCU Credit ($0)
+- Simplii Chequing now $735.12, Simplii Savings $303.50 (divisions: Capital One hold $51.45, GST reserve $41.25, free $210.80)
+- Grandmother loan now shows **balance 0, tagged "settled"** — previously tracked ~$2,000
+- Tax reserve: $910.50 owed (30% of KMM income), unfunded — no dedicated account exists
+- Logged `financials/income/2026-08.json` (INC-2026-003/004/005 for the KMM backlog, dated to job end dates as proxy since exact payment dates were never given; INC-2026-006 for a previously-unknown "KMM website retainer" $175) and `financials/income/2026-09.json` (empty, $520 partial-month figure noted but not itemized — source unclear)
+- Updated `context/current-priorities.md` with the new financial position and three flagged unknowns
+- Posted to `ai-bridges/sable-to-atlas.md` — Eva TFSA, grandmother loan resolution, and the new SCU loan all flagged as more Atlas's lane than mine
+
+### New standing rule (2026-09-21): KMM invoices auto-marked paid
+- Damien: mark KMM invoices paid by due date as soon as they're sent — no need to chase confirmation, KMM always pays on time
+- Applied retroactively: INV-2026-003/004/005 date_paid set to each invoice's due date (Aug 31 / Sep 10 / Sep 14)
+- Documented in `references/payment-workflow.md` and `invoice-collections` SKILL.md — KMM only, other clients still need real confirmation
+
+### Resolved same day (2026-09-21)
+1. **Eva** is Damien's daughter — the TFSA is money he's holding for her until she's old enough. Not a mystery, not his to spend.
+2. **Grandmother loan** — confirmed fully settled/paid off.
+3. **SCU Loan ($4,885.83)** — Damien said it doesn't need more detail than what's already on file. Not pursuing further.
+4. Invoice records reverted — Damien said leave `invoices.json` as it was; I'd added proxy payment dates that weren't real data. Backed those out, `date_paid` back to null.
+5. **Set aside for now, per Damien:** the KMM website retainer ($175, one-time vs. recurring) and September's unitemized $520 partial income. Not chasing either right now.
+
+---
+
+## [2026-09-21] — New Standing Payment Workflow
+
+Damien established a permanent process (session context had been lost, so he re-specified it directly):
+- Log hours daily into `financials/hours/[week-start].json` (current week file created: `2026-09-21.json`)
+- Every Sunday: tally Mon-Sun hours, generate the formal invoice — default client is KMM unless a day says otherwise
+- He's paid day-of — income counts as soon as hours are logged, invoice is formality only, not the payment trigger
+- Split on every payment: 10% Simplii Savings, 30% tax reserve, 60% Simplii Chequing (confirmed 2026-09-21 — original 70% was a typo)
+- Documented in full at `references/payment-workflow.md`; `invoice-collections` skill and `accounts.json` (added `tax_reserve` division) updated to match
+- Still waiting on payment date/method for the $2,340 KMM backlog before the split can actually be posted to income/accounts
+
+---
+
+## [2026-09-21] — KMM Piecework Invoices Logged (Previously Untracked)
+
+- Damien uploaded 4 invoice PDFs. INV-2026-001 (Howell, paid) matched the existing record exactly.
+- Three were **new to the system** — general labour piecework for KMM Property Maintenance in August 2026, separate from the earlier KMM website build project:
+  - INV-2026-003: $700 (35h @ $20/h), Aug 10-16, due Aug 31 — **overdue**
+  - INV-2026-004: $720 (36h @ $20/h), Aug 17-23, due Sep 10 — **overdue**
+  - INV-2026-005: $920 (46h @ $20/h), Aug 24-30, due Sep 14 — **overdue**
+  - **Total outstanding: $2,340** — none of these PDFs indicate payment status
+- Added: JOB-2026-006/007/008 (jobs/index.json, status "invoiced"), CON-2026-004 KMM contact (crm/contacts.json), all three invoices under KMM in financials/invoices.json (restructured invoices.json to group by client per Damien's request)
+- Invoice files saved to `financials/invoices/INV-2026-003.pdf`, `-004.pdf`, `-005.pdf`
+- **Not yet done:** logging income, updating account balances — payment status unconfirmed. Waiting on Damien to confirm which of these three are actually paid.
+- **Flag:** $2,340 sitting unconfirmed and past due while net worth is negative and he's chasing a 9-5 — worth a direct nudge to follow up with KMM if unpaid.
+
+---
+
 ## [2026-07-13] — KMM Property Maintenance Website Build
 
 ### New client website project — v1 built
