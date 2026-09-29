@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-09-29] — Sept 28 hours logged (first of new week)
+
+- 7h ($140), first entry in `financials/hours/2026-09-28.json` (week of Sept 28 - Oct 4)
+- INC-2026-013 logged, split at current 10/16/74 ratio: $14 savings / $22.40 tax / $103.60 spending
+- `accounts.json`: Simplii Chequing $1,671.12 (tax_reserve $166.40, free $1,504.72), Simplii Savings $407.50, net worth **+$1,631.18**
+- Still open: the Sept 8 $140 double-count question (unresolved)
+
+---
+
 ## [2026-09-28] — Income split revised: 10/16/74 (was 10/30/60)
 
 Damien: resplit all KMM income as 10% savings / 16% tax / 74% spending. Applied retroactively:

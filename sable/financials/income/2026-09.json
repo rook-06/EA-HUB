@@ -78,6 +78,19 @@
       "business": "Independent",
       "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
       "notes": "Backfilled 2026-09-28 from a historical entry, week of Sept 14-20 (financials/hours/2026-09-14.json). Post-dates the Sept 8 reconciliation, so no double-count risk. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
+    },
+    {
+      "id": "INC-2026-013",
+      "date": "2026-09-28",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 7h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 140.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 14.00, "tax_reserve": 22.40, "chequing": 103.60 },
+      "notes": "First entry of the week of Sept 28 - Oct 4 (financials/hours/2026-09-28.json). Split at the current 10/16/74 ratio."
     }
   ],
   "week_reference": "financials/hours/2026-09-21.json",
