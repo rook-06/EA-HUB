@@ -91,6 +91,19 @@
       "business": "Independent",
       "split": { "savings": 14.00, "tax_reserve": 22.40, "chequing": 103.60 },
       "notes": "First entry of the week of Sept 28 - Oct 4 (financials/hours/2026-09-28.json). Split at the current 10/16/74 ratio."
+    },
+    {
+      "id": "INC-2026-014",
+      "date": "2026-09-30",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 8h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 160.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 16.00, "tax_reserve": 25.60, "chequing": 118.40 },
+      "notes": "Week of Sept 28 - Oct 4. No hours logged Sept 29. Split at the current 10/16/74 ratio."
     }
   ],
   "week_reference": "financials/hours/2026-09-21.json",

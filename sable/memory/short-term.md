@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-09-30] — Sept 30 hours logged
+
+- 8h ($160), week of Sept 28 - Oct 4 now at 15h / $300 (no hours Sept 29)
+- INC-2026-014 logged, split 10/16/74: $16 savings / $25.60 tax / $118.40 spending
+- `accounts.json`: Simplii Chequing $1,815.12 (tax_reserve $192, free $1,623.12), Simplii Savings $423.50, net worth **+$1,791.18**
+- Still open: Sept 8 $140 double-count question (unresolved)
+
+---
+
 ## [2026-09-29] — Sept 28 hours logged (first of new week)
 
 - 7h ($140), first entry in `financials/hours/2026-09-28.json` (week of Sept 28 - Oct 4)
