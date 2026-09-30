@@ -104,8 +104,21 @@
       "business": "Independent",
       "split": { "savings": 16.00, "tax_reserve": 25.60, "chequing": 118.40 },
       "notes": "Week of Sept 28 - Oct 4. No hours logged Sept 29. Split at the current 10/16/74 ratio."
+    },
+    {
+      "id": "INC-2026-015",
+      "date": "2026-09-08",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 7h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 140.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 14.00, "tax_reserve": 22.40, "chequing": 103.60 },
+      "notes": "Backfilled from financials/hours/2026-09-07.json (week of Sept 7-13). PROVISIONAL: Damien instructed 2026-09-30 to disregard the possible overlap with the Sept 8 'September Ledger' reconciliation's unitemized $520 figure and count this now. May need reversing if that overlap is later confirmed."
     }
   ],
   "week_reference": "financials/hours/2026-09-21.json",
-  "notes": "September's Sept 8 ledger snapshot showed $520 partial-month income not itemized in this system (predates these entries, not double-counted here). These three entries (Sept 21-23) are new, logged live as hours come in."
+  "notes": "September's Sept 8 ledger snapshot showed $520 partial-month income not itemized in this system. INC-2026-015 (Sept 8, $140) may overlap with that figure -- included per Damien's 2026-09-30 instruction to disregard the reconciliation for now, flagged as provisional."
 }

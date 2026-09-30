@@ -9,5 +9,5 @@
   "hours_to_date": 7,
   "amount_to_date": 140.00,
   "status": "open",
-  "notes": "Backfilled 2026-09-28 — historical entry, predates the payment-workflow system (started 2026-09-21). Sept 8, 2026 is also the date of Damien's 'September Ledger' reconciliation, which already showed $520 in unitemized partial-September income as of that day. This $140 may already be part of that $520 — flagged to Damien, NOT yet posted to income/accounts to avoid a possible double-count. Income logging held pending his answer."
+  "notes": "Backfilled 2026-09-28 — historical entry, predates the payment-workflow system (started 2026-09-21). Sept 8, 2026 is also the date of Damien's 'September Ledger' reconciliation, which already showed $520 in unitemized partial-September income as of that day — this $140 may already be part of that $520. Damien instructed 2026-09-30 to disregard that reconciliation question for now and count it. Posted as INC-2026-015. Flagged as provisional — may need reversing if the double-count is later confirmed."
 }

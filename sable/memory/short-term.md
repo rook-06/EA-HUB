@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-09-30] — Sept 8 $140 posted, PROVISIONAL
+
+Damien: "disregard the ledger for now, just calculate with that included." Posted the long-held Sept 8 entry:
+- INC-2026-015 added to `financials/income/2026-09.json`, split 10/16/74: $14 / $22.40 / $103.60
+- `accounts.json` updated: Simplii Chequing $1,941.12 (tax_reserve $214.40, free $1,726.72), Simplii Savings $437.50, net worth **+$1,931.18**
+- **Flagged as provisional everywhere it's recorded** (hours file, income entry, accounts.json note) — this was never actually resolved, just deferred. If it turns out this $140 really was already inside the Sept 8 reconciliation's $520 partial-income figure, all of this needs to be backed out.
+
+---
+
 ## [2026-09-30] — Sept 30 hours logged
 
 - 8h ($160), week of Sept 28 - Oct 4 now at 15h / $300 (no hours Sept 29)
