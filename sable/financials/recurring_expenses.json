@@ -1,6 +1,18 @@
 {
-  "last_updated": "2026-06-22",
+  "last_updated": "2026-09-07",
   "note": "Fixed monthly subscriptions and bills. Use this to project future expenses and flag upcoming pulls.",
+  "loan_payments": [
+    {
+      "name": "SCU Loan payment",
+      "merchant": "SCU",
+      "amount": 173.53,
+      "payment_method": "scu_savings_autopull",
+      "pull_day": 30,
+      "source_account": "SCU Savings",
+      "business_expense": false,
+      "notes": "Auto-pulled from SCU Savings on the 30th to pay down SCU Loan. Reduces the loan balance — not a consumption expense."
+    }
+  ],
   "subscriptions": [
     {
       "name": "Claude Pro",

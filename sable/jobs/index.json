@@ -65,6 +65,18 @@
       "total": 0,
       "notes": "Tentative — follow up with client weekend of July 25-26 to lock in",
       "file": "hourly/JOB-2026-005.json"
+    },
+    {
+      "id": "JOB-2026-006",
+      "type": "hourly",
+      "business": "Independent",
+      "status": "in_progress",
+      "client_name": "KMM Property Maintenance",
+      "description": "General labour",
+      "hourly_rate": 20,
+      "total_hours": 143,
+      "notes": "Recurring weekly general labour. Weeks of Aug 10-16 (INV-2026-003), Aug 17-23 (INV-2026-004), and Aug 24-30 (INV-2026-005) invoiced and paid. Week of Aug 31-Sep 6 (INV-2026-006) invoiced, unpaid.",
+      "file": "hourly/JOB-2026-006.json"
     }
   ]
 }

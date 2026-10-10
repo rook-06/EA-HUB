@@ -1,0 +1,73 @@
+{
+  "id": "JOB-2026-006",
+  "type": "hourly",
+  "business": "Independent",
+  "status": "in_progress",
+  "client": {
+    "name": "KMM Property Maintenance",
+    "phone": "(431) 777-4871",
+    "email": "Dylanklassen2005@gmail.com",
+    "address": ""
+  },
+  "job": {
+    "description": "General labour",
+    "location": "",
+    "hourly_rate": 20,
+    "weeks": [
+      {
+        "period": "2026-08-10 to 2026-08-16",
+        "total_hours": 35,
+        "invoice": "INV-2026-003",
+        "amount": 700.00,
+        "status": "paid"
+      },
+      {
+        "period": "2026-08-17 to 2026-08-23",
+        "total_hours": 36,
+        "invoice": "INV-2026-004",
+        "amount": 720.00,
+        "status": "paid"
+      },
+      {
+        "period": "2026-08-24 to 2026-08-30",
+        "daily_hours": [
+          { "date": "2026-08-24", "hours": 9 },
+          { "date": "2026-08-25", "hours": 8 },
+          { "date": "2026-08-26", "hours": 8 },
+          { "date": "2026-08-28", "hours": 7 },
+          { "date": "2026-08-29", "hours": 7 },
+          { "date": "2026-08-30", "hours": 7 }
+        ],
+        "total_hours": 46,
+        "invoice": "INV-2026-005",
+        "amount": 920.00,
+        "status": "paid"
+      },
+      {
+        "period": "2026-08-31 to 2026-09-06",
+        "daily_hours": [
+          { "date": "2026-08-31", "hours": 8 },
+          { "date": "2026-09-01", "hours": 7 },
+          { "date": "2026-09-04", "hours": 4 },
+          { "date": "2026-09-06", "hours": 7 }
+        ],
+        "total_hours": 26,
+        "invoice": "INV-2026-006",
+        "amount": 520.00,
+        "status": "paid"
+      }
+    ],
+    "total_hours": 143,
+    "total_invoiced": 2860.00,
+    "total_paid": 2860.00,
+    "total_unbilled": 0
+  },
+  "invoicing_rules": {
+    "cadence": "Weekly, Monday to Sunday. One invoice per week.",
+    "no_per_job_breakdown": "Hours are not tracked per individual job/task — just a single running total per week for the company.",
+    "skip_empty_weeks": "If no hours are logged for a given week, no invoice is generated for it.",
+    "trigger": "Generate the week's invoice once all hours through that week's Sunday are logged.",
+    "auto_book_revenue": "On invoice creation, immediately record the invoice amount as income (KMM pays out daily in cash — invoices are a formality). Standing rule set 2026-09-07."
+  },
+  "notes": "Independent contracted labour — not under any of Damien's three businesses. Recurring weekly general labour arrangement with KMM. Standing invoicing rules set Aug 28, 2026 — see invoicing_rules. Week of Aug 24-30 closed out at 46h (no hours logged for Aug 27) and invoiced as INV-2026-005. Week of Aug 31-Sep 6 closed at 26h (Mon 8h, Tue 7h, Fri 4h, Sun 7h) and invoiced as INV-2026-006."
+}

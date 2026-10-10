@@ -1,5 +1,5 @@
 {
-  "last_invoice_number": "INV-2026-001",
+  "last_invoice_number": "INV-2026-006",
   "invoices": [
     {
       "id": "INV-2026-001",
@@ -14,6 +14,81 @@
       "date_paid": "2026-06-22",
       "file": "invoices/INV-2026-001.pdf",
       "notes": "Final invoice. 33h @ $25/h + 5% GST. Paid June 22, 2026 — 13 days early."
+    },
+    {
+      "id": "INV-2026-002",
+      "job_id": null,
+      "client": "KMM Property Maintenance",
+      "business": "Dametime Marketing",
+      "date_issued": "2026-08-15",
+      "due_date": "2026-08-30",
+      "amount": 175.00,
+      "subtotal": 175.00,
+      "gst": 0,
+      "status": "paid",
+      "date_paid": "2026-08-30",
+      "file": "invoices/INV-2026-002.pdf",
+      "notes": "Website maintenance, July 1–31, 2026. Flat fee, no GST applied. Role billed as Website Developer. Marked paid Sep 6, 2026 per Damien — payment date estimated as due date, confirm actual. INC-2026-006."
+    },
+    {
+      "id": "INV-2026-003",
+      "job_id": "JOB-2026-006",
+      "client": "KMM Property Maintenance",
+      "business": "Independent",
+      "date_issued": "2026-08-16",
+      "due_date": "2026-08-31",
+      "amount": 700.00,
+      "subtotal": 700.00,
+      "gst": 0,
+      "status": "paid",
+      "date_paid": "2026-08-16",
+      "file": "invoices/INV-2026-003.pdf",
+      "notes": "General labour. 35h @ $20/h, no GST. Role billed as General Labour. Job period Aug 10-16, 2026. Payment: cash or e-transfer. Paid out daily by KMM — marked paid on invoice basis Sep 6, 2026. INC-2026-003."
+    },
+    {
+      "id": "INV-2026-004",
+      "job_id": "JOB-2026-006",
+      "client": "KMM Property Maintenance",
+      "business": "Independent",
+      "date_issued": "2026-08-26",
+      "due_date": "2026-09-10",
+      "amount": 720.00,
+      "subtotal": 720.00,
+      "gst": 0,
+      "status": "paid",
+      "date_paid": "2026-08-23",
+      "file": "invoices/INV-2026-004.pdf",
+      "notes": "General labour. 36h @ $20/h, no GST. Role billed as General Labour. Job period Aug 17-23, 2026. Payment: cash or e-transfer. Paid out daily by KMM — marked paid on invoice basis Sep 6, 2026. INC-2026-004."
+    },
+    {
+      "id": "INV-2026-005",
+      "job_id": "JOB-2026-006",
+      "client": "KMM Property Maintenance",
+      "business": "Independent",
+      "date_issued": "2026-08-30",
+      "due_date": "2026-09-14",
+      "amount": 920.00,
+      "subtotal": 920.00,
+      "gst": 0,
+      "status": "paid",
+      "date_paid": "2026-08-30",
+      "file": "invoices/INV-2026-005.pdf",
+      "notes": "General labour. 46h @ $20/h, no GST. Role billed as General Labour. Job period Aug 24-30, 2026 (no hours logged Aug 27). Payment: cash or e-transfer. Auto-generated per standing weekly invoicing rule set Aug 28, 2026. Paid out daily by KMM — marked paid on invoice basis Sep 6, 2026. INC-2026-005."
+    },
+    {
+      "id": "INV-2026-006",
+      "job_id": "JOB-2026-006",
+      "client": "KMM Property Maintenance",
+      "business": "Independent",
+      "date_issued": "2026-09-06",
+      "due_date": "2026-09-21",
+      "amount": 520.00,
+      "subtotal": 520.00,
+      "gst": 0,
+      "status": "paid",
+      "date_paid": "2026-09-06",
+      "file": "invoices/INV-2026-006.pdf",
+      "notes": "General labour. 26h @ $20/h, no GST. Role billed as General Labour. Job period Aug 31-Sep 6, 2026. Payment: cash or e-transfer. Auto-generated per standing weekly invoicing rule. Booked as revenue on issue per standing rule set 2026-09-07. INC-2026-007."
     }
   ]
 }

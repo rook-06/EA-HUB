@@ -1,0 +1,18 @@
+{
+  "month": "2026-09",
+  "entries": [
+    {
+      "id": "INC-2026-007",
+      "date": "2026-09-06",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — week of Aug 31-Sep 6, 2026 (26h @ $20/h)",
+      "invoice": "INV-2026-006",
+      "job_id": "JOB-2026-006",
+      "amount": 520.00,
+      "payment_method": "cash",
+      "business": "Independent",
+      "notes": "Paid out daily by KMM in cash. Booked as revenue on invoice creation per standing rule (2026-09-07): KMM invoices are recognized as income when issued. No GST."
+    }
+  ],
+  "total": 520.00
+}

@@ -1,0 +1,54 @@
+{
+  "month": "2026-08",
+  "entries": [
+    {
+      "id": "INC-2026-003",
+      "date": "2026-08-16",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — week of Aug 10-16, 2026 (35h @ $20/h)",
+      "invoice": "INV-2026-003",
+      "job_id": "JOB-2026-006",
+      "amount": 700.00,
+      "payment_method": "cash",
+      "business": "Independent",
+      "notes": "Paid out daily by KMM in cash; invoice issued for formality. Recorded on invoice basis. No GST."
+    },
+    {
+      "id": "INC-2026-004",
+      "date": "2026-08-23",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — week of Aug 17-23, 2026 (36h @ $20/h)",
+      "invoice": "INV-2026-004",
+      "job_id": "JOB-2026-006",
+      "amount": 720.00,
+      "payment_method": "cash",
+      "business": "Independent",
+      "notes": "Paid out daily by KMM in cash; invoice issued for formality. Recorded on invoice basis. No GST."
+    },
+    {
+      "id": "INC-2026-005",
+      "date": "2026-08-30",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — week of Aug 24-30, 2026 (46h @ $20/h)",
+      "invoice": "INV-2026-005",
+      "job_id": "JOB-2026-006",
+      "amount": 920.00,
+      "payment_method": "cash",
+      "business": "Independent",
+      "notes": "Paid out daily by KMM in cash; invoice issued for formality. Recorded on invoice basis. No GST."
+    },
+    {
+      "id": "INC-2026-006",
+      "date": "2026-08-30",
+      "source": "KMM Property Maintenance",
+      "description": "Website maintenance — July 1-31, 2026 (flat fee)",
+      "invoice": "INV-2026-002",
+      "job_id": null,
+      "amount": 175.00,
+      "payment_method": "unconfirmed",
+      "business": "Dametime Marketing",
+      "notes": "Flat fee, no GST. Marked paid Sep 6, 2026 per Damien. Payment date estimated as invoice due date — confirm actual date and method."
+    }
+  ],
+  "total": 2515.00
+}

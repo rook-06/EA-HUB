@@ -1,23 +1,58 @@
 {
-  "last_updated": "2026-07-03",
+  "last_updated": "2026-09-07",
   "accounts": [
     {
       "name": "Simplii Chequing",
       "type": "chequing",
       "institution": "Simplii",
-      "balance": 314.93
+      "balance": 735.12
     },
     {
       "name": "Simplii Savings",
       "type": "savings",
       "institution": "Simplii",
-      "balance": 547.98,
+      "balance": 303.50,
       "divisions": {
-        "cc_payoff": 31.58,
+        "cc_payoff": 51.45,
         "gst_reserve": 41.25,
-        "savings": 475.15
+        "savings": 210.80
       },
-      "notes": "Divisions: CC payoff (pay credit card by 10th), GST reserve (do not touch), savings (emergency/building fund)"
+      "notes": "Divisions: CC payoff (covers current credit card balance), GST reserve (do not touch), savings. Reduced to $303.50 on 2026-09-07 — $470.63 moved to Simplii TFSA (Eva's savings). Protected buckets held, remainder to savings. GST RESERVE ($41.25): the 5% GST charged on INV-2026-001 (Howell cabin reno, June 2026). Damien was almost certainly NOT a GST registrant and under the $30k small-supplier threshold, so that GST likely should not have been charged (invoice generator added it automatically). Do not spend it. Raise at 2026 tax time: either remit to CRA or refund to the Howells. All KMM invoices since have correctly billed no GST. Flagged 2026-09-08."
+    },
+    {
+      "name": "Simplii TFSA",
+      "type": "tfsa",
+      "institution": "Simplii",
+      "balance": 470.63,
+      "notes": "Opened 2026-09-07. Designated as savings for Damien's daughter Eva. Funded with $470.63 moved from Simplii Savings. Held in Damien's name — counts toward his net worth."
+    },
+    {
+      "name": "SCU Chequing",
+      "type": "chequing",
+      "institution": "SCU",
+      "balance": 0,
+      "notes": "Added 2026-09-07. Empty."
+    },
+    {
+      "name": "NCU Chequing",
+      "type": "chequing",
+      "institution": "NCU",
+      "balance": 0,
+      "notes": "Added 2026-09-07. Empty."
+    },
+    {
+      "name": "NCU Savings",
+      "type": "savings",
+      "institution": "NCU",
+      "balance": 0,
+      "notes": "Added 2026-09-07. Empty."
+    },
+    {
+      "name": "Wealthsimple Chequing",
+      "type": "chequing",
+      "institution": "Wealthsimple",
+      "balance": 0.20,
+      "notes": "Added 2026-09-07."
     },
     {
       "name": "Wealthsimple Trading",
@@ -31,27 +66,54 @@
     {
       "name": "Cash",
       "type": "cash",
-      "balance": 140.00,
-      "notes": "JOB-2026-003 payment received June 23"
+      "balance": 0,
+      "notes": "Set to zero by Damien 2026-09-07"
     },
     {
-      "name": "Credit Card",
+      "name": "Capital One Credit",
       "type": "credit_card",
-      "balance": -31.58,
-      "notes": "Planet Fitness charge June 17. Pay by July 10."
+      "institution": "Capital One",
+      "balance": -51.45,
+      "notes": "Balance set by Damien 2026-09-07."
+    },
+    {
+      "name": "SCU Credit",
+      "type": "credit_card",
+      "institution": "SCU",
+      "balance": 0,
+      "notes": "Previously untracked. Carried ~$648.71 balance, paid in full from Simplii Chequing on 2026-09-07. Confirm whether any balance remains."
+    },
+    {
+      "name": "SCU Savings",
+      "type": "savings",
+      "institution": "SCU",
+      "balance": 3965.44,
+      "notes": "Added to the books 2026-09-07. Previously untracked. Corrected +$600 on 2026-09-08 (missed on first entry)."
     },
     {
       "name": "Personal Loan (Grandmother)",
       "type": "loan",
       "institution": "Family — no fixed term",
-      "balance": -2000.00,
-      "notes": "Approximate — Damien reported '$2k' on July 3, 2026, tied to an unspecified incident. Informal, no interest, no due date — an open system he pays into whenever he can. Exact amount not confirmed."
+      "balance": 0,
+      "notes": "Settled externally 2026-09-07 per Damien — no tracked account used. Was ~$2,000, reported July 3, 2026, tied to an unspecified incident."
+    },
+    {
+      "name": "SCU Loan",
+      "type": "loan",
+      "institution": "SCU",
+      "balance": -4885.83,
+      "auto_payment": {
+        "amount": 173.53,
+        "pull_day": 30,
+        "source_account": "SCU Savings"
+      },
+      "notes": "Added to the books 2026-09-07. Auto-pays $173.53 on the 30th of each month, pulled from SCU Savings."
     }
   ],
   "totals": {
-    "liquid": 1002.91,
+    "liquid": 5474.89,
     "invested": 53.57,
-    "liabilities": 2031.58,
-    "net_worth": -975.10
+    "liabilities": 4937.28,
+    "net_worth": 591.18
   }
 }

@@ -32,6 +32,17 @@
       "address": "",
       "linked_jobs": ["JOB-2026-005"],
       "notes": "Last name unconfirmed. Tattoo session pencilled for July 30, 2026."
+    },
+    {
+      "id": "CON-2026-004",
+      "name": "KMM Property Maintenance",
+      "type": "client",
+      "business": "Dametime Marketing",
+      "phone": "(431) 777-4871",
+      "email": "Dylanklassen2005@gmail.com",
+      "address": "",
+      "linked_jobs": ["INV-2026-002"],
+      "notes": "Email pulled from public site source, unconfirmed directly. Service-area business, no fixed street address on file. Billed for website maintenance, July 2026."
     }
   ]
 }
