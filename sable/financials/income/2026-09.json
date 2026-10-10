@@ -2,7 +2,7 @@
   "month": "2026-09",
   "entries": [
     {
-      "id": "INC-2026-007",
+      "id": "INC-2026-007-ALT",
       "date": "2026-09-21",
       "source": "KMM Property Maintenance",
       "description": "General labour — 11h @ $20/h",
@@ -58,13 +58,13 @@
       "date": "2026-09-26",
       "source": "KMM Property Maintenance",
       "description": "General labour — 7h @ $20/h",
-      "invoice": "INV-2026-006",
+      "invoice": "INV-2026-006-ALT",
       "job_id": null,
       "amount": 140.00,
       "payment_method": "day-of",
       "business": "Independent",
       "split": { "savings": 14.00, "tax_reserve": 22.40, "chequing": 103.60 },
-      "notes": "Logged per new payment-workflow.md — paid day-of. Closes out the Sept 21-27 week (39h / $780 total), formalized as INV-2026-006. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
+      "notes": "Logged per new payment-workflow.md — paid day-of. Closes out the Sept 21-27 week (39h / $780 total), formalized as INV-2026-006-ALT. Split re-applied 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60)."
     },
     {
       "id": "INC-2026-012",

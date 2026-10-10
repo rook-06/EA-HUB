@@ -34,14 +34,14 @@
       "notes": "Last name unconfirmed. Tattoo session pencilled for July 30, 2026."
     },
     {
-      "id": "CON-2026-004",
+      "id": "CON-2026-004-ALT",
       "name": "KMM Property Maintenance",
       "type": "client",
       "business": "Independent",
       "phone": "(431) 777-4871",
       "email": "Dylanklassen2005@gmail.com",
       "address": "",
-      "linked_jobs": ["JOB-2026-006", "JOB-2026-007", "JOB-2026-008"],
+      "linked_jobs": ["JOB-2026-006-ALT", "JOB-2026-007-ALT", "JOB-2026-008-ALT"],
       "notes": "General labour piecework client, Aug 2026 (separate from the earlier website build project). Contact email pulled from invoice, not yet confirmed directly."
     }
   ]
