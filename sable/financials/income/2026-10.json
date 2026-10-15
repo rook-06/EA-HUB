@@ -31,14 +31,14 @@
       "id": "INC-2026-018",
       "date": "2026-10-07",
       "source": "KMM Property Maintenance",
-      "description": "General labour — 9h @ $20/h",
+      "description": "General labour (6h @ $20/h) + quoting time (3h @ $10/h)",
       "invoice": "INV-2026-008-ALT",
       "job_id": null,
-      "amount": 180.00,
+      "amount": 150.00,
       "payment_method": "day-of",
       "business": "Independent",
-      "split": { "savings": 18.00, "tax_reserve": 28.80, "chequing": 133.20 },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+      "split": { "savings": 15.00, "tax_reserve": 24.00, "chequing": 111.00 },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. Corrected 2026-10-15: 3h of the original 9h reclassified as quoting time at half rate ($10/h vs $20/h), reducing this entry from $180 to $150."
     },
     {
       "id": "INC-2026-019",

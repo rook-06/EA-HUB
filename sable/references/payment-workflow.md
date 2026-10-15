@@ -35,6 +35,10 @@ Revised 2026-09-28 (was 10% / 30% / 60%, confirmed 2026-09-21). Applied retroact
 
 Unless a day's log says otherwise, current work logged here is under **KMM Property Maintenance**.
 
+## Quoting Time
+
+Established 2026-10-15: time spent quoting bills at **half** Damien's standard hourly rate ($10/h vs $20/h). Flagged separately in the day's hours entry (`"type": "quoting"`) rather than folded into regular labour hours.
+
 ---
 
 ## File Locations

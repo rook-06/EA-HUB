@@ -6,14 +6,15 @@
   "entries": [
     { "date": "2026-10-05", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
     { "date": "2026-10-06", "hours": 7, "client": "KMM Property Maintenance", "rate": 20, "amount": 140.00 },
-    { "date": "2026-10-07", "hours": 9, "client": "KMM Property Maintenance", "rate": 20, "amount": 180.00 },
+    { "date": "2026-10-07", "hours": 6, "client": "KMM Property Maintenance", "rate": 20, "amount": 120.00, "type": "labour" },
+    { "date": "2026-10-07", "hours": 3, "client": "KMM Property Maintenance", "rate": 10, "amount": 30.00, "type": "quoting", "notes": "Quoting time, billed at half the standard $20/h rate per Damien's instruction." },
     { "date": "2026-10-08", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
     { "date": "2026-10-09", "hours": 6, "client": "KMM Property Maintenance", "rate": 20, "amount": 120.00 },
     { "date": "2026-10-10", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 }
   ],
   "hours_to_date": 46,
-  "amount_to_date": 920.00,
+  "amount_to_date": 890.00,
   "status": "closed",
   "invoice": "INV-2026-008-ALT",
-  "notes": "Backfilled 2026-10-15, catching up after a gap since Sept 30. No hours Oct 11 (Sunday). Tallied and invoiced per references/payment-workflow.md."
+  "notes": "Backfilled 2026-10-15, catching up after a gap since Sept 30. No hours Oct 11 (Sunday). Tallied and invoiced per references/payment-workflow.md. Corrected 2026-10-15: 3 of Oct 7's 9h reclassified as quoting time at half rate ($10/h), reducing the week from $920 to $890."
 }
