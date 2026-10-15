@@ -67,7 +67,7 @@
       "file": "hourly/JOB-2026-005.json"
     },
     {
-      "id": "JOB-2026-006",
+      "id": "JOB-2026-006-ALT",
       "type": "hourly",
       "business": "Independent",
       "status": "paid",
@@ -78,11 +78,11 @@
       "total_hours": 35,
       "hourly_rate": 20,
       "total": 700,
-      "notes": "Invoiced INV-2026-003, due 2026-08-31. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
-      "file": "hourly/JOB-2026-006.json"
+      "notes": "Invoiced INV-2026-003-ALT, due 2026-08-31. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
+      "file": "hourly/JOB-2026-006-ALT.json"
     },
     {
-      "id": "JOB-2026-007",
+      "id": "JOB-2026-007-ALT",
       "type": "hourly",
       "business": "Independent",
       "status": "paid",
@@ -93,11 +93,11 @@
       "total_hours": 36,
       "hourly_rate": 20,
       "total": 720,
-      "notes": "Invoiced INV-2026-004, due 2026-09-10. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
-      "file": "hourly/JOB-2026-007.json"
+      "notes": "Invoiced INV-2026-004-ALT, due 2026-09-10. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
+      "file": "hourly/JOB-2026-007-ALT.json"
     },
     {
-      "id": "JOB-2026-008",
+      "id": "JOB-2026-008-ALT",
       "type": "hourly",
       "business": "Independent",
       "status": "paid",
@@ -108,8 +108,8 @@
       "total_hours": 46,
       "hourly_rate": 20,
       "total": 920,
-      "notes": "Invoiced INV-2026-005, due 2026-09-14. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
-      "file": "hourly/JOB-2026-008.json"
+      "notes": "Invoiced INV-2026-005-ALT, due 2026-09-14. Confirmed paid by Damien 2026-09-21 — exact date/method TBD.",
+      "file": "hourly/JOB-2026-008-ALT.json"
     }
   ]
 }

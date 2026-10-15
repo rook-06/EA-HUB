@@ -66,12 +66,13 @@ Damien logged two dates that predate the payment-workflow system (started Sept 2
 
 ---
 
-## [2026-09-28] — First week under new workflow closed out: INV-2026-006
+## [2026-09-28] — First week under new workflow closed out: INV-2026-006-ALT
 
 - Damien logged Sept 26: 7h ($140). No hours Sept 24 or Sept 27.
 - Since Sunday (Sept 27) passed without a session, tallied and invoiced retroactively on the 28th: **39h / $780 total** for the week of Sept 21-27
-- Created **INV-2026-006** in `financials/invoices.json` — $780, no GST, issued 2026-09-27, due 2026-10-12, marked paid per the standing KMM auto-paid rule (date_paid = due date). PDF not generated — JSON record only, offered to build the PDF if Damien wants one.
-- Closed `financials/hours/2026-09-21.json` (status: closed, linked to INV-2026-006), opened new week file `financials/hours/2026-09-28.json` (week of Sept 28 - Oct 4)
+- Created **INV-2026-006-ALT** in `financials/invoices.json` — $780, no GST, issued 2026-09-27, due 2026-10-12, marked paid per the standing KMM auto-paid rule (date_paid = due date). PDF not generated — JSON record only, offered to build the PDF if Damien wants one.
+  - *(Renamed 2026-10-10: this invoice number collided with a different INV-2026-006 created on master in a separate session — both renamed to `-ALT` on this branch pending reconciliation.)*
+- Closed `financials/hours/2026-09-21.json` (status: closed, linked to INV-2026-006-ALT), opened new week file `financials/hours/2026-09-28.json` (week of Sept 28 - Oct 4)
 - Final `accounts.json` for this week: Simplii Chequing $1,437.12 (tax_reserve $234, free $1,203.12), Simplii Savings $381.50, tax reserve funded $234 of $1,144.50 owed, **net worth +$1,371.18**
 
 ---
@@ -89,7 +90,7 @@ Damien logged two dates that predate the payment-workflow system (started Sept 2
 
 Damien logged hours for the current week (KMM, per standing workflow):
 - Sept 21: 11h ($220), Sept 22: 6h ($120), Sept 23: 6h ($120) — 23h / $460 so far
-- Logged to `financials/hours/2026-09-21.json`, income entries INC-2026-007/008/009 in `financials/income/2026-09.json`, split 10/30/60 applied per entry
+- Logged to `financials/hours/2026-09-21.json`, income entries INC-2026-007-ALT/008/009 in `financials/income/2026-09.json`, split 10/30/60 applied per entry
 - `accounts.json` updated: Simplii Chequing $1,011.12 (added `tax_reserve` division: $138 earmarked, $873.12 free), Simplii Savings $349.50, tax reserve owed now $1,048.50 ($138 funded, $910.50 backlog still unfunded), net worth **+$1,051.18** (up from +$591.18 on Sept 8)
 - Week isn't over — Sunday 2026-09-27 still needs the formal tally + invoice per the workflow
 - Also clarified same session: the KMM website rebuild (`sable/projects/marketing-portfolio/site/`) was never deployed — it's a portfolio spec build, not KMM's real live site. The only live KMM site is their original Jobber one. Session has no outbound web access, so couldn't fetch/audit it directly — flagged to Damien, waiting on his call on how to proceed.
@@ -105,13 +106,13 @@ Damien shared an artifact with his full reconciled financial state as of Sept 7-
 - Simplii Chequing now $735.12, Simplii Savings $303.50 (divisions: Capital One hold $51.45, GST reserve $41.25, free $210.80)
 - Grandmother loan now shows **balance 0, tagged "settled"** — previously tracked ~$2,000
 - Tax reserve: $910.50 owed (30% of KMM income), unfunded — no dedicated account exists
-- Logged `financials/income/2026-08.json` (INC-2026-003/004/005 for the KMM backlog, dated to job end dates as proxy since exact payment dates were never given; INC-2026-006 for a previously-unknown "KMM website retainer" $175) and `financials/income/2026-09.json` (empty, $520 partial-month figure noted but not itemized — source unclear)
+- Logged `financials/income/2026-08.json` (INC-2026-003-ALT/004-ALT/005-ALT for the KMM backlog, dated to job end dates as proxy since exact payment dates were never given; INC-2026-006-ALT for a previously-unknown "KMM website retainer" $175) and `financials/income/2026-09.json` (empty, $520 partial-month figure noted but not itemized — source unclear)
 - Updated `context/current-priorities.md` with the new financial position and three flagged unknowns
 - Posted to `ai-bridges/sable-to-atlas.md` — Eva TFSA, grandmother loan resolution, and the new SCU loan all flagged as more Atlas's lane than mine
 
 ### New standing rule (2026-09-21): KMM invoices auto-marked paid
 - Damien: mark KMM invoices paid by due date as soon as they're sent — no need to chase confirmation, KMM always pays on time
-- Applied retroactively: INV-2026-003/004/005 date_paid set to each invoice's due date (Aug 31 / Sep 10 / Sep 14)
+- Applied retroactively: INV-2026-003-ALT/004-ALT/005-ALT date_paid set to each invoice's due date (Aug 31 / Sep 10 / Sep 14)
 - Documented in `references/payment-workflow.md` and `invoice-collections` SKILL.md — KMM only, other clients still need real confirmation
 
 ### Resolved same day (2026-09-21)
@@ -139,12 +140,12 @@ Damien established a permanent process (session context had been lost, so he re-
 
 - Damien uploaded 4 invoice PDFs. INV-2026-001 (Howell, paid) matched the existing record exactly.
 - Three were **new to the system** — general labour piecework for KMM Property Maintenance in August 2026, separate from the earlier KMM website build project:
-  - INV-2026-003: $700 (35h @ $20/h), Aug 10-16, due Aug 31 — **overdue**
-  - INV-2026-004: $720 (36h @ $20/h), Aug 17-23, due Sep 10 — **overdue**
-  - INV-2026-005: $920 (46h @ $20/h), Aug 24-30, due Sep 14 — **overdue**
+  - INV-2026-003-ALT: $700 (35h @ $20/h), Aug 10-16, due Aug 31 — **overdue**
+  - INV-2026-004-ALT: $720 (36h @ $20/h), Aug 17-23, due Sep 10 — **overdue**
+  - INV-2026-005-ALT: $920 (46h @ $20/h), Aug 24-30, due Sep 14 — **overdue**
   - **Total outstanding: $2,340** — none of these PDFs indicate payment status
-- Added: JOB-2026-006/007/008 (jobs/index.json, status "invoiced"), CON-2026-004 KMM contact (crm/contacts.json), all three invoices under KMM in financials/invoices.json (restructured invoices.json to group by client per Damien's request)
-- Invoice files saved to `financials/invoices/INV-2026-003.pdf`, `-004.pdf`, `-005.pdf`
+- Added: JOB-2026-006-ALT/007-ALT/008-ALT (jobs/index.json, status "invoiced"), CON-2026-004-ALT KMM contact (crm/contacts.json), all three invoices under KMM in financials/invoices.json (restructured invoices.json to group by client per Damien's request)
+- Invoice files saved to `financials/invoices/INV-2026-003-ALT.pdf`, `-004-ALT.pdf`, `-005-ALT.pdf`
 - **Not yet done:** logging income, updating account balances — payment status unconfirmed. Waiting on Damien to confirm which of these three are actually paid.
 - **Flag:** $2,340 sitting unconfirmed and past due while net worth is negative and he's chasing a 9-5 — worth a direct nudge to follow up with KMM if unpaid.
 

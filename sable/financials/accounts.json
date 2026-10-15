@@ -110,7 +110,7 @@
     "invested": 53.57,
     "liabilities": 4937.28,
     "net_worth": 1491.18,
-    "note": "Updated 2026-10-15 — backfilled 9 days of hours (Oct 5-13, $1,150) after a logging gap since Sept 30. Closed out INV-2026-007 (Sept 28 - Oct 4, $300) and INV-2026-008 (Oct 5-11, $920). Net worth now +$3,081.18."
+    "note": "Updated 2026-10-15 — backfilled 9 days of hours (Oct 5-13, $1,150) after a logging gap since Sept 30. Closed out INV-2026-007-ALT (Sept 28 - Oct 4, $300) and INV-2026-008-ALT (Oct 5-11, $920). Net worth now +$3,081.18."
   },
   "reserves": {
     "tax_reserve_owed": 884.00,

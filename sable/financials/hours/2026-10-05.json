@@ -14,6 +14,6 @@
   "hours_to_date": 46,
   "amount_to_date": 920.00,
   "status": "closed",
-  "invoice": "INV-2026-008",
+  "invoice": "INV-2026-008-ALT",
   "notes": "Backfilled 2026-10-15, catching up after a gap since Sept 30. No hours Oct 11 (Sunday). Tallied and invoiced per references/payment-workflow.md."
 }
