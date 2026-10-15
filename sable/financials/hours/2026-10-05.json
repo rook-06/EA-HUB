@@ -15,6 +15,6 @@
   "hours_to_date": 46,
   "amount_to_date": 890.00,
   "status": "closed",
-  "invoice": "INV-2026-008-ALT",
+  "invoice": "INV-2026-008",
   "notes": "Backfilled 2026-10-15, catching up after a gap since Sept 30. No hours Oct 11 (Sunday). Tallied and invoiced per references/payment-workflow.md. Corrected 2026-10-15: 3 of Oct 7's 9h reclassified as quoting time at half rate ($10/h), reducing the week from $920 to $890."
 }

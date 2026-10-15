@@ -4,6 +4,21 @@
 
 ---
 
+## [2026-10-15] — This branch's records set as main, master's as alt
+
+Damien: this branch's records (what I've been tracking all along) are the main ones; the other, parallel KMM record set is the alt. Stripped the `-ALT` suffix from every ID on this branch (`jobs/index.json`, `crm/contacts.json`, `financials/invoices.json`, the hours files, `accounts.json`, the income files) — back to clean `INV-2026-00X` / `INC-2026-00X` / `JOB-2026-00X` / `CON-2026-004` numbering. All JSON validated after the strip.
+
+**Important:** I checked what's actually on `origin/master` before doing this, and it's not just an ID-numbering difference — master's data genuinely diverges in places:
+- It has **INV-2026-002** ($175 website retainer, Aug 15-31) — no equivalent number on this branch (I'd logged the same $175 retainer as INC-2026-006 with no invoice).
+- Its **INV-2026-006** is $520 for a week of **Aug 31 - Sept 6** — a week this branch never logged at all. This is almost certainly the real source of the mysterious "$520 unitemized partial-September income" from the Sept 8 ledger reconciliation I've been carrying as an open question.
+- This branch's own INV-2026-006 (Sept 21-27, $780) has no match on master at all.
+
+So "set as main/alt" settles which copy wins on a naming conflict, but it does NOT mean the two datasets now agree — master may be tracking real income (that Aug 31-Sept 6 week) that never made it into this branch's numbers. Flagged to Damien; not reconciling the actual dollar figures without his say-so.
+
+I have NOT touched master itself (pushing to a different branch needs explicit permission per my instructions) — this only changes what's on `claude/invoices-display-adfgx6`.
+
+---
+
 ## [2026-10-15] — Quoting-time rate applied to Oct 7
 
 Damien: 3 of Oct 7's hours were quoting time, billed at half the standard rate ($10/h vs $20/h). Oct 7 split into labour (6h @ $20 = $120) + quoting (3h @ $10 = $30), down from the original flat 9h @ $20 = $180.

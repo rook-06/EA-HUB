@@ -13,6 +13,6 @@
   "hours_to_date": 39,
   "amount_to_date": 780.00,
   "status": "closed",
-  "invoice": "INV-2026-006-ALT",
+  "invoice": "INV-2026-006",
   "notes": "Week closed 2026-09-28 (logged a day late — Sept 27 itself had no hours). No hours logged Sept 24 or Sept 27. Tallied and invoiced per references/payment-workflow.md."
 }

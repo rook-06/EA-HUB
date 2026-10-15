@@ -110,7 +110,7 @@
     "invested": 53.57,
     "liabilities": 4937.28,
     "net_worth": 1491.18,
-    "note": "Updated 2026-10-15 — 3h of Oct 7 reclassified as quoting time at half rate ($10/h vs $20/h), reducing INV-2026-008-ALT from $920 to $890 (-$30). Net worth now +$3,051.18."
+    "note": "Updated 2026-10-15 — 3h of Oct 7 reclassified as quoting time at half rate ($10/h vs $20/h), reducing INV-2026-008 from $920 to $890 (-$30). Net worth now +$3,051.18."
   },
   "reserves": {
     "tax_reserve_owed": 879.20,
