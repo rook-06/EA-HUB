@@ -5,10 +5,11 @@
   "default_rate": 20,
   "entries": [
     { "date": "2026-10-12", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
-    { "date": "2026-10-13", "hours": 7.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 150.00 }
+    { "date": "2026-10-13", "hours": 7.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 150.00 },
+    { "date": "2026-10-15", "hours": 9, "client": "KMM Property Maintenance", "rate": 20, "amount": 180.00 }
   ],
-  "hours_to_date": 11.5,
-  "amount_to_date": 230.00,
+  "hours_to_date": 20.5,
+  "amount_to_date": 410.00,
   "status": "open",
   "notes": "Log each day worked as it happens. Tally and invoice Sunday 2026-10-18 per references/payment-workflow.md."
 }

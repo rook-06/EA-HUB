@@ -4,6 +4,14 @@
 
 ---
 
+## [2026-10-15] — Oct 15 hours logged
+
+- 9h ($180), week of Oct 12-18 now at 20.5h / $410 (no hours Oct 14)
+- INC-2026-024 logged, split 10/16/74: $18 savings / $28.80 tax / $133.20 spending
+- `accounts.json`: Simplii Chequing $3,111.12 (tax_reserve $422.40, free $2,688.72), Simplii Savings $567.50, net worth **+$3,231.18**
+
+---
+
 ## [2026-10-15] — This branch's records set as main, master's as alt
 
 Damien: this branch's records (what I've been tracking all along) are the main ones; the other, parallel KMM record set is the alt. Stripped the `-ALT` suffix from every ID on this branch (`jobs/index.json`, `crm/contacts.json`, `financials/invoices.json`, the hours files, `accounts.json`, the income files) — back to clean `INV-2026-00X` / `INC-2026-00X` / `JOB-2026-00X` / `CON-2026-004` numbering. All JSON validated after the strip.
