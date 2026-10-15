@@ -1,0 +1,110 @@
+{
+  "month": "2026-10",
+  "entries": [
+    {
+      "id": "INC-2026-016",
+      "date": "2026-10-05",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 8h @ $20/h",
+      "invoice": "INV-2026-008",
+      "job_id": null,
+      "amount": 160.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 16.00, "tax_reserve": 25.60, "chequing": 118.40 },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+    },
+    {
+      "id": "INC-2026-017",
+      "date": "2026-10-06",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 7h @ $20/h",
+      "invoice": "INV-2026-008",
+      "job_id": null,
+      "amount": 140.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 14.00, "tax_reserve": 22.40, "chequing": 103.60 },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+    },
+    {
+      "id": "INC-2026-018",
+      "date": "2026-10-07",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 9h @ $20/h",
+      "invoice": "INV-2026-008",
+      "job_id": null,
+      "amount": 180.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 18.00, "tax_reserve": 28.80, "chequing": 133.20 },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+    },
+    {
+      "id": "INC-2026-019",
+      "date": "2026-10-08",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 8h @ $20/h",
+      "invoice": "INV-2026-008",
+      "job_id": null,
+      "amount": 160.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 16.00, "tax_reserve": 25.60, "chequing": 118.40 },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+    },
+    {
+      "id": "INC-2026-020",
+      "date": "2026-10-09",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 6h @ $20/h",
+      "invoice": "INV-2026-008",
+      "job_id": null,
+      "amount": 120.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+    },
+    {
+      "id": "INC-2026-021",
+      "date": "2026-10-10",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 8h @ $20/h",
+      "invoice": "INV-2026-008",
+      "job_id": null,
+      "amount": 160.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 16.00, "tax_reserve": 25.60, "chequing": 118.40 },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. No hours logged Oct 11, closes out the week (46h / $920, INV-2026-008)."
+    },
+    {
+      "id": "INC-2026-022",
+      "date": "2026-10-12",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 4h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 80.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 8.00, "tax_reserve": 12.80, "chequing": 59.20 },
+      "notes": "Week of Oct 12-18 (open). First entry of the new week."
+    },
+    {
+      "id": "INC-2026-023",
+      "date": "2026-10-13",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 7.5h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 150.00,
+      "payment_method": "day-of",
+      "business": "Independent",
+      "split": { "savings": 15.00, "tax_reserve": 24.00, "chequing": 111.00 },
+      "notes": "Week of Oct 12-18 (open)."
+    }
+  ],
+  "notes": "Backfilled 2026-10-15 after a gap in logging since Sept 30. Sept 28 - Oct 4 week's income (INC-2026-013/014, $300) already logged in 2026-09.json; this file covers Oct 5 onward."
+}

@@ -4,6 +4,19 @@
 
 ---
 
+## [2026-10-15] — Backfilled Oct 5-13 after a 15-day logging gap
+
+No session between Sept 30 and Oct 15. Damien provided a full Oct hours spread to catch up:
+- Oct 5 (8h), 6 (7h), 7 (9h), 8 (8h), 9 (6h), 10 (8h), 11 (n/a), 12 (4h), 13 (7.5h)
+- Closed out the stale **Sept 28 - Oct 4** week (15h/$300, already partially logged) as **INV-2026-007**
+- New week **Oct 5-11** (46h/$920) fully logged and closed as **INV-2026-008**
+- New week **Oct 12-18** opened (11.5h/$230 so far, still in progress)
+- `financials/income/2026-10.json` created — INC-2026-016 through 023, split 10/16/74 throughout
+- `accounts.json`: Simplii Chequing $2,976.12 (tax_reserve $398.40, free $2,577.72), Simplii Savings $552.50, net worth **+$3,081.18**
+- Flagged the gap directly to Damien before he sent the backfill — two weeks of unlogged work is real money not showing up anywhere until caught up
+
+---
+
 ## [2026-09-30] — Sept 8 $140 posted, PROVISIONAL
 
 Damien: "disregard the ledger for now, just calculate with that included." Posted the long-held Sept 8 entry:

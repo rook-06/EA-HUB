@@ -1,0 +1,19 @@
+{
+  "week_start": "2026-10-05",
+  "week_end": "2026-10-11",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [
+    { "date": "2026-10-05", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
+    { "date": "2026-10-06", "hours": 7, "client": "KMM Property Maintenance", "rate": 20, "amount": 140.00 },
+    { "date": "2026-10-07", "hours": 9, "client": "KMM Property Maintenance", "rate": 20, "amount": 180.00 },
+    { "date": "2026-10-08", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
+    { "date": "2026-10-09", "hours": 6, "client": "KMM Property Maintenance", "rate": 20, "amount": 120.00 },
+    { "date": "2026-10-10", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 }
+  ],
+  "hours_to_date": 46,
+  "amount_to_date": 920.00,
+  "status": "closed",
+  "invoice": "INV-2026-008",
+  "notes": "Backfilled 2026-10-15, catching up after a gap since Sept 30. No hours Oct 11 (Sunday). Tallied and invoiced per references/payment-workflow.md."
+}

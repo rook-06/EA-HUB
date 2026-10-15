@@ -1,5 +1,5 @@
 {
-  "last_invoice_number": "INV-2026-006",
+  "last_invoice_number": "INV-2026-008",
   "clients": [
     {
       "client": "George Howell",
@@ -83,6 +83,34 @@
           "date_paid": "2026-10-12",
           "file": null,
           "notes": "First invoice under the new weekly workflow (references/payment-workflow.md). 39h @ $20/h: Sept 21 (11h), 22 (6h), 23 (6h), 25 (9h), 26 (7h). No hours Sept 24 or 27. Marked paid per standing KMM rule. PDF not generated yet — JSON record is authoritative; say the word if you want the PDF for your own files."
+        },
+        {
+          "id": "INV-2026-007",
+          "job_id": null,
+          "description": "General labour, Sept 28 - Oct 4, 2026 (week)",
+          "date_issued": "2026-10-04",
+          "due_date": "2026-10-19",
+          "subtotal": 300.00,
+          "gst": 0,
+          "amount": 300.00,
+          "status": "paid",
+          "date_paid": "2026-10-19",
+          "file": null,
+          "notes": "15h @ $20/h: Sept 28 (7h), Sept 30 (8h). No hours Oct 1-4. Backfilled and invoiced 2026-10-15 after a logging gap. Marked paid per standing KMM rule."
+        },
+        {
+          "id": "INV-2026-008",
+          "job_id": null,
+          "description": "General labour, Oct 5-11, 2026 (week)",
+          "date_issued": "2026-10-11",
+          "due_date": "2026-10-26",
+          "subtotal": 920.00,
+          "gst": 0,
+          "amount": 920.00,
+          "status": "paid",
+          "date_paid": "2026-10-26",
+          "file": null,
+          "notes": "46h @ $20/h: Oct 5 (8h), 6 (7h), 7 (9h), 8 (8h), 9 (6h), 10 (8h). No hours Oct 11. Backfilled and invoiced 2026-10-15 after a logging gap. Marked paid per standing KMM rule."
         }
       ]
     }

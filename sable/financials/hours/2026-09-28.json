@@ -9,6 +9,7 @@
   ],
   "hours_to_date": 15,
   "amount_to_date": 300.00,
-  "status": "open",
-  "notes": "Log each day worked as it happens. Tally and invoice Sunday 2026-10-04 per references/payment-workflow.md."
+  "status": "closed",
+  "invoice": "INV-2026-007",
+  "notes": "Week closed 2026-10-15 (retroactively — no session between Sept 30 and Oct 15). No hours logged Oct 1-4. Tallied and invoiced per references/payment-workflow.md."
 }
