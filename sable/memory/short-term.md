@@ -4,6 +4,12 @@
 
 ---
 
+## [2026-10-15] — ID collision discovered: this branch now uses -ALT suffixes
+
+While pushing the Oct backfill, found a commit Damien made directly on this branch Oct 10: he renamed all of this branch's KMM records (CON-2026-004, JOB-2026-006/007/008, INC-2026-003 through 007, INV-2026-003 through 006) to `-ALT` suffixes, because they collided with a **separate parallel KMM record set on master** — a different session/branch independently built its own KMM tracking with the same ID numbers. Merged that commit in. Renamed my new records to match the convention: **INV-2026-007 → INV-2026-007-ALT, INV-2026-008 → INV-2026-008-ALT**, `last_invoice_number` → `INV-2026-008-ALT`. Going forward, every new ID on this branch should get the `-ALT` suffix until this branch and master are reconciled.
+
+---
+
 ## [2026-10-15] — Backfilled Oct 5-13 after a 15-day logging gap
 
 No session between Sept 30 and Oct 15. Damien provided a full Oct hours spread to catch up:
