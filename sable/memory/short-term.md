@@ -4,6 +4,27 @@
 
 ---
 
+## [2026-10-16] — Major correction: KMM "paid day-of" assumption was wrong + found a second bug
+
+Damien: he's only actually been paid $1,000 of what he's owed, and nothing from Oct 5 onward before that. The entire "KMM pays day-of, auto-mark invoices paid" model I'd been running since Sept 21 was wrong.
+
+**His instruction:** treat everything billed Oct 5 onward as a lump owing sum, subtract the $1,000 already paid, and going forward tallied hours go into an owing balance — only move to real accounts once he explicitly confirms payment (payment doesn't need to map 1:1 to a specific invoice/day).
+
+**What I did:**
+- Oct 5-15 billed total: $1,300. Received: $1,000 (INC-2026-025, posted with the normal 10/16/74 split). **Net owing: $300.**
+- Marked INC-2026-016 through 024 (the Oct 5-15 entries) as `"paid": false` / `"payment_method": "owing"` — their split fields show what *would* apply once paid, but nothing from them is actually in `accounts.json` anymore.
+- Reverted INV-2026-008 (Oct 5-11, $890) from "paid" to "outstanding".
+- Added `accounts_receivable` tracking to `accounts.json`: `kmm_owing: 300`, billed/received/last-payment-date.
+- **Revoked** the "KMM invoices auto-marked paid" standing rule in `references/payment-workflow.md` and the `invoice-collections` skill — both rewritten so invoices default to outstanding until Damien confirms, for KMM same as any other client.
+- Scope: only touched Oct 5 onward, per Damien's instruction — did NOT revisit Aug/Sept records, even though the same bad assumption presumably applied there too. Left as-is; he didn't ask for that to be reopened.
+- Flagged in `context/current-priorities.md`: KMM's payment unreliability is now a top priority, not just a tracking footnote — recommended he have a direct conversation with KMM about terms.
+
+**Second, unrelated bug found and fixed while doing this:** `accounts.json`'s top-level `totals` block (liquid/net_worth) stopped actually being written after the 2026-10-15 Oct-backfill commit — I kept computing net worth by hand each turn and reporting it in chat, but the edit that was supposed to persist those numbers never included the `liquid`/`net_worth` fields themselves, so the file silently stayed stuck at an old value (+$1,491.18) for four commits while I verbally reported $3,081 → $3,051 → $3,231 in chat. The per-account balances (Chequing, Savings) WERE updating correctly the whole time, and my hand-calculations were internally consistent with each other, so the chat figures were likely accurate relative to what had actually been logged — just never match the stale file. Recomputed from the actual account list and confirmed $3,231.18 was correct as of end of Oct 15, before applying today's owing-balance correction on top of that.
+
+**Final state after both fixes:** Simplii Chequing $2,841.12, Simplii Savings $537.50, net worth **+$2,931.18**, KMM owing $300.
+
+---
+
 ## [2026-10-15] — Oct 15 hours logged
 
 - 9h ($180), week of Oct 12-18 now at 20.5h / $410 (no hours Oct 14)

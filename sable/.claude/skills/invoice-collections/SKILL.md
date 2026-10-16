@@ -2,7 +2,7 @@
 
 Tracks invoicing for completed jobs, generates PDFs, monitors payment status, and follows up on overdue accounts. Damien doesn't naturally track this — this skill compensates.
 
-**Standing process (since 2026-09-21):** see `references/payment-workflow.md`. Damien logs hours daily into `financials/hours/[week-start].json`; current work defaults to KMM unless noted. He's paid day-of, so income is logged as soon as hours are logged — not when the invoice goes out. Every Sunday, tally the week and generate the invoice (formality, not the payment trigger). The steps below still apply for the invoice/PDF side of that weekly cycle.
+**Standing process (since 2026-09-21, revised 2026-10-16):** see `references/payment-workflow.md`. Damien logs hours daily into `financials/hours/[week-start].json`; current work defaults to KMM unless noted. **He is NOT paid day-of** — that assumption was wrong and was revoked 2026-10-16. Tallied hours post to an owing balance (`accounts.json` → `accounts_receivable`), not to cash accounts, until Damien explicitly confirms a payment. Every Sunday, tally the week and generate the invoice as a billing record — it does not mean payment was received.
 
 ## When to use
 
@@ -22,7 +22,7 @@ Read `jobs/index.json`. Look for any job with status "completed" but no correspo
 
 Flag these — they're money that hasn't been collected yet.
 
-For the weekly KMM cycle specifically: read the current week's file in `financials/hours/`, confirm all logged days have matching income entries (they should, since income posts day-of), then proceed to generate the formal invoice for the week's total.
+For the weekly KMM cycle specifically: read the current week's file in `financials/hours/`, confirm all logged days have matching income entries (logged as owing, not paid, per the 2026-10-16 revision), then proceed to generate the formal invoice for the week's total.
 
 ### Step 2 — Generate invoice
 
@@ -50,16 +50,15 @@ After generating the invoice:
 Present the PDF to Damien via Telegram for him to send to the client.
 Note the client's preferred payment method (e-transfer, cash) in the job file.
 
-**KMM specifically:** the moment the invoice goes out, mark it paid — status "paid", `date_paid` set to the invoice's due date. Standing rule since 2026-09-21, no confirmation needed from Damien on these. Skip Step 5 for KMM invoices.
+**KMM specifically:** ~~the moment the invoice goes out, mark it paid~~ — this rule was revoked 2026-10-16, it was wrong (KMM does not reliably pay by the due date). KMM invoices now default to "outstanding" like any other client's, below.
 
-### Step 5 — Track payment (non-KMM clients)
+### Step 5 — Track payment (all clients)
 
-When Damien confirms payment received:
-- Update job status from "invoiced" to "paid"
-- Update `financials/income/` entry status from "pending" to "received"
-- Update `financials/index.json` running totals
-- Update `financials/summaries/[month].json`
-- Update `financials/accounts.json` balance (if reported)
+Nothing is marked paid, and no split is applied to `accounts.json`, until Damien explicitly confirms a payment. When he does:
+- Update job status from "invoiced" to "paid" (or note partial payment)
+- Update the relevant `financials/income/` entries — a confirmed payment doesn't need to map 1:1 to a specific invoice or day; apply it against the oldest outstanding amount unless Damien says otherwise, and log what's still owing
+- Update `financials/accounts.json`: post the actual amount received (with the 10/16/74 split) to the real accounts, and update `accounts_receivable.kmm_owing` (or the equivalent for other clients) to reflect what's left outstanding
+- Update `financials/index.json` running totals and `financials/summaries/[month].json` if applicable
 
 ### Step 6 — Collections: overdue follow-up
 

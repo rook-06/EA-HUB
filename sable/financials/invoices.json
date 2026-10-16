@@ -107,10 +107,10 @@
           "subtotal": 890.00,
           "gst": 0,
           "amount": 890.00,
-          "status": "paid",
-          "date_paid": "2026-10-26",
+          "status": "outstanding",
+          "date_paid": null,
           "file": null,
-          "notes": "43h labour @ $20/h + 3h quoting @ $10/h: Oct 5 (8h), 6 (7h), 7 (6h labour + 3h quoting), 8 (8h), 9 (6h), 10 (8h). No hours Oct 11. Backfilled and invoiced 2026-10-15 after a logging gap, corrected same day for the quoting-time rate on Oct 7. Marked paid per standing KMM rule."
+          "notes": "43h labour @ $20/h + 3h quoting @ $10/h: Oct 5 (8h), 6 (7h), 7 (6h labour + 3h quoting), 8 (8h), 9 (6h), 10 (8h). No hours Oct 11. CORRECTED 2026-10-16: the 'KMM auto-pays by due date' rule was wrong — Damien confirmed only $1,000 received against everything billed since Oct 5 ($1,300 total, this invoice plus the uninvoiced Oct 12-18 partial week), not allocated to a specific invoice. Status reverted from paid to outstanding; see accounts.json accounts_receivable for the net owing balance."
         }
       ]
     }

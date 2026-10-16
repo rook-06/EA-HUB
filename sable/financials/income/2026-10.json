@@ -8,11 +8,16 @@
       "description": "General labour — 8h @ $20/h",
       "invoice": "INV-2026-008",
       "job_id": null,
-      "amount": 160.00,
-      "payment_method": "day-of",
+      "amount": 160.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 16.00, "tax_reserve": 25.60, "chequing": 118.40 },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+      "split": {
+        "savings": 16.0,
+        "tax_reserve": 25.6,
+        "chequing": 118.4
+      },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
     },
     {
       "id": "INC-2026-017",
@@ -21,11 +26,16 @@
       "description": "General labour — 7h @ $20/h",
       "invoice": "INV-2026-008",
       "job_id": null,
-      "amount": 140.00,
-      "payment_method": "day-of",
+      "amount": 140.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 14.00, "tax_reserve": 22.40, "chequing": 103.60 },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+      "split": {
+        "savings": 14.0,
+        "tax_reserve": 22.4,
+        "chequing": 103.6
+      },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
     },
     {
       "id": "INC-2026-018",
@@ -34,11 +44,16 @@
       "description": "General labour (6h @ $20/h) + quoting time (3h @ $10/h)",
       "invoice": "INV-2026-008",
       "job_id": null,
-      "amount": 150.00,
-      "payment_method": "day-of",
+      "amount": 150.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 15.00, "tax_reserve": 24.00, "chequing": 111.00 },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. Corrected 2026-10-15: 3h of the original 9h reclassified as quoting time at half rate ($10/h vs $20/h), reducing this entry from $180 to $150."
+      "split": {
+        "savings": 15.0,
+        "tax_reserve": 24.0,
+        "chequing": 111.0
+      },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. Corrected 2026-10-15: 3h of the original 9h reclassified as quoting time at half rate ($10/h vs $20/h), reducing this entry from $180 to $150. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
     },
     {
       "id": "INC-2026-019",
@@ -47,11 +62,16 @@
       "description": "General labour — 8h @ $20/h",
       "invoice": "INV-2026-008",
       "job_id": null,
-      "amount": 160.00,
-      "payment_method": "day-of",
+      "amount": 160.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 16.00, "tax_reserve": 25.60, "chequing": 118.40 },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+      "split": {
+        "savings": 16.0,
+        "tax_reserve": 25.6,
+        "chequing": 118.4
+      },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
     },
     {
       "id": "INC-2026-020",
@@ -60,11 +80,16 @@
       "description": "General labour — 6h @ $20/h",
       "invoice": "INV-2026-008",
       "job_id": null,
-      "amount": 120.00,
-      "payment_method": "day-of",
+      "amount": 120.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 12.00, "tax_reserve": 19.20, "chequing": 88.80 },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11."
+      "split": {
+        "savings": 12.0,
+        "tax_reserve": 19.2,
+        "chequing": 88.8
+      },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
     },
     {
       "id": "INC-2026-021",
@@ -73,11 +98,16 @@
       "description": "General labour — 8h @ $20/h",
       "invoice": "INV-2026-008",
       "job_id": null,
-      "amount": 160.00,
-      "payment_method": "day-of",
+      "amount": 160.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 16.00, "tax_reserve": 25.60, "chequing": 118.40 },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. No hours logged Oct 11, closes out the week (46h / $920, INV-2026-008)."
+      "split": {
+        "savings": 16.0,
+        "tax_reserve": 25.6,
+        "chequing": 118.4
+      },
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. No hours logged Oct 11, closes out the week (46h / $920, INV-2026-008). CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
     },
     {
       "id": "INC-2026-022",
@@ -86,11 +116,16 @@
       "description": "General labour — 4h @ $20/h",
       "invoice": null,
       "job_id": null,
-      "amount": 80.00,
-      "payment_method": "day-of",
+      "amount": 80.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 8.00, "tax_reserve": 12.80, "chequing": 59.20 },
-      "notes": "Week of Oct 12-18 (open). First entry of the new week."
+      "split": {
+        "savings": 8.0,
+        "tax_reserve": 12.8,
+        "chequing": 59.2
+      },
+      "notes": "Week of Oct 12-18 (open). First entry of the new week. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
     },
     {
       "id": "INC-2026-023",
@@ -99,11 +134,16 @@
       "description": "General labour — 7.5h @ $20/h",
       "invoice": null,
       "job_id": null,
-      "amount": 150.00,
-      "payment_method": "day-of",
+      "amount": 150.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 15.00, "tax_reserve": 24.00, "chequing": 111.00 },
-      "notes": "Week of Oct 12-18 (open)."
+      "split": {
+        "savings": 15.0,
+        "tax_reserve": 24.0,
+        "chequing": 111.0
+      },
+      "notes": "Week of Oct 12-18 (open). CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
     },
     {
       "id": "INC-2026-024",
@@ -112,12 +152,34 @@
       "description": "General labour — 9h @ $20/h",
       "invoice": null,
       "job_id": null,
-      "amount": 180.00,
-      "payment_method": "day-of",
+      "amount": 180.0,
+      "payment_method": "owing",
       "business": "Independent",
-      "split": { "savings": 18.00, "tax_reserve": 28.80, "chequing": 133.20 },
-      "notes": "Week of Oct 12-18 (open). No hours logged Oct 14."
+      "split": {
+        "savings": 18.0,
+        "tax_reserve": 28.8,
+        "chequing": 133.2
+      },
+      "notes": "Week of Oct 12-18 (open). No hours logged Oct 14. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "paid": false
+    },
+    {
+      "id": "INC-2026-025",
+      "date": "2026-10-16",
+      "source": "KMM Property Maintenance",
+      "description": "Partial payment against Oct 5 onward owing balance",
+      "invoice": null,
+      "job_id": null,
+      "amount": 1000.0,
+      "payment_method": "confirmed by Damien",
+      "business": "Independent",
+      "split": {
+        "savings": 100.0,
+        "tax_reserve": 160.0,
+        "chequing": 740.0
+      },
+      "notes": "Lump payment, not tied to a specific invoice or day — applied against the $1,300 billed Oct 5-15. Leaves $300 still owing. This is the only Oct 5+ income actually posted to accounts.json."
     }
   ],
-  "notes": "Backfilled 2026-10-15 after a gap in logging since Sept 30. Sept 28 - Oct 4 week's income (INC-2026-013/014, $300) already logged in 2026-09.json; this file covers Oct 5 onward."
+  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Damien confirmed only $1,000 has actually been received against everything billed since Oct 5 ($1,300 total), and nothing before that either. INC-2026-016 through 024 are now marked owing, not paid — their split fields show what applies once paid, but nothing has been posted to accounts.json except INC-2026-025, the $1,000 actual payment. Net owing as of 2026-10-16: $300. See accounts.json accounts_receivable and short-term memory for the full correction. Septembers Sept 8 ledger snapshot context (the $520 partial-month figure) still applies to entries before this correction and is unrelated."
 }

@@ -15,13 +15,17 @@ Damien logs hours worked each day into the current week's file in `financials/ho
 3. Invoice is a formality — see Income Timing below.
 4. Archive the week's hours file, start a fresh one for the new week.
 
-## Income Timing
+## Income Timing — REVISED 2026-10-16
 
-Damien is paid **day of** — the day he logs the hours, he's been paid for them. Income is counted (logged to `financials/income/`) as soon as hours are logged, not when the Sunday invoice goes out. The invoice is paperwork, not a payment trigger.
+~~Damien is paid day of~~ — **this was wrong.** Confirmed 2026-10-16: nothing had actually been paid since Oct 5, and only $1,000 arrived then against $1,300 billed. The "paid day-of" assumption had been driving real account-balance updates since Sept 21, which means balances were materially overstated.
 
-## Invoice Status — KMM specifically
+**Current model:** tallied hours post to an **owing** balance (`financials/accounts.json` → `accounts_receivable`), not to cash accounts. Nothing moves to Simplii Chequing/Savings — and the 10/16/74 split doesn't get applied — until Damien explicitly confirms a payment, lump sum or otherwise. He said: *"I'll confirm once I'm paid out for things."* A confirmed payment doesn't need to map 1:1 to a specific invoice or day — apply it against the oldest outstanding amount unless Damien says otherwise, and log the remaining owing balance.
 
-Standing rule (2026-09-21): KMM invoices are marked **paid** automatically the moment they're sent, with `date_paid` set to the invoice's due date. No need to chase confirmation from Damien on these — KMM always pays by the due date. This applies to KMM only; other clients still need actual confirmation before marking paid.
+Invoices are still generated on the usual weekly cadence as a billing record — that part didn't change.
+
+## Invoice Status — KMM specifically — REVOKED 2026-10-16
+
+~~Standing rule (2026-09-21): KMM invoices are marked paid automatically the moment they're sent~~ — revoked. It assumed KMM pays by the due date without fail; that assumption was wrong. Invoices now default to **outstanding** until Damien confirms actual payment, same as any other client.
 
 ## Income Split — every payment, on receipt
 
