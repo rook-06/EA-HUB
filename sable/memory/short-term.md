@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-10-17] — Oct 17 hours logged, first entry under the owing model
+
+- 9h ($180), week of Oct 12-18 now at 29.5h / $590
+- INC-2026-026 logged as owing (not paid), per the 2026-10-16 revision — no accounts.json cash impact
+- `accounts.json` accounts_receivable: kmm_owing now **$480.00** (was $300, +$180)
+- Net worth unchanged at +$2,931.18 (owing isn't counted as an asset)
+
+---
+
 ## [2026-10-16] — Major correction: KMM "paid day-of" assumption was wrong + found a second bug
 
 Damien: he's only actually been paid $1,000 of what he's owed, and nothing from Oct 5 onward before that. The entire "KMM pays day-of, auto-mark invoices paid" model I'd been running since Sept 21 was wrong.

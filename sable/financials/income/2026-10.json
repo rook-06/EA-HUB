@@ -179,6 +179,24 @@
         "chequing": 740.0
       },
       "notes": "Lump payment, not tied to a specific invoice or day — applied against the $1,300 billed Oct 5-15. Leaves $300 still owing. This is the only Oct 5+ income actually posted to accounts.json."
+    },
+    {
+      "id": "INC-2026-026",
+      "date": "2026-10-17",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 9h @ $20/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 180.0,
+      "payment_method": "owing",
+      "paid": false,
+      "business": "Independent",
+      "split": {
+        "savings": 18.0,
+        "tax_reserve": 28.8,
+        "chequing": 133.2
+      },
+      "notes": "Week of Oct 12-18 (open). Posted to the owing balance per the 2026-10-16 revision — not paid day-of, not posted to accounts.json until Damien confirms payment."
     }
   ],
   "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Damien confirmed only $1,000 has actually been received against everything billed since Oct 5 ($1,300 total), and nothing before that either. INC-2026-016 through 024 are now marked owing, not paid — their split fields show what applies once paid, but nothing has been posted to accounts.json except INC-2026-025, the $1,000 actual payment. Net owing as of 2026-10-16: $300. See accounts.json accounts_receivable and short-term memory for the full correction. Septembers Sept 8 ledger snapshot context (the $520 partial-month figure) still applies to entries before this correction and is unrelated."
