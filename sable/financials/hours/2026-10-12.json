@@ -7,7 +7,7 @@
     { "date": "2026-10-12", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
     { "date": "2026-10-13", "hours": 7.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 150.00 },
     { "date": "2026-10-15", "hours": 9, "client": "KMM Property Maintenance", "rate": 20, "amount": 180.00 },
-    { "date": "2026-10-17", "hours": 9, "client": "KMM Property Maintenance", "rate": 20, "amount": 180.00 }
+    { "date": "2026-10-16", "hours": 9, "client": "KMM Property Maintenance", "rate": 20, "amount": 180.00 }
   ],
   "hours_to_date": 29.5,
   "amount_to_date": 590.00,

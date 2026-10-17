@@ -4,12 +4,13 @@
 
 ---
 
-## [2026-10-17] — Oct 17 hours logged, first entry under the owing model
+## [2026-10-16] — Oct 16 hours logged, first entry under the owing model
 
 - 9h ($180), week of Oct 12-18 now at 29.5h / $590
 - INC-2026-026 logged as owing (not paid), per the 2026-10-16 revision — no accounts.json cash impact
 - `accounts.json` accounts_receivable: kmm_owing now **$480.00** (was $300, +$180)
 - Net worth unchanged at +$2,931.18 (owing isn't counted as an asset)
+- **Date correction:** originally logged this as Oct 17 (session's date reminder said so at the time); Damien corrected it — today is actually the 16th. Fixed the date on the hours entry and INC-2026-026.
 
 ---
 
