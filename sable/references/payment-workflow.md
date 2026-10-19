@@ -43,9 +43,9 @@ Unless a day's log says otherwise, current work logged here is under **KMM Prope
 
 ## Website Retainer — established 2026-10-19
 
-Separate from KMM general labour. Billed monthly, upfront, invoice dated the 1st of the month, covering that month's work — not after the fact. Own numbering series, `SITE-2026-XXX` (starts at 001, August 2026), so it never collides with labour invoices or anything on the shared `INV-2026-XXX` series. Rate assumed at $175/month (the only known data point) until Damien says otherwise.
+Separate from KMM general labour. Billed monthly, upfront, invoice dated the 1st of the month, covering that month's work — not after the fact. Own numbering series, `SITE-2026-XXX` (starts at 001, August 2026), so it never collides with labour invoices or anything on the shared `INV-2026-XXX` series. Rate is **$200/month from August 2026 onward** (corrected 2026-10-19 — initially assumed $175/month, carried over from the old one-off July bill; Damien confirmed the real rate). July's original invoice (INV-2026-002, $175) predates this series and stays as-is.
 
-Damien confirmed 2026-10-19 that the savings/tax split sitting in Simplii Savings matches the same 10% savings / 16% tax ratio that used to apply to KMM labour income. That ratio is reused *only* to tell Damien what to cut from each retainer payment into Simplii Savings — $17.50 + $28.00 = $45.50/month — not to resurrect live accounts.json allocation tracking, which stays retired. This cut is reported per invoice (see `financials/invoices.json` → `retainer_invoices`) for Damien to action himself.
+Damien confirmed 2026-10-19 that the savings/tax split sitting in Simplii Savings matches the same 10% savings / 16% tax ratio that used to apply to KMM labour income. That ratio is reused *only* to tell Damien what to cut from each retainer payment into Simplii Savings — $20.00 + $32.00 = $52.00/month at the corrected rate — not to resurrect live accounts.json allocation tracking, which stays retired. This cut is reported per invoice (see `financials/invoices.json` → `retainer_invoices`) for Damien to action himself.
 
 ## Quoting Time
 

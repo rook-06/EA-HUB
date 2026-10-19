@@ -4,6 +4,20 @@
 
 ---
 
+## [2026-10-19] — Correction: website retainer is $200/month, not $175
+
+Damien corrected my assumption from earlier today — confirmed it's $200/month from August onward specifically (not retroactive to July's old one-off $175 bill, which stays as-is on the shared series).
+
+Updated everywhere the $175 assumption landed:
+- `financials/invoices.json`: SITE-2026-001/002/003 amount → $200, cut recalculated to $20.00 savings + $32.00 tax = $52.00/month ($148.00 stays spendable)
+- `financials/income/2026-08/09/10.json`: INC-2026-032/033/034 amount → $200, `cut_to_savings` updated to match
+- Regenerated all three retainer PDFs at the corrected rate and the `tools/invoice-gen/output/` mirror
+- `references/payment-workflow.md` updated to state the $200/month rate plainly, no longer flagged as assumed
+
+Aug–Oct retainer total now $600 (was $525), total cut to SS over the three months $156.00 ($60 savings + $96 tax).
+
+---
+
 ## [2026-10-19] — Balance update: Capital One Credit, SCU Credit
 
 Damien reported: Capital One Credit -$1.89 (was -$51.45), SCU Credit -$413.57 (was $0). Logged to `accounts.json` and `weekly_log`.

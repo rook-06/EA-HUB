@@ -47,7 +47,7 @@
           "notes": "Flat-fee website retainer, no GST. Separate line of business (Dametime Marketing) — NOT part of the KMM general-labour hours tracked under the KMM-2026-XXX series below. Recovered from the master branch during the 2026-10-19 consolidation; previously logged on this branch only as income (INC-2026-006) with no formal invoice record."
         }
       ],
-      "retainer_invoices_note": "Added 2026-10-19: website retainer now billed monthly upfront, invoice dated the 1st of each month, covering that whole month's work, starting August 2026. Rate assumed at $175/month (the only known data point, from the July one-off) — flag if that's changed. Each invoice's cut to Simplii Savings uses the same 10% savings / 16% tax split that applied to KMM labour income (confirmed by Damien 2026-10-19 to match what's already in Simplii Savings) — $17.50 + $28.00 = $45.50/month, $129.50 stays spendable. This is a one-time cut calculation per invoice for Damien's own budgeting, not a live accounts.json allocation — that tracking was retired 2026-10-19 in favor of the weekly balance log.",
+      "retainer_invoices_note": "Added 2026-10-19: website retainer now billed monthly upfront, invoice dated the 1st of each month, covering that whole month's work, starting August 2026. Rate CORRECTED 2026-10-19 to $200/month (Damien: 'every month from website is $200' — the initial $175 assumption, carried over from the old one-off July bill, was wrong for this new series). Each invoice's cut to Simplii Savings uses the same 10% savings / 16% tax split that applied to KMM labour income (confirmed by Damien 2026-10-19 to match what's already in Simplii Savings) — $20.00 + $32.00 = $52.00/month, $148.00 stays spendable. This is a one-time cut calculation per invoice for Damien's own budgeting, not a live accounts.json allocation — that tracking was retired 2026-10-19 in favor of the weekly balance log.",
       "retainer_invoices": [
         {
           "id": "SITE-2026-001",
@@ -56,13 +56,13 @@
           "description": "Website maintenance retainer — August 2026 (flat fee, paid upfront)",
           "date_issued": "2026-08-01",
           "due_date": "2026-08-01",
-          "subtotal": 175.0,
+          "subtotal": 200.0,
           "gst": 0,
-          "amount": 175.0,
+          "amount": 200.0,
           "status": "paid",
           "date_paid": "2026-08-01",
           "file": "invoices/SITE-2026-001.pdf",
-          "notes": "Assumed $175/month at the established rate — flag if this has changed. Cut to Simplii Savings: $17.50 savings + $28.00 tax = $45.50. $129.50 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record."
+          "notes": "CORRECTED 2026-10-19: $200/month, not the initial $175 assumption. Cut to Simplii Savings: $20.00 savings + $32.00 tax = $52.00. $148.00 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record."
         },
         {
           "id": "SITE-2026-002",
@@ -71,13 +71,13 @@
           "description": "Website maintenance retainer — September 2026 (flat fee, paid upfront)",
           "date_issued": "2026-09-01",
           "due_date": "2026-09-01",
-          "subtotal": 175.0,
+          "subtotal": 200.0,
           "gst": 0,
-          "amount": 175.0,
+          "amount": 200.0,
           "status": "paid",
           "date_paid": "2026-09-01",
           "file": "invoices/SITE-2026-002.pdf",
-          "notes": "Assumed $175/month at the established rate — flag if this has changed. Cut to Simplii Savings: $17.50 savings + $28.00 tax = $45.50. $129.50 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record."
+          "notes": "CORRECTED 2026-10-19: $200/month, not the initial $175 assumption. Cut to Simplii Savings: $20.00 savings + $32.00 tax = $52.00. $148.00 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record."
         },
         {
           "id": "SITE-2026-003",
@@ -86,13 +86,13 @@
           "description": "Website maintenance retainer — October 2026 (flat fee, paid upfront)",
           "date_issued": "2026-10-01",
           "due_date": "2026-10-01",
-          "subtotal": 175.0,
+          "subtotal": 200.0,
           "gst": 0,
-          "amount": 175.0,
+          "amount": 200.0,
           "status": "paid",
           "date_paid": "2026-10-01",
           "file": "invoices/SITE-2026-003.pdf",
-          "notes": "Assumed $175/month at the established rate — flag if this has changed. Cut to Simplii Savings: $17.50 savings + $28.00 tax = $45.50. $129.50 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record. Current month — November's invoice (SITE-2026-004) follows the same pattern once Nov 1 arrives."
+          "notes": "CORRECTED 2026-10-19: $200/month, not the initial $175 assumption. Cut to Simplii Savings: $20.00 savings + $32.00 tax = $52.00. $148.00 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record. Current month — November's invoice (SITE-2026-004) follows the same pattern once Nov 1 arrives."
         }
       ],
       "labour_invoices_note": "General labour piecework, weekly cycle. All entries below use the KMM-2026-XXX series (distinct from the invoices above) so they never collide with Howell, the website retainer, or any future non-KMM job. Every completed week from the start of this work through the present has an invoice, even where the daily hour breakdown had to be reconstructed by spreading a known weekly total evenly across the days (see each hours file's notes for which weeks that applies to).",

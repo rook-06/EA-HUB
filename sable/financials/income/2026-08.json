@@ -57,11 +57,11 @@
       "description": "Website maintenance retainer — August 2026",
       "invoice": "SITE-2026-001",
       "job_id": null,
-      "amount": 175.00,
+      "amount": 200.00,
       "payment_method": "paid upfront",
       "business": "Dametime Marketing",
-      "cut_to_savings": { "savings": 17.50, "tax_reserve": 28.00, "total": 45.50 },
-      "notes": "Established 2026-10-19: new monthly-upfront retainer model, invoice dated the 1st of the month, covers that month's work. Rate assumed at $175/month. The cut_to_savings field is informational only (for Damien's own budgeting) — not posted to accounts.json, which only tracks a weekly balance log now."
+      "cut_to_savings": { "savings": 20.00, "tax_reserve": 32.00, "total": 52.00 },
+      "notes": "Established 2026-10-19: new monthly-upfront retainer model, invoice dated the 1st of the month, covers that month's work. CORRECTED 2026-10-19: $200/month (was logged at an assumed $175). The cut_to_savings field is informational only (for Damien's own budgeting) — not posted to accounts.json, which only tracks a weekly balance log now."
     }
   ]
 }
