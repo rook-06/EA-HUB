@@ -1,0 +1,19 @@
+{
+  "week_start": "2026-08-24",
+  "week_end": "2026-08-30",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [
+    { "date": "2026-08-24", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
+    { "date": "2026-08-25", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
+    { "date": "2026-08-26", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
+    { "date": "2026-08-28", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
+    { "date": "2026-08-29", "hours": 7, "client": "KMM Property Maintenance", "rate": 20, "amount": 140.00 },
+    { "date": "2026-08-30", "hours": 7, "client": "KMM Property Maintenance", "rate": 20, "amount": 140.00 }
+  ],
+  "hours_to_date": 46,
+  "amount_to_date": 920.00,
+  "status": "closed",
+  "invoice": "KMM-2026-003",
+  "notes": "Reconstructed 2026-10-19 during the full hours/invoice consolidation. Original invoice confirmed no hours Aug 27 — spread the remaining 46h evenly across the other 6 days per Damien's instruction; only the weekly tally matters for the invoice."
+}

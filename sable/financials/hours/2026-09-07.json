@@ -1,0 +1,14 @@
+{
+  "week_start": "2026-09-07",
+  "week_end": "2026-09-13",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [
+    { "date": "2026-09-08", "hours": 7, "client": "KMM Property Maintenance", "rate": 20, "amount": 140.00 }
+  ],
+  "hours_to_date": 7,
+  "amount_to_date": 140.00,
+  "status": "closed",
+  "invoice": "KMM-2026-005",
+  "notes": "Backfilled 2026-09-28 — historical entry, predates the payment-workflow system (started 2026-09-21). RESOLVED 2026-10-19: confirmed during the master-branch consolidation that the Sept 8 'September Ledger' reconciliation's unitemized $520 figure was actually the separate Aug 31-Sep 6 week (KMM-2026-004) — no overlap with this $140. No longer provisional. Formalized as KMM-2026-005; only Sept 8 was ever logged this week, so the invoice reflects exactly that."
+}

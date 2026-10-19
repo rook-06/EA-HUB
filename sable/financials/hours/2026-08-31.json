@@ -1,0 +1,20 @@
+{
+  "week_start": "2026-08-31",
+  "week_end": "2026-09-06",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [
+    { "date": "2026-08-31", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
+    { "date": "2026-09-01", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
+    { "date": "2026-09-02", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
+    { "date": "2026-09-03", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
+    { "date": "2026-09-04", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
+    { "date": "2026-09-05", "hours": 3, "client": "KMM Property Maintenance", "rate": 20, "amount": 60.00 },
+    { "date": "2026-09-06", "hours": 3, "client": "KMM Property Maintenance", "rate": 20, "amount": 60.00 }
+  ],
+  "hours_to_date": 26,
+  "amount_to_date": 520.00,
+  "status": "closed",
+  "invoice": "KMM-2026-004",
+  "notes": "This week only ever existed on the master branch (INV-2026-006 there, $520/26h) — never logged on this branch at all. Pulled in during the 2026-10-19 consolidation. No daily breakdown was ever recorded; spread evenly across the 7 days per Damien's instruction. This $520 is already reflected in net worth from the 2026-09-21 reconciliation ('The September Ledger') — no new cash posted to accounts.json for it, this is paperwork only."
+}
