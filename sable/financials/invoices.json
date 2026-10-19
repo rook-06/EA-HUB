@@ -81,7 +81,7 @@
           "amount": 780.0,
           "status": "paid",
           "date_paid": "2026-10-12",
-          "file": null,
+          "file": "invoices/INV-2026-006.pdf",
           "notes": "First invoice under the new weekly workflow (references/payment-workflow.md). 39h @ $20/h: Sept 21 (11h), 22 (6h), 23 (6h), 25 (9h), 26 (7h). No hours Sept 24 or 27. Marked paid per standing KMM rule. PDF not generated yet — JSON record is authoritative; say the word if you want the PDF for your own files."
         },
         {
@@ -95,7 +95,7 @@
           "amount": 300.0,
           "status": "paid",
           "date_paid": "2026-10-19",
-          "file": null,
+          "file": "invoices/INV-2026-007.pdf",
           "notes": "15h @ $20/h: Sept 28 (7h), Sept 30 (8h). No hours Oct 1-4. Backfilled and invoiced 2026-10-15 after a logging gap. Marked paid per standing KMM rule."
         },
         {
