@@ -4,6 +4,14 @@
 
 ---
 
+## [2026-10-19] — Balance update: Capital One Credit, SCU Credit
+
+Damien reported: Capital One Credit -$1.89 (was -$51.45), SCU Credit -$413.57 (was $0). Logged to `accounts.json` and `weekly_log`.
+
+Net worth goes negative: **-$232.99** (was +$131.02).
+
+---
+
 ## [2026-10-19] — Balance update: SCU Savings, SCU Loan
 
 Damien reported: SCU Savings $751.91 (was $3,965.44), SCU Loan -$4,744.78 (was -$4,885.83). Logged straight to `accounts.json` and `weekly_log`, no questions asked per his standing instruction.

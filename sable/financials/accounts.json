@@ -79,14 +79,15 @@
       "name": "Capital One Credit",
       "type": "credit_card",
       "institution": "Capital One",
-      "balance": -51.45,
-      "notes": "Pay in full monthly. Held against by the $51.45 Simplii Savings division above."
+      "balance": -1.89,
+      "notes": "Updated 2026-10-19 per Damien's direct balance report (was -$51.45)."
     },
     {
       "name": "SCU Credit",
       "type": "credit_card",
       "institution": "SCU",
-      "balance": 0
+      "balance": -413.57,
+      "notes": "Updated 2026-10-19 per Damien's direct balance report (was $0)."
     },
     {
       "name": "Personal Loan (Grandmother)",
@@ -99,9 +100,9 @@
   "totals": {
     "liquid": 4873.68,
     "invested": 53.57,
-    "liabilities": 4796.23,
-    "net_worth": 131.02,
-    "note": "Updated 2026-10-19 (second report same day): SCU Savings $751.91 (was $3,965.44), SCU Loan -$4,744.78 (was -$4,885.83). Net worth drops from +$3,203.50 to +$131.02 — SCU Savings fell by far more than the loan improved. Recorded as reported, not questioned."
+    "liabilities": 5160.24,
+    "net_worth": -232.99,
+    "note": "Updated 2026-10-19 (third report same day): Capital One Credit -$1.89 (was -$51.45), SCU Credit -$413.57 (was $0). Net worth goes negative: -$232.99 (was +$131.02). Recorded as reported, not questioned."
   },
   "accounts_receivable": {
     "kmm_owing": 200.00,
@@ -155,6 +156,22 @@
         "Capital One Credit": -51.45
       },
       "net_worth": 131.02
+    },
+    {
+      "date": "2026-10-19",
+      "source": "Damien's direct balance report (third update same day — credit cards)",
+      "balances": {
+        "Simplii Chequing": 1245.00,
+        "Simplii Savings": 1528.80,
+        "Simplii TFSA (Eva)": 1347.77,
+        "SCU Savings": 751.91,
+        "Wealthsimple Chequing": 0.20,
+        "Wealthsimple Trading": 53.57,
+        "SCU Loan": -4744.78,
+        "Capital One Credit": -1.89,
+        "SCU Credit": -413.57
+      },
+      "net_worth": -232.99
     }
   ]
 }
