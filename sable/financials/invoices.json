@@ -42,8 +42,8 @@
           "amount": 175.0,
           "status": "paid",
           "date_paid": "2026-08-30",
-          "file": null,
-          "notes": "Flat-fee website retainer, no GST. Separate line of business (Dametime Marketing) — NOT part of the KMM general-labour hours tracked under the KMM-2026-XXX series below. Recovered from the master branch during the 2026-10-19 consolidation; previously logged on this branch only as income (INC-2026-006) with no formal invoice record. PDF not yet generated."
+          "file": "invoices/INV-2026-002.pdf",
+          "notes": "Flat-fee website retainer, no GST. Separate line of business (Dametime Marketing) — NOT part of the KMM general-labour hours tracked under the KMM-2026-XXX series below. Recovered from the master branch during the 2026-10-19 consolidation; previously logged on this branch only as income (INC-2026-006) with no formal invoice record."
         }
       ],
       "labour_invoices_note": "General labour piecework, weekly cycle. All entries below use the KMM-2026-XXX series (distinct from the invoices above) so they never collide with Howell, the website retainer, or any future non-KMM job. Every completed week from the start of this work through the present has an invoice, even where the daily hour breakdown had to be reconstructed by spreading a known weekly total evenly across the days (see each hours file's notes for which weeks that applies to).",
