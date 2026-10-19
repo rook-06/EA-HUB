@@ -4,6 +4,23 @@
 
 ---
 
+## [2026-10-19] — Real account balance update: Chequing, Savings, Eva's TFSA
+
+Damien gave current real balances directly:
+- Simplii Chequing: $1,245.00 (was $3,273.12)
+- Simplii Savings: $1,528.80 (was $585.50) — Damien confirmed this now holds BOTH his savings and his tax reserve blended together, no breakdown given yet
+- Eva's TFSA: $1,347.77 (was $470.63)
+
+Updated `accounts.json` to match. Dropped the old Chequing tax_reserve division (confirmed moved to Savings) and the old Savings capital_one_hold/gst_reserve/savings divisions (stale now that Savings is blended) — flagged both as needing a real breakdown from Damien rather than guessing.
+
+New totals: liquid $8,087.21, net worth **+$3,203.50** (down from +$3,411.18 — net -$207.68, since Chequing dropped more than Savings and the TFSA gained combined). Not speculating on why the money moved, just recording where it landed.
+
+`reserves.tax_reserve_funded` carried forward as a placeholder ($451.20) since I don't know how much of the new $1,528.80 is actually tax vs. savings — asked Damien for that split. `discretionary.truly_free` ($5,709.94) is provisional for the same reason.
+
+Only pushed to this branch — this is routine balance bookkeeping, not part of the KMM hours/invoice consolidation that explicitly went to both branches.
+
+---
+
 ## [2026-10-19] — Full KMM hours/invoice consolidation across both branches
 
 Damien: tired of backtracking on this — wanted every week's hours and invoices put together from both this branch and master, with KMM labour given its own ID series so it never collides with other jobs again, weeks with an invoice but unclear daily breakdown just spread evenly, and half-rate hours labeled simply by rate instead of a separate "type" tag.
