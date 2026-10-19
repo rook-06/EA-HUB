@@ -4,6 +4,17 @@
 
 ---
 
+## [2026-10-19] — KMM-2026-009 and 010 now genuinely marked paid in the system
+
+Damien followed up: mark them paid in the system too, not just on the invoice. Confirmed only the Oct 19 hours remain genuinely outstanding, and explicitly chose to mark KMM-2026-010 "completely paid" — closing the $120 gap on it as a bookkeeping call, not a newly reported deposit.
+
+- `accounts_receivable`: `kmm_owing` $200.00 → **$80.00** (just the Oct 19 hours, still on the open, uninvoiced week), `received_oct5_onward` $1,480.00 → $1,600.00
+- Updated both invoices' notes to drop the "invoice only" caveat from my last pass — this is real now
+- Did NOT add a new lump-payment income entry for the $120, and did NOT flip the individual hour-entries' (INC-2026-016 through 028) `paid`/`payment_method` fields — consistent with how the two earlier real payments were handled (those also never flipped the per-hour entries; the aggregate `accounts_receivable` figure is what's authoritative)
+- No accounts.json cash balances touched — that allocation tracking stays retired; Simplii balances only move via Damien's own weekly reports
+
+---
+
 ## [2026-10-19] — KMM-2026-009 and 010 marked paid ON INVOICE ONLY
 
 Damien asked to add the website retainer invoices and the two outstanding labour invoices (009, 010) into the zip, and mark all invoices paid — explicitly "on invoice only."

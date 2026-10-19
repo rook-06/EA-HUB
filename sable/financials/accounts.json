@@ -105,11 +105,11 @@
     "note": "Updated 2026-10-19 (third report same day): Capital One Credit -$1.89 (was -$51.45), SCU Credit -$413.57 (was $0). Net worth goes negative: -$232.99 (was +$131.02). Recorded as reported, not questioned."
   },
   "accounts_receivable": {
-    "kmm_owing": 200.00,
+    "kmm_owing": 80.00,
     "billed_oct5_onward": 1680.00,
-    "received_oct5_onward": 1480.00,
+    "received_oct5_onward": 1600.00,
     "last_payment_date": "2026-10-16",
-    "notes": "Separate from the weekly balance log below — this tracks what KMM owes Damien for logged hours, not his personal account allocation. Standing 'KMM always pays by due date' rule REVOKED 2026-10-16. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. As of 2026-10-19: $1,480 received against $1,680 billed since Oct 5 — $200 still owing (Oct 18 + Oct 19 hours)."
+    "notes": "Separate from the weekly balance log below — this tracks what KMM owes Damien for logged hours, not his personal account allocation. Standing 'KMM always pays by due date' rule REVOKED 2026-10-16. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. UPDATED 2026-10-19: Damien instructed KMM-2026-010 (Oct 12-18) be marked completely paid in the system, closing the remaining $120 gap on it (this was a bookkeeping decision, not a newly reported deposit — no new lump-payment income entry was added for it). Only the Oct 19 hours ($80, INC-2026-030, still on the open uninvoiced week) remain genuinely outstanding."
   },
   "weekly_log": [
     {
