@@ -1,20 +1,20 @@
 {
   "last_updated": "2026-10-19",
-  "source_note": "Reconciled from Damien's own ledger artifact (\"The September Ledger\"), shared 2026-09-21, dated as of Sept 7-8, 2026. Balances recorded as reported, not independently verified.",
+  "source_note": "Simplified 2026-10-19 per Damien: no more internal allocation tracking (tax reserve divisions, discretionary/spendable breakdowns) — just a weekly log of real account balances as he reports them. See weekly_log below for history.",
   "accounts": [
     {
       "name": "Simplii Chequing",
       "type": "chequing",
       "institution": "Simplii",
       "balance": 1245.00,
-      "notes": "Updated 2026-10-19 per Damien's direct balance report: $1,245.00. Divisions dropped — Damien confirmed the tax-reserve portion is no longer held here; it's now blended into Simplii Savings (see below). Prior balance was $3,273.12; not asking why it moved, just recording where it landed."
+      "notes": "Updated 2026-10-19 per Damien's direct balance report. No divisions tracked anymore."
     },
     {
       "name": "Simplii Savings",
       "type": "savings",
       "institution": "Simplii",
       "balance": 1528.80,
-      "notes": "Updated 2026-10-19 per Damien's direct balance report: $1,528.80. Damien confirmed this now contains BOTH his savings and his tax reserve blended together — exact split between the two is not yet known. Previous divisions (capital_one_hold $51.45, gst_reserve $41.25, savings $492.80) are stale and not carried forward as-is; flagged for Damien to break down. reserves.tax_reserve_funded below is carried forward as a best estimate ($451.20) pending his confirmation of the actual split."
+      "notes": "Updated 2026-10-19 per Damien's direct balance report. No divisions tracked anymore."
     },
     {
       "name": "Simplii TFSA (Eva)",
@@ -101,22 +101,45 @@
     "invested": 53.57,
     "liabilities": 4937.28,
     "net_worth": 3203.50,
-    "note": "Updated 2026-10-19 (second update same day): Damien reported current real balances — Simplii Chequing $1,245.00 (down from $3,273.12), Simplii Savings $1,528.80 (up from $585.50, now blended with the tax reserve), Eva's TFSA $1,347.77 (up from $470.63). Net worth moves from +$3,411.18 to +$3,203.50 — net down $207.68 despite Savings and the TFSA both rising, because Chequing dropped by more than those two gained combined. Not questioning the movement, just recording it."
+    "note": "Net worth +$3,203.50 as of the 2026-10-19 balance report (was +$3,411.18 as of 2026-10-16)."
   },
   "accounts_receivable": {
     "kmm_owing": 200.00,
     "billed_oct5_onward": 1680.00,
     "received_oct5_onward": 1480.00,
     "last_payment_date": "2026-10-16",
-    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-19: +$480 received (Oct 16, corrected from $495), owing was down to $120 for everything through Oct 18 (confirmed by Damien). New hours logged same day (INC-2026-030, 4h/$80, Oct 19 — first entry of the new week) bring billed up to $1,680 and owing back up to $200. Two payments on file: $1,000 (Oct 14) and $480 (Oct 16)."
+    "notes": "Separate from the weekly balance log below — this tracks what KMM owes Damien for logged hours, not his personal account allocation. Standing 'KMM always pays by due date' rule REVOKED 2026-10-16. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. As of 2026-10-19: $1,480 received against $1,680 billed since Oct 5 — $200 still owing (Oct 18 + Oct 19 hours)."
   },
-  "reserves": {
-    "tax_reserve_owed": 936.80,
-    "tax_reserve_funded": 451.20,
-    "notes": "16% of KMM income per payment workflow (references/payment-workflow.md), tracked against income actually received (cash basis), not just billed. The pre-Sept-21 backlog remains $485.60 — still unfunded. UPDATED 2026-10-19: the $451.20 funded figure used to live in a Simplii Chequing division; Damien now says the tax reserve is blended into Simplii Savings ($1,528.80 total, savings + tax combined) with no breakdown given yet. Carrying $451.20 forward as a placeholder, not a confirmed figure — ask Damien for the actual savings/tax split within Simplii Savings next time, so this number stops being a guess."
-  },
-  "discretionary": {
-    "truly_free": 5709.94,
-    "notes": "Liquid cash (excludes Wealthsimple Trading), less Eva's TFSA, the tax reserve owed, the Capital One hold, and the GST reserve. PROVISIONAL as of 2026-10-19: the Capital One hold ($51.45) and GST reserve ($41.25) used to be tracked as Simplii Savings divisions, which no longer exist in their old form now that Savings blends savings + tax. Carried forward as-is pending confirmation; could shift once Damien breaks down the new Savings balance."
-  }
+  "weekly_log": [
+    {
+      "date": "2026-09-21",
+      "source": "The September Ledger reconciliation",
+      "balances": {
+        "Simplii Chequing": 735.12,
+        "Simplii Savings": 303.50,
+        "Simplii TFSA (Eva)": 470.63,
+        "SCU Savings": 3965.44,
+        "Wealthsimple Chequing": 0.20,
+        "Wealthsimple Trading": 53.57,
+        "SCU Loan": -4885.83,
+        "Capital One Credit": -51.45
+      },
+      "net_worth": 591.18
+    },
+    {
+      "date": "2026-10-19",
+      "source": "Damien's direct balance report",
+      "balances": {
+        "Simplii Chequing": 1245.00,
+        "Simplii Savings": 1528.80,
+        "Simplii TFSA (Eva)": 1347.77,
+        "SCU Savings": 3965.44,
+        "Wealthsimple Chequing": 0.20,
+        "Wealthsimple Trading": 53.57,
+        "SCU Loan": -4885.83,
+        "Capital One Credit": -51.45
+      },
+      "net_worth": 3203.50
+    }
+  ]
 }

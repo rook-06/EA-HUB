@@ -29,13 +29,13 @@ Invoices are still generated on the usual weekly cadence as a billing record —
 
 ~~Standing rule (2026-09-21): KMM invoices are marked paid automatically the moment they're sent~~ — revoked. It assumed KMM pays by the due date without fail; that assumption was wrong. Invoices now default to **outstanding** until Damien confirms actual payment, same as any other client.
 
-## Income Split — every payment, on receipt
+## Income Split — RETIRED 2026-10-19
 
-- **10%** → Simplii Savings
-- **16%** → Tax reserve
-- **74%** → Spending (Simplii Chequing)
+~~10% → Simplii Savings, 16% → Tax reserve, 74% → Spending~~ — retired. Damien: *"Don't worry about how my money is spent, just take a weekly log from me about my account balances."* No more per-entry allocation modeling — new income entries log the amount only, no `split` breakdown. Historical entries keep their recorded splits as-is (not rewritten), but they're no longer treated as live allocation — see Weekly Balance Log below for how account state is tracked now.
 
-Revised 2026-09-28 (was 10% / 30% / 60%, confirmed 2026-09-21). Applied retroactively to every KMM income entry logged in the system at the time of the change, not just going forward.
+## Weekly Balance Log — established 2026-10-19
+
+Replaces all internal allocation tracking (tax reserve divisions, discretionary/spendable breakdowns) in `financials/accounts.json`. Damien reports his real account balances periodically (weekly, in practice whenever he gives an update); each report gets logged as a dated snapshot in `accounts.json` → `weekly_log`, and `accounts`/`totals` update to match. No attempt is made to track *why* a balance moved or how it's internally divided — just what it is, as of when he reported it.
 
 ## Default Client
 

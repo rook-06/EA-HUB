@@ -57,7 +57,7 @@ Note the client's preferred payment method (e-transfer, cash) in the job file.
 Nothing is marked paid, and no split is applied to `accounts.json`, until Damien explicitly confirms a payment. When he does:
 - Update job status from "invoiced" to "paid" (or note partial payment)
 - Update the relevant `financials/income/` entries — a confirmed payment doesn't need to map 1:1 to a specific invoice or day; apply it against the oldest outstanding amount unless Damien says otherwise, and log what's still owing
-- Update `financials/accounts.json`: post the actual amount received (with the 10/16/74 split) to the real accounts, and update `accounts_receivable.kmm_owing` (or the equivalent for other clients) to reflect what's left outstanding
+- Update `accounts_receivable.kmm_owing` (or the equivalent for other clients) to reflect what's left outstanding. Retired 2026-10-19: no split applied to accounts.json anymore — account balances are now a weekly log of what Damien reports, not a derived allocation. Don't try to post income into real account balances; just keep the owing figure accurate
 - Update `financials/index.json` running totals and `financials/summaries/[month].json` if applicable
 
 ### Step 6 — Collections: overdue follow-up

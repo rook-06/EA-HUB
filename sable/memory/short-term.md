@@ -4,6 +4,21 @@
 
 ---
 
+## [2026-10-19] — Allocation tracking retired; accounts.json is now a weekly balance log
+
+Damien: "Don't worry about how my money is spent, just take a weekly log from me about my account balances."
+
+Retired the whole internal-allocation layer:
+- Dropped per-account `divisions` (tax_reserve, capital_one_hold, gst_reserve, savings/free splits) from `accounts.json`
+- Removed the `reserves` (tax_reserve_owed/funded) and `discretionary` (truly_free) blocks entirely — those were "how it's spent" derivations, exactly what he said to stop tracking
+- Retired the 10/16/74 income split going forward (`references/payment-workflow.md`, `invoice-collections` SKILL.md updated) — new income entries log the amount only, no split breakdown. Historical entries keep their recorded splits as-is, just no longer treated as live.
+- Added `weekly_log` to `accounts.json` — a dated array of full balance snapshots + net worth, seeded with the 2026-09-21 reconciliation and today's report. Going forward: Damien reports balances periodically, I log a new entry, done. No modeling of why a number moved.
+- `accounts_receivable` (KMM owing) stays — that's revenue/AR tracking, not personal spending allocation, out of scope for this change.
+
+This is a mode change, not a one-off — made the call based on his instruction rather than asking, since he was direct about it. If he wants the split back for budgeting purposes specifically (separate from account-balance tracking), that's a different ask.
+
+---
+
 ## [2026-10-19] — Real account balance update: Chequing, Savings, Eva's TFSA
 
 Damien gave current real balances directly:
