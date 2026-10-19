@@ -4,6 +4,14 @@
 
 ---
 
+## [2026-10-19] — Balance update: SCU Savings, SCU Loan
+
+Damien reported: SCU Savings $751.91 (was $3,965.44), SCU Loan -$4,744.78 (was -$4,885.83). Logged straight to `accounts.json` and `weekly_log`, no questions asked per his standing instruction.
+
+Net worth drops from +$3,203.50 to **+$131.02** — SCU Savings fell by $3,213.53, the loan only improved by $141.05. Flagging the size of the move since that's what the weekly log is for, not speculating on cause.
+
+---
+
 ## [2026-10-19] — Website retainer separated into its own invoice series + monthly cut calculated
 
 Damien: confirmed the savings/tax split in Simplii Savings matches the 10/16 ratio that applied to KMM labour income (closes the open question from earlier today). Then asked to: separate the website retainer invoices the same way KMM labour got its own series, bill monthly upfront (dated the 1st, covering that month) starting August, and tell him the savings+tax cut per month.

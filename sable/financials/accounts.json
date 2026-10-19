@@ -27,8 +27,8 @@
       "name": "SCU Savings",
       "type": "savings",
       "institution": "SCU",
-      "balance": 3965.44,
-      "notes": "72% of all liquid funds. This is also the account the SCU Loan auto-pay draws from on the 30th each month — the loan payment erodes this balance directly."
+      "balance": 751.91,
+      "notes": "Updated 2026-10-19 per Damien's direct balance report (was $3,965.44). This is also the account the SCU Loan auto-pay draws from on the 30th each month."
     },
     {
       "name": "SCU Chequing",
@@ -72,8 +72,8 @@
       "name": "SCU Loan",
       "type": "loan",
       "institution": "SCU",
-      "balance": -4885.83,
-      "notes": "Auto-pays $173.53 on the 30th of each month, drawn from SCU Savings. At that rate, clears in ~28 months before interest."
+      "balance": -4744.78,
+      "notes": "Updated 2026-10-19 per Damien's direct balance report (was -$4,885.83). Auto-pays $173.53 on the 30th of each month, drawn from SCU Savings."
     },
     {
       "name": "Capital One Credit",
@@ -97,11 +97,11 @@
     }
   ],
   "totals": {
-    "liquid": 8087.21,
+    "liquid": 4873.68,
     "invested": 53.57,
-    "liabilities": 4937.28,
-    "net_worth": 3203.50,
-    "note": "Net worth +$3,203.50 as of the 2026-10-19 balance report (was +$3,411.18 as of 2026-10-16)."
+    "liabilities": 4796.23,
+    "net_worth": 131.02,
+    "note": "Updated 2026-10-19 (second report same day): SCU Savings $751.91 (was $3,965.44), SCU Loan -$4,744.78 (was -$4,885.83). Net worth drops from +$3,203.50 to +$131.02 — SCU Savings fell by far more than the loan improved. Recorded as reported, not questioned."
   },
   "accounts_receivable": {
     "kmm_owing": 200.00,
@@ -140,6 +140,21 @@
         "Capital One Credit": -51.45
       },
       "net_worth": 3203.50
+    },
+    {
+      "date": "2026-10-19",
+      "source": "Damien's direct balance report (second update same day — SCU accounts)",
+      "balances": {
+        "Simplii Chequing": 1245.00,
+        "Simplii Savings": 1528.80,
+        "Simplii TFSA (Eva)": 1347.77,
+        "SCU Savings": 751.91,
+        "Wealthsimple Chequing": 0.20,
+        "Wealthsimple Trading": 53.57,
+        "SCU Loan": -4744.78,
+        "Capital One Credit": -51.45
+      },
+      "net_worth": 131.02
     }
   ]
 }
