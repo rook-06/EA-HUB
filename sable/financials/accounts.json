@@ -113,11 +113,11 @@
     "note": "Corrected 2026-10-16. Two things happened here: (1) fixed a bug where this totals block stopped actually being written after the 2026-10-15 Oct-backfill commit — per-account balances kept updating correctly but this summary field silently stuck at an old value while I verbally reported higher numbers computed by hand. (2) Applied Damien's correction: all KMM income from Oct 5 onward was being treated as paid same-day, which was wrong — only $1,000 has actually been received, nothing before that date either per his statement. Backed the Oct 5-15 split out of the accounts and replaced it with just the $1,000 real payment. Net worth is down from the $3,231.18 last reported to the real $2,931.18."
   },
   "accounts_receivable": {
-    "kmm_owing": 480.00,
-    "billed_oct5_onward": 1480.00,
+    "kmm_owing": 600.00,
+    "billed_oct5_onward": 1600.00,
     "received_oct5_onward": 1000.00,
     "last_payment_date": "2026-10-16",
-    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-17: +$180 (9h logged), owing now $480. See references/payment-workflow.md and short-term memory for the full correction."
+    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-18: closed INV-2026-009 (Oct 12-18 week, $710 total), +$120 since last update, owing now $600. See references/payment-workflow.md and short-term memory for the full correction."
   },
   "reserves": {
     "tax_reserve_owed": 860.00,

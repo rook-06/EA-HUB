@@ -8,6 +8,8 @@
 
 Damien logs hours worked each day into the current week's file in `financials/hours/`.
 
+**Date handling (added 2026-10-18):** the system's injected "today's date" has been wrong twice in a row — both times exactly one day ahead of Damien's actual day (said the 17th when it was the 16th, said the 19th when it was the 18th). Do not log a date-sensitive hours/income entry off that injected date alone, especially near a week boundary (Sunday → Monday), where a wrong date silently moves hours into the wrong week/invoice. If Damien doesn't state the date explicitly in a message like "Xh today," confirm the date before logging rather than trust the system reminder.
+
 ## Weekly (every Sunday)
 
 1. Tally the week's hours, Monday through Sunday.

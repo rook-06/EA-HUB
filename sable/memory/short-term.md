@@ -4,6 +4,16 @@
 
 ---
 
+## [2026-10-18] — Week closed (INV-2026-009), system date confirmed unreliable
+
+- Logged Oct 18: 3h labour ($60) + 6h quoting at half rate ($60) = $120, both owing
+- This closed the Oct 12-18 week on time (Sunday): **38.5h / $710 total**, formalized as **INV-2026-009**, status outstanding per the owing model
+- `accounts.json` accounts_receivable: billed_oct5_onward $1,600, received $1,000, **kmm_owing now $600.00**
+- **Caught the system's injected date being wrong for the second time in a row** — said the 19th, Damien confirmed it was actually the 18th (same pattern as the 17th/16th mix-up two days prior: system consistently one day ahead). Asked before logging this time instead of assuming. Documented the workaround in `references/payment-workflow.md`: don't trust the injected date for billing-sensitive entries, especially near a week boundary — confirm with Damien if he doesn't state the date explicitly.
+- Can't actually fix the underlying system clock (it's injected by the harness, not part of this repo) — the fix is behavioral: verify before logging.
+
+---
+
 ## [2026-10-16] — Oct 16 hours logged, first entry under the owing model
 
 - 9h ($180), week of Oct 12-18 now at 29.5h / $590
