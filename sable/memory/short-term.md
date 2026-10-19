@@ -4,6 +4,12 @@
 
 ---
 
+## [2026-10-19] — Confirmed: the $120 owing is specifically Oct 18
+
+Damien: all that's owed now is the hours for Oct 18. Checked the math — it lines up exactly: $120 owing = Oct 18's two entries (INC-2026-027 $60 labour + INC-2026-028 $60 quoting). Everything Oct 5-16 ($1,480) is paid in full between the two payments already logged. No numbers changed, just added a clarifying note to `accounts.json` accounts_receivable tying the $120 explicitly to Oct 18.
+
+---
+
 ## [2026-10-19] — Correction: second payment was $480, not $495
 
 Damien caught his own typo right after. INC-2026-029 corrected from $495 to **$480** (split and all downstream numbers recomputed):

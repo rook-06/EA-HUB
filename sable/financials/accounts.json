@@ -117,7 +117,7 @@
     "billed_oct5_onward": 1600.00,
     "received_oct5_onward": 1480.00,
     "last_payment_date": "2026-10-16",
-    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-19: +$480 received (Oct 16, corrected from $495), owing down to $120. Two payments on file: $1,000 (Oct 14) and $480 (Oct 16). See references/payment-workflow.md and short-term memory for the full correction."
+    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-19: +$480 received (Oct 16, corrected from $495), owing down to $120. Two payments on file: $1,000 (Oct 14) and $480 (Oct 16) — together covering everything billed through Oct 16. Damien confirmed 2026-10-19 the remaining $120 owing is specifically Oct 18 (INC-2026-027/028, $60 labour + $60 quoting) — everything earlier is paid in full."
   },
   "reserves": {
     "tax_reserve_owed": 936.80,
