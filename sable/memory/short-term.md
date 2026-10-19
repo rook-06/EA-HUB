@@ -4,6 +4,16 @@
 
 ---
 
+## [2026-10-19] — Oct 19 hours logged, new week opened
+
+- 4h ($80), first entry of the new week (Oct 19-25) following the close of INV-2026-009 (Oct 12-18)
+- New file `financials/hours/2026-10-19.json` created, status "open"
+- INC-2026-030 logged in `financials/income/2026-10.json` as owing (not paid), per the standing owing model — no accounts.json cash impact
+- `accounts.json` accounts_receivable: billed_oct5_onward $1,600 → $1,680, kmm_owing $120 → **$200.00** (received_oct5_onward unchanged at $1,480)
+- Confirmed the date directly with Damien before logging ("October 19") rather than trusting the injected system date, consistent with the standing caution in `references/payment-workflow.md`
+
+---
+
 ## [2026-10-19] — Confirmed: the $120 owing is specifically Oct 18
 
 Damien: all that's owed now is the hours for Oct 18. Checked the math — it lines up exactly: $120 owing = Oct 18's two entries (INC-2026-027 $60 labour + INC-2026-028 $60 quoting). Everything Oct 5-16 ($1,480) is paid in full between the two payments already logged. No numbers changed, just added a clarifying note to `accounts.json` accounts_receivable tying the $120 explicitly to Oct 18.

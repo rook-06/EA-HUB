@@ -113,11 +113,11 @@
     "note": "Updated 2026-10-19: posted a second real KMM payment, $480 received Oct 16 (INC-2026-029, corrected from an initial $495). Also corrected the date on the earlier $1,000 payment — it landed Oct 14, not Oct 16 as first logged (amount unchanged). Net worth now +$3,411.18."
   },
   "accounts_receivable": {
-    "kmm_owing": 120.00,
-    "billed_oct5_onward": 1600.00,
+    "kmm_owing": 200.00,
+    "billed_oct5_onward": 1680.00,
     "received_oct5_onward": 1480.00,
     "last_payment_date": "2026-10-16",
-    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-19: +$480 received (Oct 16, corrected from $495), owing down to $120. Two payments on file: $1,000 (Oct 14) and $480 (Oct 16) — together covering everything billed through Oct 16. Damien confirmed 2026-10-19 the remaining $120 owing is specifically Oct 18 (INC-2026-027/028, $60 labour + $60 quoting) — everything earlier is paid in full."
+    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-19: +$480 received (Oct 16, corrected from $495), owing was down to $120 for everything through Oct 18 (confirmed by Damien). New hours logged same day (INC-2026-030, 4h/$80, Oct 19 — first entry of the new week) bring billed up to $1,680 and owing back up to $200. Two payments on file: $1,000 (Oct 14) and $480 (Oct 16)."
   },
   "reserves": {
     "tax_reserve_owed": 936.80,
