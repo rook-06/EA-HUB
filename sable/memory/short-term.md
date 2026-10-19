@@ -4,6 +4,25 @@
 
 ---
 
+## [2026-10-19] — Full KMM hours/invoice consolidation across both branches
+
+Damien: tired of backtracking on this — wanted every week's hours and invoices put together from both this branch and master, with KMM labour given its own ID series so it never collides with other jobs again, weeks with an invoice but unclear daily breakdown just spread evenly, and half-rate hours labeled simply by rate instead of a separate "type" tag.
+
+**What changed:**
+- **New numbering:** KMM general-labour invoices moved off the shared `INV-2026-XXX` series onto their own `KMM-2026-XXX` series, starting at 001. This is the actual fix for the branch/master ID collision — Howell and the KMM website retainer stay on the shared series (now just INV-2026-001/002), KMM labour never touches it again.
+- **Every completed week Aug 10 – Oct 18 now has exactly one invoice** (KMM-2026-001 through 010) and a matching hours file. Cross-checked: hours and dollar totals tie out exactly across all 10 weeks (298.5h / $5,880 total labour logged to date, not counting the still-open Oct 19-25 week).
+- **Recovered from master:** the Aug 31–Sept 6 week (26h, $520) — this branch never had it at all. This is also the real source of the "$520 unitemized partial-September income" that's been an open question in this ledger since the Sept 21 reconciliation. Mystery resolved: it's this week, not a double-count risk for anything else. Added as KMM-2026-004 / INC-2026-031. No new cash posted to accounts.json — that $520 was already baked into net worth as of the Sept 21 reconciliation; this is paperwork catching up to money already counted.
+- **Recovered from master:** the KMM website retainer ($175, July work, billed Aug 15-31) — now has a formal invoice (INV-2026-002) on this branch; previously only existed as an income entry (INC-2026-006) with no invoice. Kept clearly separate from the labour-hours series (different business line: Dametime Marketing, flat fee, not hourly).
+- **Formalized two previously-provisional weeks:** Sept 7-13 ($140, only Sept 8 ever logged) and Sept 14-20 ($120, only Sept 18 ever logged) now have real invoices (KMM-2026-005, KMM-2026-006). The Sept 8 entry's "provisional" flag is lifted — the $520 overlap question that was holding it back is resolved (see above).
+- **Reconstructed 4 weeks with no daily breakdown** (Aug 10-16, Aug 17-23, Aug 24-30, Aug 31-Sep 6) by spreading each week's known total evenly across its days, per Damien's instruction — only the weekly tally matters for the invoice, so exact day-by-day placement for these older weeks is a formality, not a fact.
+- **Simplified half-rate labeling:** dropped the `"type": "quoting"` tag on Oct 7 and Oct 18's half-rate entries — now just a plain entry with `rate: 10` instead of `rate: 20`, no separate tagging.
+- **Fixed a stray JSON syntax error** in `income/2026-10.json` left over from an earlier edit (duplicate closing brace before INC-2026-030) — the file was actually invalid JSON until this pass.
+- Validated every touched file (`hours/*.json`, `invoices.json`, `income/2026-08/09/10.json`) parses cleanly and the hours/dollar math ties out before committing.
+- **Pushed to both branches** — this branch (`claude/invoices-display-adfgx6`) and `master`, per Damien's explicit instruction to redo it on both. Did not touch jobs/index.json, CRM, or anything outside hours/income/invoices — out of scope for this pass.
+- Did not change any real cash balances in `accounts.json` — this was a paperwork/record-keeping consolidation, not a re-derivation of what's actually been received. Oct 5-onward owing balance ($200) is unaffected.
+
+---
+
 ## [2026-10-19] — Oct 19 hours logged, new week opened
 
 - 4h ($80), first entry of the new week (Oct 19-25) following the close of INV-2026-009 (Oct 12-18)

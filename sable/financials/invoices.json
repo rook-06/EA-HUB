@@ -1,5 +1,7 @@
 {
-  "last_invoice_number": "INV-2026-009",
+  "last_invoice_number": "INV-2026-002",
+  "last_kmm_labour_invoice_number": "KMM-2026-010",
+  "numbering_note": "As of 2026-10-19: KMM general-labour hours get their own 'KMM-2026-XXX' series, starting at 001, separate from the shared 'INV-2026-XXX' series used for every other job/client. This was a deliberate fix — the old shared numbering collided between this branch and a parallel KMM dataset on master. Non-labour invoices (Howell, the KMM website retainer) stay on the shared series.",
   "clients": [
     {
       "client": "George Howell",
@@ -29,7 +31,25 @@
       },
       "invoices": [
         {
-          "id": "INV-2026-003",
+          "id": "INV-2026-002",
+          "job_id": null,
+          "business": "Dametime Marketing",
+          "description": "Website maintenance, July 1-31, 2026 (flat fee)",
+          "date_issued": "2026-08-15",
+          "due_date": "2026-08-30",
+          "subtotal": 175.0,
+          "gst": 0,
+          "amount": 175.0,
+          "status": "paid",
+          "date_paid": "2026-08-30",
+          "file": null,
+          "notes": "Flat-fee website retainer, no GST. Separate line of business (Dametime Marketing) — NOT part of the KMM general-labour hours tracked under the KMM-2026-XXX series below. Recovered from the master branch during the 2026-10-19 consolidation; previously logged on this branch only as income (INC-2026-006) with no formal invoice record. PDF not yet generated."
+        }
+      ],
+      "labour_invoices_note": "General labour piecework, weekly cycle. All entries below use the KMM-2026-XXX series (distinct from the invoices above) so they never collide with Howell, the website retainer, or any future non-KMM job. Every completed week from the start of this work through the present has an invoice, even where the daily hour breakdown had to be reconstructed by spreading a known weekly total evenly across the days (see each hours file's notes for which weeks that applies to).",
+      "labour_invoices": [
+        {
+          "id": "KMM-2026-001",
           "job_id": null,
           "description": "General labour, Aug 10-16, 2026",
           "date_issued": "2026-08-16",
@@ -39,11 +59,11 @@
           "amount": 700.0,
           "status": "paid",
           "date_paid": "2026-08-31",
-          "file": "invoices/INV-2026-003.pdf",
-          "notes": "35h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21). Per standing rule (2026-09-21): KMM invoices are marked paid as of due date automatically once sent."
+          "file": "invoices/KMM-2026-001.pdf",
+          "notes": "35h @ $20/h. No GST. Renumbered from INV-2026-003 during the 2026-10-19 consolidation. No daily breakdown survived — hours spread evenly across the week in financials/hours/2026-08-10.json; only the weekly tally (35h) is on the invoice."
         },
         {
-          "id": "INV-2026-004",
+          "id": "KMM-2026-002",
           "job_id": null,
           "description": "General labour, Aug 17-23, 2026",
           "date_issued": "2026-08-26",
@@ -53,11 +73,11 @@
           "amount": 720.0,
           "status": "paid",
           "date_paid": "2026-09-10",
-          "file": "invoices/INV-2026-004.pdf",
-          "notes": "36h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21). Per standing rule (2026-09-21): KMM invoices are marked paid as of due date automatically once sent."
+          "file": "invoices/KMM-2026-002.pdf",
+          "notes": "36h @ $20/h. No GST. Renumbered from INV-2026-004. No daily breakdown survived — hours spread evenly across the week in financials/hours/2026-08-17.json; only the weekly tally (36h) is on the invoice."
         },
         {
-          "id": "INV-2026-005",
+          "id": "KMM-2026-003",
           "job_id": null,
           "description": "General labour, Aug 24-30, 2026",
           "date_issued": "2026-08-30",
@@ -67,11 +87,53 @@
           "amount": 920.0,
           "status": "paid",
           "date_paid": "2026-09-14",
-          "file": "invoices/INV-2026-005.pdf",
-          "notes": "46h @ $20/h. No GST charged. Confirmed paid by Damien (2026-09-21). Per standing rule (2026-09-21): KMM invoices are marked paid as of due date automatically once sent."
+          "file": "invoices/KMM-2026-003.pdf",
+          "notes": "46h @ $20/h, no hours Aug 27. No GST. Renumbered from INV-2026-005. Remaining hours spread evenly across the other 6 days in financials/hours/2026-08-24.json; only the weekly tally (46h) is on the invoice."
         },
         {
-          "id": "INV-2026-006",
+          "id": "KMM-2026-004",
+          "job_id": null,
+          "description": "General labour, Aug 31 - Sept 6, 2026",
+          "date_issued": "2026-09-06",
+          "due_date": "2026-09-21",
+          "subtotal": 520.0,
+          "gst": 0,
+          "amount": 520.0,
+          "status": "paid",
+          "date_paid": "2026-09-06",
+          "file": "invoices/KMM-2026-004.pdf",
+          "notes": "26h @ $20/h. No GST. This week only ever existed on the master branch (as INV-2026-006 there) — pulled into this branch for the first time during the 2026-10-19 consolidation. No daily breakdown survived — hours spread evenly across the week in financials/hours/2026-08-31.json. This income is already reflected in net worth via the 2026-09-21 ledger reconciliation; adding this invoice is paperwork only, no new cash posted."
+        },
+        {
+          "id": "KMM-2026-005",
+          "job_id": null,
+          "description": "General labour, Sept 7-13, 2026",
+          "date_issued": "2026-09-13",
+          "due_date": "2026-09-28",
+          "subtotal": 140.0,
+          "gst": 0,
+          "amount": 140.0,
+          "status": "paid",
+          "date_paid": "2026-09-08",
+          "file": "invoices/KMM-2026-005.pdf",
+          "notes": "7h @ $20/h. No GST. Had no formal invoice before — this week was only ever a backfilled hours entry (financials/hours/2026-09-07.json), flagged provisional pending a double-count check against the Sept 8 ledger reconciliation. That check is now resolved (see KMM-2026-004) — formalized as an invoice during the 2026-10-19 consolidation. Only Sept 8 was ever logged this week, so the invoice reflects exactly that."
+        },
+        {
+          "id": "KMM-2026-006",
+          "job_id": null,
+          "description": "General labour, Sept 14-20, 2026",
+          "date_issued": "2026-09-20",
+          "due_date": "2026-10-05",
+          "subtotal": 120.0,
+          "gst": 0,
+          "amount": 120.0,
+          "status": "paid",
+          "date_paid": "2026-09-18",
+          "file": "invoices/KMM-2026-006.pdf",
+          "notes": "6h @ $20/h. No GST. Had no formal invoice before — only a backfilled hours entry (financials/hours/2026-09-14.json). Formalized during the 2026-10-19 consolidation. Only Sept 18 was ever logged this week, so the invoice reflects exactly that."
+        },
+        {
+          "id": "KMM-2026-007",
           "job_id": null,
           "description": "General labour, Sept 21-27, 2026 (week)",
           "date_issued": "2026-09-27",
@@ -81,11 +143,11 @@
           "amount": 780.0,
           "status": "paid",
           "date_paid": "2026-10-12",
-          "file": "invoices/INV-2026-006.pdf",
-          "notes": "First invoice under the new weekly workflow (references/payment-workflow.md). 39h @ $20/h: Sept 21 (11h), 22 (6h), 23 (6h), 25 (9h), 26 (7h). No hours Sept 24 or 27. Marked paid per standing KMM rule. PDF not generated yet — JSON record is authoritative; say the word if you want the PDF for your own files."
+          "file": "invoices/KMM-2026-007.pdf",
+          "notes": "First invoice under the weekly workflow (references/payment-workflow.md). 39h @ $20/h: Sept 21 (11h), 22 (6h), 23 (6h), 25 (9h), 26 (7h). No hours Sept 24 or 27. Renumbered from INV-2026-006 during the 2026-10-19 consolidation."
         },
         {
-          "id": "INV-2026-007",
+          "id": "KMM-2026-008",
           "job_id": null,
           "description": "General labour, Sept 28 - Oct 4, 2026 (week)",
           "date_issued": "2026-10-04",
@@ -95,13 +157,13 @@
           "amount": 300.0,
           "status": "paid",
           "date_paid": "2026-10-19",
-          "file": "invoices/INV-2026-007.pdf",
-          "notes": "15h @ $20/h: Sept 28 (7h), Sept 30 (8h). No hours Oct 1-4. Backfilled and invoiced 2026-10-15 after a logging gap. Marked paid per standing KMM rule."
+          "file": "invoices/KMM-2026-008.pdf",
+          "notes": "15h @ $20/h: Sept 28 (7h), Sept 30 (8h). No hours Oct 1-4. Backfilled and invoiced 2026-10-15 after a logging gap. Renumbered from INV-2026-007 during the 2026-10-19 consolidation."
         },
         {
-          "id": "INV-2026-008",
+          "id": "KMM-2026-009",
           "job_id": null,
-          "description": "General labour + quoting time, Oct 5-11, 2026 (week)",
+          "description": "General labour + half-rate hours, Oct 5-11, 2026 (week)",
           "date_issued": "2026-10-11",
           "due_date": "2026-10-26",
           "subtotal": 890.0,
@@ -109,13 +171,13 @@
           "amount": 890.0,
           "status": "outstanding",
           "date_paid": null,
-          "file": "invoices/INV-2026-008.pdf",
-          "notes": "43h labour @ $20/h + 3h quoting @ $10/h: Oct 5 (8h), 6 (7h), 7 (6h labour + 3h quoting), 8 (8h), 9 (6h), 10 (8h). No hours Oct 11. CORRECTED 2026-10-16: the 'KMM auto-pays by due date' rule was wrong — Damien confirmed only $1,000 received against everything billed since Oct 5 ($1,300 total, this invoice plus the uninvoiced Oct 12-18 partial week), not allocated to a specific invoice. Status reverted from paid to outstanding; see accounts.json accounts_receivable for the net owing balance."
+          "file": "invoices/KMM-2026-009.pdf",
+          "notes": "43h @ $20/h + 3h @ $10/h (half rate): Oct 5 (8h), 6 (7h), 7 (6h @ $20 + 3h @ $10), 8 (8h), 9 (6h), 10 (8h). No hours Oct 11. Renumbered from INV-2026-008 during the 2026-10-19 consolidation. Still outstanding — part of the Oct 5-onward owing balance tracked in accounts.json."
         },
         {
-          "id": "INV-2026-009",
+          "id": "KMM-2026-010",
           "job_id": null,
-          "description": "General labour + quoting time, Oct 12-18, 2026 (week)",
+          "description": "General labour + half-rate hours, Oct 12-18, 2026 (week)",
           "date_issued": "2026-10-18",
           "due_date": "2026-11-02",
           "subtotal": 710.0,
@@ -123,8 +185,8 @@
           "amount": 710.0,
           "status": "outstanding",
           "date_paid": null,
-          "file": "invoices/INV-2026-009.pdf",
-          "notes": "32.5h labour @ $20/h + 6h quoting @ $10/h: Oct 12 (4h), 13 (7.5h), 15 (9h), 16 (9h), 18 (3h labour + 6h quoting). No hours Oct 14, 17. Outstanding per the owing-balance model established 2026-10-16 — not marked paid until Damien confirms."
+          "file": "invoices/KMM-2026-010.pdf",
+          "notes": "32.5h @ $20/h + 6h @ $10/h (half rate): Oct 12 (4h), 13 (7.5h), 15 (9h), 16 (9h), 18 (3h @ $20 + 6h @ $10). No hours Oct 14, 17. Renumbered from INV-2026-009 during the 2026-10-19 consolidation. Still outstanding — part of the Oct 5-onward owing balance tracked in accounts.json."
         }
       ]
     }

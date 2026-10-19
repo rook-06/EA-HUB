@@ -8,12 +8,12 @@
     { "date": "2026-10-13", "hours": 7.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 150.00 },
     { "date": "2026-10-15", "hours": 9, "client": "KMM Property Maintenance", "rate": 20, "amount": 180.00 },
     { "date": "2026-10-16", "hours": 9, "client": "KMM Property Maintenance", "rate": 20, "amount": 180.00 },
-    { "date": "2026-10-18", "hours": 3, "client": "KMM Property Maintenance", "rate": 20, "amount": 60.00, "type": "labour" },
-    { "date": "2026-10-18", "hours": 6, "client": "KMM Property Maintenance", "rate": 10, "amount": 60.00, "type": "quoting", "notes": "Quoting time at half rate." }
+    { "date": "2026-10-18", "hours": 3, "client": "KMM Property Maintenance", "rate": 20, "amount": 60.00 },
+    { "date": "2026-10-18", "hours": 6, "client": "KMM Property Maintenance", "rate": 10, "amount": 60.00 }
   ],
   "hours_to_date": 38.5,
   "amount_to_date": 710.00,
   "status": "closed",
-  "invoice": "INV-2026-009",
-  "notes": "Week closed 2026-10-18 (Sunday, on time). No hours Oct 14, 17. Tallied and invoiced per references/payment-workflow.md."
+  "invoice": "KMM-2026-010",
+  "notes": "Week closed 2026-10-18 (Sunday, on time). No hours Oct 14, 17. Tallied and invoiced per references/payment-workflow.md. Invoice renumbered from INV-2026-009 to KMM-2026-010 during the 2026-10-19 consolidation; half-rate hours labeled simply by rate (10 vs 20), no separate type tag."
 }

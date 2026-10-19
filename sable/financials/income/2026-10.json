@@ -6,7 +6,7 @@
       "date": "2026-10-05",
       "source": "KMM Property Maintenance",
       "description": "General labour — 8h @ $20/h",
-      "invoice": "INV-2026-008",
+      "invoice": "KMM-2026-009",
       "job_id": null,
       "amount": 160.0,
       "payment_method": "owing",
@@ -16,7 +16,7 @@
         "tax_reserve": 25.6,
         "chequing": 118.4
       },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts. Invoice renumbered from INV-2026-008 to KMM-2026-009 during the 2026-10-19 consolidation.",
       "paid": false
     },
     {
@@ -24,7 +24,7 @@
       "date": "2026-10-06",
       "source": "KMM Property Maintenance",
       "description": "General labour — 7h @ $20/h",
-      "invoice": "INV-2026-008",
+      "invoice": "KMM-2026-009",
       "job_id": null,
       "amount": 140.0,
       "payment_method": "owing",
@@ -34,15 +34,15 @@
         "tax_reserve": 22.4,
         "chequing": 103.6
       },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts. Invoice renumbered from INV-2026-008 to KMM-2026-009 during the 2026-10-19 consolidation.",
       "paid": false
     },
     {
       "id": "INC-2026-018",
       "date": "2026-10-07",
       "source": "KMM Property Maintenance",
-      "description": "General labour (6h @ $20/h) + quoting time (3h @ $10/h)",
-      "invoice": "INV-2026-008",
+      "description": "General labour (6h @ $20/h) + half-rate hours (3h @ $10/h)",
+      "invoice": "KMM-2026-009",
       "job_id": null,
       "amount": 150.0,
       "payment_method": "owing",
@@ -52,7 +52,7 @@
         "tax_reserve": 24.0,
         "chequing": 111.0
       },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. Corrected 2026-10-15: 3h of the original 9h reclassified as quoting time at half rate ($10/h vs $20/h), reducing this entry from $180 to $150. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. Corrected 2026-10-15: 3h of the original 9h reclassified at half rate ($10/h vs $20/h), reducing this entry from $180 to $150. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts. Invoice renumbered from INV-2026-008 to KMM-2026-009 during the 2026-10-19 consolidation.",
       "paid": false
     },
     {
@@ -60,7 +60,7 @@
       "date": "2026-10-08",
       "source": "KMM Property Maintenance",
       "description": "General labour — 8h @ $20/h",
-      "invoice": "INV-2026-008",
+      "invoice": "KMM-2026-009",
       "job_id": null,
       "amount": 160.0,
       "payment_method": "owing",
@@ -70,7 +70,7 @@
         "tax_reserve": 25.6,
         "chequing": 118.4
       },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts. Invoice renumbered from INV-2026-008 to KMM-2026-009 during the 2026-10-19 consolidation.",
       "paid": false
     },
     {
@@ -78,7 +78,7 @@
       "date": "2026-10-09",
       "source": "KMM Property Maintenance",
       "description": "General labour — 6h @ $20/h",
-      "invoice": "INV-2026-008",
+      "invoice": "KMM-2026-009",
       "job_id": null,
       "amount": 120.0,
       "payment_method": "owing",
@@ -88,7 +88,7 @@
         "tax_reserve": 19.2,
         "chequing": 88.8
       },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts. Invoice renumbered from INV-2026-008 to KMM-2026-009 during the 2026-10-19 consolidation.",
       "paid": false
     },
     {
@@ -96,7 +96,7 @@
       "date": "2026-10-10",
       "source": "KMM Property Maintenance",
       "description": "General labour — 8h @ $20/h",
-      "invoice": "INV-2026-008",
+      "invoice": "KMM-2026-009",
       "job_id": null,
       "amount": 160.0,
       "payment_method": "owing",
@@ -106,7 +106,7 @@
         "tax_reserve": 25.6,
         "chequing": 118.4
       },
-      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. No hours logged Oct 11, closes out the week (46h / $920, INV-2026-008). CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Backfilled 2026-10-15. Week of Oct 5-11. No hours logged Oct 11, closes out the week (46h / $920, now KMM-2026-009). CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
       "paid": false
     },
     {
@@ -114,7 +114,7 @@
       "date": "2026-10-12",
       "source": "KMM Property Maintenance",
       "description": "General labour — 4h @ $20/h",
-      "invoice": null,
+      "invoice": "KMM-2026-010",
       "job_id": null,
       "amount": 80.0,
       "payment_method": "owing",
@@ -124,7 +124,7 @@
         "tax_reserve": 12.8,
         "chequing": 59.2
       },
-      "notes": "Week of Oct 12-18 (open). First entry of the new week. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Week of Oct 12-18. First entry of the week. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts. Invoice renumbered from INV-2026-009 to KMM-2026-010 during the 2026-10-19 consolidation.",
       "paid": false
     },
     {
@@ -132,7 +132,7 @@
       "date": "2026-10-13",
       "source": "KMM Property Maintenance",
       "description": "General labour — 7.5h @ $20/h",
-      "invoice": null,
+      "invoice": "KMM-2026-010",
       "job_id": null,
       "amount": 150.0,
       "payment_method": "owing",
@@ -142,7 +142,7 @@
         "tax_reserve": 24.0,
         "chequing": 111.0
       },
-      "notes": "Week of Oct 12-18 (open). CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Week of Oct 12-18. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts. Invoice renumbered from INV-2026-009 to KMM-2026-010 during the 2026-10-19 consolidation.",
       "paid": false
     },
     {
@@ -150,7 +150,7 @@
       "date": "2026-10-15",
       "source": "KMM Property Maintenance",
       "description": "General labour — 9h @ $20/h",
-      "invoice": null,
+      "invoice": "KMM-2026-010",
       "job_id": null,
       "amount": 180.0,
       "payment_method": "owing",
@@ -160,7 +160,7 @@
         "tax_reserve": 28.8,
         "chequing": 133.2
       },
-      "notes": "Week of Oct 12-18 (open). No hours logged Oct 14. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts.",
+      "notes": "Week of Oct 12-18. No hours logged Oct 14. CORRECTED 2026-10-16: not actually paid day-of as assumed — this amount is part of the Oct 5 onward owing balance. Split shown is what applies once/if paid, not yet posted to accounts. Invoice renumbered from INV-2026-009 to KMM-2026-010 during the 2026-10-19 consolidation.",
       "paid": false
     },
     {
@@ -202,7 +202,7 @@
       "date": "2026-10-16",
       "source": "KMM Property Maintenance",
       "description": "General labour — 9h @ $20/h",
-      "invoice": null,
+      "invoice": "KMM-2026-010",
       "job_id": null,
       "amount": 180.0,
       "payment_method": "owing",
@@ -213,14 +213,14 @@
         "tax_reserve": 28.8,
         "chequing": 133.2
       },
-      "notes": "Week of Oct 12-18 (open). Posted to the owing balance per the 2026-10-16 revision — not paid day-of, not posted to accounts.json until Damien confirms payment."
+      "notes": "Week of Oct 12-18. Posted to the owing balance per the 2026-10-16 revision — not paid day-of, not posted to accounts.json until Damien confirms payment. Invoice renumbered from INV-2026-009 to KMM-2026-010 during the 2026-10-19 consolidation."
     },
     {
       "id": "INC-2026-027",
       "date": "2026-10-18",
       "source": "KMM Property Maintenance",
       "description": "General labour — 3h @ $20/h",
-      "invoice": "INV-2026-009",
+      "invoice": "KMM-2026-010",
       "job_id": null,
       "amount": 60.0,
       "payment_method": "owing",
@@ -231,14 +231,14 @@
         "tax_reserve": 9.6,
         "chequing": 44.4
       },
-      "notes": "Closes out the Oct 12-18 week (38.5h / $710 total), formalized as INV-2026-009. Posted to the owing balance — not paid, not posted to accounts.json."
+      "notes": "Closes out the Oct 12-18 week (38.5h / $710 total), formalized as KMM-2026-010 (renumbered from INV-2026-009 during the 2026-10-19 consolidation). Posted to the owing balance — not paid, not posted to accounts.json."
     },
     {
       "id": "INC-2026-028",
       "date": "2026-10-18",
       "source": "KMM Property Maintenance",
-      "description": "Quoting time — 6h @ $10/h (half rate)",
-      "invoice": "INV-2026-009",
+      "description": "Half-rate hours — 6h @ $10/h",
+      "invoice": "KMM-2026-010",
       "job_id": null,
       "amount": 60.0,
       "payment_method": "owing",
@@ -249,8 +249,7 @@
         "tax_reserve": 9.6,
         "chequing": 44.4
       },
-      "notes": "Closes out the Oct 12-18 week (38.5h / $710 total), formalized as INV-2026-009. Posted to the owing balance — not paid, not posted to accounts.json."
-    }
+      "notes": "Closes out the Oct 12-18 week (38.5h / $710 total), formalized as KMM-2026-010 (renumbered from INV-2026-009 during the 2026-10-19 consolidation). Posted to the owing balance — not paid, not posted to accounts.json."
     },
     {
       "id": "INC-2026-030",
@@ -268,8 +267,8 @@
         "tax_reserve": 12.8,
         "chequing": 59.2
       },
-      "notes": "First entry of the new week (Oct 19-25), following the close of INV-2026-009. Posted to the owing balance — not paid, not posted to accounts.json until Damien confirms payment."
+      "notes": "First entry of the new week (Oct 19-25), following the close of KMM-2026-010. Posted to the owing balance — not paid, not posted to accounts.json until Damien confirms payment. Will be formalized as KMM-2026-011 once the week closes."
     }
   ],
-  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($480, Oct 16, corrected from an initial $495), total $1,480 received against $1,600 billed since Oct 5. Net owing was $120 before today's new hours; now $200 with INC-2026-030 ($80, Oct 19) added. All other Oct 5+ entries remain owing (not paid) until Damien confirms further payments. September's Sept 8 ledger snapshot context (the $520 partial-month figure) still applies to entries before this correction and is unrelated."
+  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($480, Oct 16, corrected from an initial $495), total $1,480 received against $1,600 billed since Oct 5. Net owing was $120 before Oct 19's new hours; now $200 with INC-2026-030 ($80, Oct 19) added. All other Oct 5+ entries remain owing (not paid) until Damien confirms further payments. Invoice references updated to the new KMM-2026-XXX series during the 2026-10-19 full hours/invoice consolidation (see financials/invoices.json). Also fixed a stray JSON syntax error left over from an earlier edit."
 }

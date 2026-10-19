@@ -7,48 +7,48 @@
       "date": "2026-08-16",
       "source": "KMM Property Maintenance",
       "description": "General labour — 35h @ $20/h, Aug 10-16",
-      "invoice": "INV-2026-003",
+      "invoice": "KMM-2026-001",
       "job_id": "JOB-2026-006",
       "amount": 700.00,
       "payment_method": "unconfirmed",
       "business": "Independent",
-      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy."
+      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy. Invoice renumbered from INV-2026-003 to KMM-2026-001 during the 2026-10-19 hours/invoice consolidation."
     },
     {
       "id": "INC-2026-004",
       "date": "2026-08-23",
       "source": "KMM Property Maintenance",
       "description": "General labour — 36h @ $20/h, Aug 17-23",
-      "invoice": "INV-2026-004",
+      "invoice": "KMM-2026-002",
       "job_id": "JOB-2026-007",
       "amount": 720.00,
       "payment_method": "unconfirmed",
       "business": "Independent",
-      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy."
+      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy. Invoice renumbered from INV-2026-004 to KMM-2026-002 during the 2026-10-19 hours/invoice consolidation."
     },
     {
       "id": "INC-2026-005",
       "date": "2026-08-30",
       "source": "KMM Property Maintenance",
       "description": "General labour — 46h @ $20/h, Aug 24-30",
-      "invoice": "INV-2026-005",
+      "invoice": "KMM-2026-003",
       "job_id": "JOB-2026-008",
       "amount": 920.00,
       "payment_method": "unconfirmed",
       "business": "Independent",
-      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy."
+      "notes": "Confirmed paid by Damien 2026-09-21. Exact payment date/method not logged — dated to job end date as proxy. Invoice renumbered from INV-2026-005 to KMM-2026-003 during the 2026-10-19 hours/invoice consolidation."
     },
     {
       "id": "INC-2026-006",
       "date": "2026-08-31",
       "source": "KMM Property Maintenance",
       "description": "Website build retainer",
-      "invoice": null,
+      "invoice": "INV-2026-002",
       "job_id": null,
       "amount": 175.00,
       "payment_method": "unconfirmed",
-      "business": "Independent",
-      "notes": "Appears in Sept 8 reconciliation as 'KMM — website retainer'. Not previously logged anywhere in this system. No job/invoice record exists for it — date is estimated as end of August. Needs confirmation: one-time or recurring?"
+      "business": "Dametime Marketing",
+      "notes": "Appears in Sept 8 reconciliation as 'KMM — website retainer'. Formal invoice (INV-2026-002) recovered from the master branch and added here 2026-10-19 — this is a separate line of business (website work, Dametime Marketing), not part of the KMM general-labour hours tracked under the KMM-2026-XXX series. Still open: one-time or recurring? Not yet confirmed with Damien."
     }
   ]
 }

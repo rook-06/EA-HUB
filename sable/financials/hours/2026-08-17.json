@@ -1,0 +1,20 @@
+{
+  "week_start": "2026-08-17",
+  "week_end": "2026-08-23",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [
+    { "date": "2026-08-17", "hours": 5, "client": "KMM Property Maintenance", "rate": 20, "amount": 100.00 },
+    { "date": "2026-08-18", "hours": 5, "client": "KMM Property Maintenance", "rate": 20, "amount": 100.00 },
+    { "date": "2026-08-19", "hours": 5, "client": "KMM Property Maintenance", "rate": 20, "amount": 100.00 },
+    { "date": "2026-08-20", "hours": 5, "client": "KMM Property Maintenance", "rate": 20, "amount": 100.00 },
+    { "date": "2026-08-21", "hours": 5, "client": "KMM Property Maintenance", "rate": 20, "amount": 100.00 },
+    { "date": "2026-08-22", "hours": 5, "client": "KMM Property Maintenance", "rate": 20, "amount": 100.00 },
+    { "date": "2026-08-23", "hours": 6, "client": "KMM Property Maintenance", "rate": 20, "amount": 120.00 }
+  ],
+  "hours_to_date": 36,
+  "amount_to_date": 720.00,
+  "status": "closed",
+  "invoice": "KMM-2026-002",
+  "notes": "Reconstructed 2026-10-19 during the full hours/invoice consolidation. No daily breakdown was ever recorded for this week — only the week total (36h / $720) survived on the original invoice. Spread evenly across the 7 days per Damien's instruction; only the weekly tally matters for the invoice."
+}

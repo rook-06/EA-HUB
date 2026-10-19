@@ -8,6 +8,7 @@
   ],
   "hours_to_date": 6,
   "amount_to_date": 120.00,
-  "status": "open",
-  "notes": "Backfilled 2026-09-28 — historical entry, predates the payment-workflow system (started 2026-09-21). This date is after the Sept 8 reconciliation snapshot, so no double-count risk — logged as new income."
+  "status": "closed",
+  "invoice": "KMM-2026-006",
+  "notes": "Backfilled 2026-09-28 — historical entry, predates the payment-workflow system (started 2026-09-21). Formalized as KMM-2026-006 during the 2026-10-19 consolidation; only Sept 18 was ever logged this week, so the invoice reflects exactly that."
 }
