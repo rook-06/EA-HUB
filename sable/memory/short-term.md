@@ -4,6 +4,17 @@
 
 ---
 
+## [2026-10-19] — Second real payment ($495) + date correction on the first
+
+Damien: a second, separate payment of $495 landed on the 16th — and the earlier $1,000 (previously logged dated the 16th) actually landed on the **14th**, not the 16th. Confirmed by asking rather than assuming, since the two could have been read as the same payment restated.
+
+- INC-2026-025 date corrected: 2026-10-16 → **2026-10-14** (amount unchanged, $1,000)
+- INC-2026-029 added: **$495**, received 2026-10-16, split 10/16/74 ($49.50 / $79.20 / $366.30), posted to real accounts
+- `accounts.json`: Simplii Chequing **$3,286.62**, Simplii Savings **$587.00**, net worth **+$3,426.18**
+- `accounts_receivable`: received_oct5_onward now $1,495 (two payments: $1,000 + $495), billed $1,600, **KMM owing down to $105.00**
+
+---
+
 ## [2026-10-18] — Week closed (INV-2026-009), system date confirmed unreliable
 
 - Logged Oct 18: 3h labour ($60) + 6h quoting at half rate ($60) = $120, both owing

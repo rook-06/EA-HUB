@@ -165,7 +165,7 @@
     },
     {
       "id": "INC-2026-025",
-      "date": "2026-10-16",
+      "date": "2026-10-14",
       "source": "KMM Property Maintenance",
       "description": "Partial payment against Oct 5 onward owing balance",
       "invoice": null,
@@ -178,7 +178,24 @@
         "tax_reserve": 160.0,
         "chequing": 740.0
       },
-      "notes": "Lump payment, not tied to a specific invoice or day — applied against the $1,300 billed Oct 5-15. Leaves $300 still owing. This is the only Oct 5+ income actually posted to accounts.json."
+      "notes": "Lump payment, not tied to a specific invoice or day — applied against the $1,300 billed Oct 5-15. Date corrected 2026-10-19: Damien confirmed this landed on the 14th, not the 16th as originally logged (amount unaffected)."
+    },
+    {
+      "id": "INC-2026-029",
+      "date": "2026-10-16",
+      "source": "KMM Property Maintenance",
+      "description": "Second partial payment against Oct 5 onward owing balance",
+      "invoice": null,
+      "job_id": null,
+      "amount": 495.0,
+      "payment_method": "confirmed by Damien",
+      "business": "Independent",
+      "split": {
+        "savings": 49.5,
+        "tax_reserve": 79.2,
+        "chequing": 366.3
+      },
+      "notes": "Separate from INC-2026-025 ($1,000, received the 14th). Lump payment, not tied to a specific invoice or day. Total received against the $1,600 billed since Oct 5 is now $1,495 — $105 still owing."
     },
     {
       "id": "INC-2026-026",
@@ -235,5 +252,5 @@
       "notes": "Closes out the Oct 12-18 week (38.5h / $710 total), formalized as INV-2026-009. Posted to the owing balance — not paid, not posted to accounts.json."
     }
   ],
-  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Damien confirmed only $1,000 has actually been received against everything billed since Oct 5 ($1,300 total), and nothing before that either. INC-2026-016 through 024 are now marked owing, not paid — their split fields show what applies once paid, but nothing has been posted to accounts.json except INC-2026-025, the $1,000 actual payment. Net owing as of 2026-10-16: $300. See accounts.json accounts_receivable and short-term memory for the full correction. Septembers Sept 8 ledger snapshot context (the $520 partial-month figure) still applies to entries before this correction and is unrelated."
+  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($495, Oct 16), total $1,495 received against $1,600 billed since Oct 5. Net owing: $105. All other Oct 5+ entries remain owing (not paid) until Damien confirms further payments. September's Sept 8 ledger snapshot context (the $520 partial-month figure) still applies to entries before this correction and is unrelated."
 }

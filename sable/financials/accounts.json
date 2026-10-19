@@ -6,10 +6,10 @@
       "name": "Simplii Chequing",
       "type": "chequing",
       "institution": "Simplii",
-      "balance": 2841.12,
+      "balance": 3286.62,
       "divisions": {
-        "tax_reserve": 374.40,
-        "free": 2466.72
+        "tax_reserve": 453.60,
+        "free": 2833.02
       },
       "notes": "tax_reserve division added 2026-09-23. Re-split 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60) — total balance unchanged, only the tax/free split within it shifted. No dedicated tax account exists yet. (Correction 2026-09-25: the 2026-09-23 entry under-added this balance by $138 — the tax-reserved portion was carved out of the 60% chequing share instead of added on top of it. Fixed; see short-term memory for the note.) (Correction 2026-10-16: backed out the full Oct 5-15 income split — that money was never actually received — and re-added only the $1,000 actually paid. See accounts_receivable below.)"
     },
@@ -17,11 +17,11 @@
       "name": "Simplii Savings",
       "type": "savings",
       "institution": "Simplii",
-      "balance": 537.50,
+      "balance": 587.00,
       "divisions": {
         "capital_one_hold": 51.45,
         "gst_reserve": 41.25,
-        "savings": 444.80
+        "savings": 494.30
       },
       "notes": "Divisions: Capital One card hold, GST reserve (do not touch), free savings."
     },
@@ -106,26 +106,26 @@
     }
   ],
   "totals": {
-    "liquid": 7814.89,
+    "liquid": 8309.89,
     "invested": 53.57,
     "liabilities": 4937.28,
-    "net_worth": 2931.18,
-    "note": "Corrected 2026-10-16. Two things happened here: (1) fixed a bug where this totals block stopped actually being written after the 2026-10-15 Oct-backfill commit — per-account balances kept updating correctly but this summary field silently stuck at an old value while I verbally reported higher numbers computed by hand. (2) Applied Damien's correction: all KMM income from Oct 5 onward was being treated as paid same-day, which was wrong — only $1,000 has actually been received, nothing before that date either per his statement. Backed the Oct 5-15 split out of the accounts and replaced it with just the $1,000 real payment. Net worth is down from the $3,231.18 last reported to the real $2,931.18."
+    "net_worth": 3426.18,
+    "note": "Updated 2026-10-19: posted a second real KMM payment, $495 received Oct 16 (INC-2026-029). Also corrected the date on the earlier $1,000 payment — it landed Oct 14, not Oct 16 as first logged (amount unchanged). Net worth now +$3,426.18."
   },
   "accounts_receivable": {
-    "kmm_owing": 600.00,
+    "kmm_owing": 105.00,
     "billed_oct5_onward": 1600.00,
-    "received_oct5_onward": 1000.00,
+    "received_oct5_onward": 1495.00,
     "last_payment_date": "2026-10-16",
-    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-18: closed INV-2026-009 (Oct 12-18 week, $710 total), +$120 since last update, owing now $600. See references/payment-workflow.md and short-term memory for the full correction."
+    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-19: +$495 received (Oct 16), owing down to $105. Two payments on file: $1,000 (Oct 14) and $495 (Oct 16). See references/payment-workflow.md and short-term memory for the full correction."
   },
   "reserves": {
-    "tax_reserve_owed": 860.00,
-    "tax_reserve_funded": 374.40,
+    "tax_reserve_owed": 939.20,
+    "tax_reserve_funded": 453.60,
     "notes": "16% of KMM income per payment workflow (references/payment-workflow.md), tracked against income actually received (cash basis), not just billed. $374.40 actually set aside (Simplii Chequing tax_reserve division). The pre-Sept-21 backlog remains $485.60 — still unfunded, no dedicated tax account exists yet."
   },
   "discretionary": {
-    "truly_free": 6391.56,
+    "truly_free": 6807.36,
     "notes": "Liquid cash (excludes Wealthsimple Trading), less Eva's TFSA, the tax reserve owed, the Capital One hold, and the GST reserve."
   }
 }
