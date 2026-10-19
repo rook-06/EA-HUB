@@ -41,6 +41,12 @@ Replaces all internal allocation tracking (tax reserve divisions, discretionary/
 
 Unless a day's log says otherwise, current work logged here is under **KMM Property Maintenance**.
 
+## Website Retainer — established 2026-10-19
+
+Separate from KMM general labour. Billed monthly, upfront, invoice dated the 1st of the month, covering that month's work — not after the fact. Own numbering series, `SITE-2026-XXX` (starts at 001, August 2026), so it never collides with labour invoices or anything on the shared `INV-2026-XXX` series. Rate assumed at $175/month (the only known data point) until Damien says otherwise.
+
+Damien confirmed 2026-10-19 that the savings/tax split sitting in Simplii Savings matches the same 10% savings / 16% tax ratio that used to apply to KMM labour income. That ratio is reused *only* to tell Damien what to cut from each retainer payment into Simplii Savings — $17.50 + $28.00 = $45.50/month — not to resurrect live accounts.json allocation tracking, which stays retired. This cut is reported per invoice (see `financials/invoices.json` → `retainer_invoices`) for Damien to action himself.
+
 ## Quoting Time
 
 Established 2026-10-15: time spent quoting bills at **half** Damien's standard hourly rate ($10/h vs $20/h). Flagged separately in the day's hours entry (`"type": "quoting"`) rather than folded into regular labour hours.

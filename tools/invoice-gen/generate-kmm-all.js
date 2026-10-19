@@ -167,6 +167,36 @@ const invoices = [
     period: 'July 1 – July 31, 2026',
     flatFee: 175.0,
     flatLabel: 'Website maintenance — flat fee'
+  },
+  {
+    invoiceNumber: 'SITE-2026-001',
+    invoiceDate: 'August 1, 2026',
+    dueDate: 'August 1, 2026',
+    client,
+    description: 'Website Maintenance Retainer (Dametime Marketing)',
+    period: 'August 1 – August 31, 2026',
+    flatFee: 175.0,
+    flatLabel: 'Website maintenance retainer — paid upfront'
+  },
+  {
+    invoiceNumber: 'SITE-2026-002',
+    invoiceDate: 'September 1, 2026',
+    dueDate: 'September 1, 2026',
+    client,
+    description: 'Website Maintenance Retainer (Dametime Marketing)',
+    period: 'September 1 – September 30, 2026',
+    flatFee: 175.0,
+    flatLabel: 'Website maintenance retainer — paid upfront'
+  },
+  {
+    invoiceNumber: 'SITE-2026-003',
+    invoiceDate: 'October 1, 2026',
+    dueDate: 'October 1, 2026',
+    client,
+    description: 'Website Maintenance Retainer (Dametime Marketing)',
+    period: 'October 1 – October 31, 2026',
+    flatFee: 175.0,
+    flatLabel: 'Website maintenance retainer — paid upfront'
   }
 ];
 

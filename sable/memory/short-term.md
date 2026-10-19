@@ -4,6 +4,22 @@
 
 ---
 
+## [2026-10-19] — Website retainer separated into its own invoice series + monthly cut calculated
+
+Damien: confirmed the savings/tax split in Simplii Savings matches the 10/16 ratio that applied to KMM labour income (closes the open question from earlier today). Then asked to: separate the website retainer invoices the same way KMM labour got its own series, bill monthly upfront (dated the 1st, covering that month) starting August, and tell him the savings+tax cut per month.
+
+**What I did:**
+- New series **SITE-2026-XXX** in `financials/invoices.json` (`retainer_invoices`), separate from both the shared `INV-2026-XXX` series and KMM labour's `KMM-2026-XXX`. Old one-off July retainer (INV-2026-002) stays as a grandfathered historical record on the shared series — new monthly cadence starts fresh.
+- Created **SITE-2026-001 (Aug 1), -002 (Sept 1), -003 (Oct 1)** — $175 each, assumed rate (only known data point from the July bill), dated/due the 1st of the month, marked paid per the "paid upfront" arrangement (not independently confirmed by a separate deposit record — flagged).
+- Generated PDFs for all three, added to `tools/invoice-gen/generate-kmm-all.js`.
+- Logged income entries INC-2026-032 (Aug), 033 (Sept), 034 (Oct), each with a `cut_to_savings` field for reference — informational only, NOT posted to `accounts.json`, since that allocation tracking was retired earlier today.
+- **Per-month cut: $17.50 savings + $28.00 tax = $45.50 to Simplii Savings, $129.50 stays spendable.** Over Aug+Sept+Oct: $525 billed, **$136.50 total cut to SS** ($52.50 savings + $84.00 tax).
+- Documented the new model in `references/payment-workflow.md`. Deliberately did NOT reintroduce accounts.json divisions/reserves — this is a one-time-per-invoice number for Damien to action himself, consistent with the weekly-balance-log mode from earlier today.
+- November's retainer (SITE-2026-004) follows the same pattern once Nov 1 arrives.
+- Pushed to this branch only — not part of the explicit both-branches KMM hours/invoice consolidation.
+
+---
+
 ## [2026-10-19] — Allocation tracking retired; accounts.json is now a weekly balance log
 
 Damien: "Don't worry about how my money is spent, just take a weekly log from me about my account balances."

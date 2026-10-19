@@ -1,7 +1,8 @@
 {
   "last_invoice_number": "INV-2026-002",
   "last_kmm_labour_invoice_number": "KMM-2026-010",
-  "numbering_note": "As of 2026-10-19: KMM general-labour hours get their own 'KMM-2026-XXX' series, starting at 001, separate from the shared 'INV-2026-XXX' series used for every other job/client. This was a deliberate fix — the old shared numbering collided between this branch and a parallel KMM dataset on master. Non-labour invoices (Howell, the KMM website retainer) stay on the shared series.",
+  "last_site_retainer_invoice_number": "SITE-2026-003",
+  "numbering_note": "As of 2026-10-19: KMM general-labour hours get their own 'KMM-2026-XXX' series, starting at 001, separate from the shared 'INV-2026-XXX' series used for every other job/client. This was a deliberate fix — the old shared numbering collided between this branch and a parallel KMM dataset on master. The website retainer got its own series too (added 2026-10-19), 'SITE-2026-XXX' — same idea, so recurring retainer billing never collides with labour invoices or anything else. INV-2026-002 (the old one-off July retainer bill) stays on the shared series as a grandfathered historical record; the new monthly cadence starts fresh at SITE-2026-001.",
   "clients": [
     {
       "client": "George Howell",
@@ -44,6 +45,54 @@
           "date_paid": "2026-08-30",
           "file": "invoices/INV-2026-002.pdf",
           "notes": "Flat-fee website retainer, no GST. Separate line of business (Dametime Marketing) — NOT part of the KMM general-labour hours tracked under the KMM-2026-XXX series below. Recovered from the master branch during the 2026-10-19 consolidation; previously logged on this branch only as income (INC-2026-006) with no formal invoice record."
+        }
+      ],
+      "retainer_invoices_note": "Added 2026-10-19: website retainer now billed monthly upfront, invoice dated the 1st of each month, covering that whole month's work, starting August 2026. Rate assumed at $175/month (the only known data point, from the July one-off) — flag if that's changed. Each invoice's cut to Simplii Savings uses the same 10% savings / 16% tax split that applied to KMM labour income (confirmed by Damien 2026-10-19 to match what's already in Simplii Savings) — $17.50 + $28.00 = $45.50/month, $129.50 stays spendable. This is a one-time cut calculation per invoice for Damien's own budgeting, not a live accounts.json allocation — that tracking was retired 2026-10-19 in favor of the weekly balance log.",
+      "retainer_invoices": [
+        {
+          "id": "SITE-2026-001",
+          "job_id": null,
+          "business": "Dametime Marketing",
+          "description": "Website maintenance retainer — August 2026 (flat fee, paid upfront)",
+          "date_issued": "2026-08-01",
+          "due_date": "2026-08-01",
+          "subtotal": 175.0,
+          "gst": 0,
+          "amount": 175.0,
+          "status": "paid",
+          "date_paid": "2026-08-01",
+          "file": "invoices/SITE-2026-001.pdf",
+          "notes": "Assumed $175/month at the established rate — flag if this has changed. Cut to Simplii Savings: $17.50 savings + $28.00 tax = $45.50. $129.50 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record."
+        },
+        {
+          "id": "SITE-2026-002",
+          "job_id": null,
+          "business": "Dametime Marketing",
+          "description": "Website maintenance retainer — September 2026 (flat fee, paid upfront)",
+          "date_issued": "2026-09-01",
+          "due_date": "2026-09-01",
+          "subtotal": 175.0,
+          "gst": 0,
+          "amount": 175.0,
+          "status": "paid",
+          "date_paid": "2026-09-01",
+          "file": "invoices/SITE-2026-002.pdf",
+          "notes": "Assumed $175/month at the established rate — flag if this has changed. Cut to Simplii Savings: $17.50 savings + $28.00 tax = $45.50. $129.50 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record."
+        },
+        {
+          "id": "SITE-2026-003",
+          "job_id": null,
+          "business": "Dametime Marketing",
+          "description": "Website maintenance retainer — October 2026 (flat fee, paid upfront)",
+          "date_issued": "2026-10-01",
+          "due_date": "2026-10-01",
+          "subtotal": 175.0,
+          "gst": 0,
+          "amount": 175.0,
+          "status": "paid",
+          "date_paid": "2026-10-01",
+          "file": "invoices/SITE-2026-003.pdf",
+          "notes": "Assumed $175/month at the established rate — flag if this has changed. Cut to Simplii Savings: $17.50 savings + $28.00 tax = $45.50. $129.50 stays spendable. Paid-status assumed from the stated 'paid upfront' arrangement, not independently confirmed by a separate income record. Current month — November's invoice (SITE-2026-004) follows the same pattern once Nov 1 arrives."
         }
       ],
       "labour_invoices_note": "General labour piecework, weekly cycle. All entries below use the KMM-2026-XXX series (distinct from the invoices above) so they never collide with Howell, the website retainer, or any future non-KMM job. Every completed week from the start of this work through the present has an invoice, even where the daily hour breakdown had to be reconstructed by spreading a known weekly total evenly across the days (see each hours file's notes for which weeks that applies to).",

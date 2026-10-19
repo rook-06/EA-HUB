@@ -2,6 +2,19 @@
   "month": "2026-09",
   "entries": [
     {
+      "id": "INC-2026-033",
+      "date": "2026-09-01",
+      "source": "KMM Property Maintenance",
+      "description": "Website maintenance retainer — September 2026",
+      "invoice": "SITE-2026-002",
+      "job_id": null,
+      "amount": 175.00,
+      "payment_method": "paid upfront",
+      "business": "Dametime Marketing",
+      "cut_to_savings": { "savings": 17.50, "tax_reserve": 28.00, "total": 45.50 },
+      "notes": "Monthly-upfront retainer, established 2026-10-19. Rate assumed at $175/month. cut_to_savings is informational only — not posted to accounts.json."
+    },
+    {
       "id": "INC-2026-007",
       "date": "2026-09-21",
       "source": "KMM Property Maintenance",
