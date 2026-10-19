@@ -4,6 +4,19 @@
 
 ---
 
+## [2026-10-19] — KMM-2026-009 and 010 marked paid ON INVOICE ONLY
+
+Damien asked to add the website retainer invoices and the two outstanding labour invoices (009, 010) into the zip, and mark all invoices paid — explicitly "on invoice only."
+
+Did exactly that, nothing more:
+- `financials/invoices.json`: KMM-2026-009 and KMM-2026-010 status → "paid", date_paid 2026-10-19, with a loud note on each that this is a paperwork/display change only
+- **Did NOT touch** `accounts_receivable.kmm_owing` ($200, unchanged) or the underlying income entries (INC-2026-016 through 028 stay `"paid": false` / `"owing"`) — the real cash picture is exactly what it was before this instruction
+- Rebuilt the zip to include all 13 KMM invoices (labour 001-010, retainer INV-2026-002 + SITE-2026-001-003) now that all show "paid" on the document itself
+
+If a real payment comes in later, confirm it the normal way (per `references/payment-workflow.md`) — this change doesn't substitute for that.
+
+---
+
 ## [2026-10-19] — Correction: website retainer is $200/month, not $175
 
 Damien corrected my assumption from earlier today — confirmed it's $200/month from August onward specifically (not retroactive to July's old one-off $175 bill, which stays as-is on the shared series).
