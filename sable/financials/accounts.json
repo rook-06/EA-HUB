@@ -6,10 +6,10 @@
       "name": "Simplii Chequing",
       "type": "chequing",
       "institution": "Simplii",
-      "balance": 3286.62,
+      "balance": 3273.12,
       "divisions": {
-        "tax_reserve": 453.60,
-        "free": 2833.02
+        "tax_reserve": 451.20,
+        "free": 2821.92
       },
       "notes": "tax_reserve division added 2026-09-23. Re-split 2026-09-28 at the revised 10/16/74 ratio (was 10/30/60) — total balance unchanged, only the tax/free split within it shifted. No dedicated tax account exists yet. (Correction 2026-09-25: the 2026-09-23 entry under-added this balance by $138 — the tax-reserved portion was carved out of the 60% chequing share instead of added on top of it. Fixed; see short-term memory for the note.) (Correction 2026-10-16: backed out the full Oct 5-15 income split — that money was never actually received — and re-added only the $1,000 actually paid. See accounts_receivable below.)"
     },
@@ -17,11 +17,11 @@
       "name": "Simplii Savings",
       "type": "savings",
       "institution": "Simplii",
-      "balance": 587.00,
+      "balance": 585.50,
       "divisions": {
         "capital_one_hold": 51.45,
         "gst_reserve": 41.25,
-        "savings": 494.30
+        "savings": 492.80
       },
       "notes": "Divisions: Capital One card hold, GST reserve (do not touch), free savings."
     },
@@ -106,26 +106,26 @@
     }
   ],
   "totals": {
-    "liquid": 8309.89,
+    "liquid": 8294.89,
     "invested": 53.57,
     "liabilities": 4937.28,
-    "net_worth": 3426.18,
-    "note": "Updated 2026-10-19: posted a second real KMM payment, $495 received Oct 16 (INC-2026-029). Also corrected the date on the earlier $1,000 payment — it landed Oct 14, not Oct 16 as first logged (amount unchanged). Net worth now +$3,426.18."
+    "net_worth": 3411.18,
+    "note": "Updated 2026-10-19: posted a second real KMM payment, $480 received Oct 16 (INC-2026-029, corrected from an initial $495). Also corrected the date on the earlier $1,000 payment — it landed Oct 14, not Oct 16 as first logged (amount unchanged). Net worth now +$3,411.18."
   },
   "accounts_receivable": {
-    "kmm_owing": 105.00,
+    "kmm_owing": 120.00,
     "billed_oct5_onward": 1600.00,
-    "received_oct5_onward": 1495.00,
+    "received_oct5_onward": 1480.00,
     "last_payment_date": "2026-10-16",
-    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-19: +$495 received (Oct 16), owing down to $105. Two payments on file: $1,000 (Oct 14) and $495 (Oct 16). See references/payment-workflow.md and short-term memory for the full correction."
+    "notes": "Standing 'KMM always pays by due date, mark invoices paid automatically' rule REVOKED 2026-10-16 — it was wrong. Tallied hours post here, not to cash accounts, until Damien explicitly confirms a payment. Updated 2026-10-19: +$480 received (Oct 16, corrected from $495), owing down to $120. Two payments on file: $1,000 (Oct 14) and $480 (Oct 16). See references/payment-workflow.md and short-term memory for the full correction."
   },
   "reserves": {
-    "tax_reserve_owed": 939.20,
-    "tax_reserve_funded": 453.60,
+    "tax_reserve_owed": 936.80,
+    "tax_reserve_funded": 451.20,
     "notes": "16% of KMM income per payment workflow (references/payment-workflow.md), tracked against income actually received (cash basis), not just billed. $374.40 actually set aside (Simplii Chequing tax_reserve division). The pre-Sept-21 backlog remains $485.60 — still unfunded, no dedicated tax account exists yet."
   },
   "discretionary": {
-    "truly_free": 6807.36,
+    "truly_free": 6794.76,
     "notes": "Liquid cash (excludes Wealthsimple Trading), less Eva's TFSA, the tax reserve owed, the Capital One hold, and the GST reserve."
   }
 }

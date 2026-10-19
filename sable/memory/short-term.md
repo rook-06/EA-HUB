@@ -4,7 +4,15 @@
 
 ---
 
-## [2026-10-19] — Second real payment ($495) + date correction on the first
+## [2026-10-19] — Correction: second payment was $480, not $495
+
+Damien caught his own typo right after. INC-2026-029 corrected from $495 to **$480** (split and all downstream numbers recomputed):
+- `accounts.json`: Simplii Chequing $3,273.12, Simplii Savings $585.50, net worth **+$3,411.18**
+- `accounts_receivable`: received $1,480 total ($1,000 + $480), billed $1,600, **KMM owing $120.00**
+
+---
+
+## [2026-10-19] — Second real payment ($495, later corrected to $480) + date correction on the first
 
 Damien: a second, separate payment of $495 landed on the 16th — and the earlier $1,000 (previously logged dated the 16th) actually landed on the **14th**, not the 16th. Confirmed by asking rather than assuming, since the two could have been read as the same payment restated.
 

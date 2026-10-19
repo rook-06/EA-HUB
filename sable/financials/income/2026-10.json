@@ -187,15 +187,15 @@
       "description": "Second partial payment against Oct 5 onward owing balance",
       "invoice": null,
       "job_id": null,
-      "amount": 495.0,
+      "amount": 480.0,
       "payment_method": "confirmed by Damien",
       "business": "Independent",
       "split": {
-        "savings": 49.5,
-        "tax_reserve": 79.2,
-        "chequing": 366.3
+        "savings": 48.0,
+        "tax_reserve": 76.8,
+        "chequing": 355.2
       },
-      "notes": "Separate from INC-2026-025 ($1,000, received the 14th). Lump payment, not tied to a specific invoice or day. Total received against the $1,600 billed since Oct 5 is now $1,495 — $105 still owing."
+      "notes": "Separate from INC-2026-025 ($1,000, received the 14th). Lump payment, not tied to a specific invoice or day. Corrected 2026-10-19: Damien said $480, not the $495 first logged. Total received against the $1,600 billed since Oct 5 is now $1,480 — $120 still owing."
     },
     {
       "id": "INC-2026-026",
@@ -252,5 +252,5 @@
       "notes": "Closes out the Oct 12-18 week (38.5h / $710 total), formalized as INV-2026-009. Posted to the owing balance — not paid, not posted to accounts.json."
     }
   ],
-  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($495, Oct 16), total $1,495 received against $1,600 billed since Oct 5. Net owing: $105. All other Oct 5+ entries remain owing (not paid) until Damien confirms further payments. September's Sept 8 ledger snapshot context (the $520 partial-month figure) still applies to entries before this correction and is unrelated."
+  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($480, Oct 16, corrected from an initial $495), total $1,480 received against $1,600 billed since Oct 5. Net owing: $120. All other Oct 5+ entries remain owing (not paid) until Damien confirms further payments. September's Sept 8 ledger snapshot context (the $520 partial-month figure) still applies to entries before this correction and is unrelated."
 }
