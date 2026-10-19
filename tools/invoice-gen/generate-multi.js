@@ -1,0 +1,154 @@
+const PDFDocument = require('pdfkit');
+const fs = require('fs');
+const path = require('path');
+
+const invoices = [
+  {
+    invoiceNumber: 'INV-2026-008',
+    invoiceDate: 'October 11, 2026',
+    dueDate: 'October 26, 2026',
+    client: {
+      name: 'KMM Property Maintenance',
+      phone: '(431) 777-4871',
+      email: 'Dylanklassen2005@gmail.com'
+    },
+    description: 'General Labour',
+    period: 'October 5 – October 11, 2026',
+    lines: [
+      { date: 'Oct 5', description: 'General labour', hours: 8, rate: 20 },
+      { date: 'Oct 6', description: 'General labour', hours: 7, rate: 20 },
+      { date: 'Oct 7', description: 'General labour', hours: 6, rate: 20 },
+      { date: 'Oct 7', description: 'Quoting time (half rate)', hours: 3, rate: 10 },
+      { date: 'Oct 8', description: 'General labour', hours: 8, rate: 20 },
+      { date: 'Oct 9', description: 'General labour', hours: 6, rate: 20 },
+      { date: 'Oct 10', description: 'General labour', hours: 8, rate: 20 }
+    ]
+  },
+  {
+    invoiceNumber: 'INV-2026-009',
+    invoiceDate: 'October 18, 2026',
+    dueDate: 'November 2, 2026',
+    client: {
+      name: 'KMM Property Maintenance',
+      phone: '(431) 777-4871',
+      email: 'Dylanklassen2005@gmail.com'
+    },
+    description: 'General Labour',
+    period: 'October 12 – October 18, 2026',
+    lines: [
+      { date: 'Oct 12', description: 'General labour', hours: 4, rate: 20 },
+      { date: 'Oct 13', description: 'General labour', hours: 7.5, rate: 20 },
+      { date: 'Oct 15', description: 'General labour', hours: 9, rate: 20 },
+      { date: 'Oct 16', description: 'General labour', hours: 9, rate: 20 },
+      { date: 'Oct 18', description: 'General labour', hours: 3, rate: 20 },
+      { date: 'Oct 18', description: 'Quoting time (half rate)', hours: 6, rate: 10 }
+    ]
+  }
+];
+
+const GRAY = '#555555';
+const DARK = '#1a1a1a';
+const ACCENT = '#1a3a5c';
+const LINE_COLOR = '#dddddd';
+
+for (const inv of invoices) {
+  const lineAmounts = inv.lines.map(l => l.hours * l.rate);
+  const subtotal = lineAmounts.reduce((s, a) => s + a, 0);
+  const totalHours = inv.lines.reduce((s, l) => s + l.hours, 0);
+  const total = subtotal; // no GST on KMM piecework
+
+  const outPath = path.join(__dirname, 'output', `${inv.invoiceNumber}.pdf`);
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+
+  const doc = new PDFDocument({ margin: 50, size: 'LETTER' });
+  doc.pipe(fs.createWriteStream(outPath));
+
+  // Header bar
+  doc.rect(0, 0, doc.page.width, 80).fill(ACCENT);
+  doc.fillColor('#ffffff').fontSize(22).font('Helvetica-Bold').text('Damien Dalupang', 50, 25);
+  doc.fillColor('#aaccee').fontSize(9).font('Helvetica').text('General Labour', 50, 52);
+  doc.fillColor('#ffffff').fontSize(28).font('Helvetica-Bold')
+    .text('INVOICE', 0, 25, { align: 'right', width: doc.page.width - 50 });
+
+  const metaTop = 100;
+  doc.fillColor(DARK).fontSize(9).font('Helvetica-Bold')
+    .text('Invoice Number:', 350, metaTop)
+    .text('Invoice Date:', 350, metaTop + 16)
+    .text('Due Date:', 350, metaTop + 32);
+  doc.fillColor(GRAY).font('Helvetica')
+    .text(inv.invoiceNumber, 450, metaTop)
+    .text(inv.invoiceDate, 450, metaTop + 16)
+    .text(inv.dueDate, 450, metaTop + 32);
+
+  doc.fillColor(DARK).fontSize(9).font('Helvetica-Bold').text('FROM', 50, metaTop);
+  doc.fillColor(GRAY).font('Helvetica')
+    .text('Damien Dalupang', 50, metaTop + 14)
+    .text('General Labour', 50, metaTop + 26)
+    .text('damiendalupang@gmail.com', 50, metaTop + 38);
+
+  doc.fillColor(DARK).fontSize(9).font('Helvetica-Bold').text('BILL TO', 200, metaTop);
+  doc.fillColor(GRAY).font('Helvetica')
+    .text(inv.client.name, 200, metaTop + 14)
+    .text(inv.client.phone, 200, metaTop + 26)
+    .text(inv.client.email, 200, metaTop + 38);
+
+  doc.moveTo(50, 178).lineTo(doc.page.width - 50, 178).strokeColor(LINE_COLOR).lineWidth(1).stroke();
+
+  doc.fillColor(DARK).fontSize(10).font('Helvetica-Bold').text('JOB DETAILS', 50, 193);
+  doc.fillColor(GRAY).fontSize(9).font('Helvetica')
+    .text(`Description: ${inv.description}`, 50, 209)
+    .text(`Period: ${inv.period}`, 50, 223)
+    .text(`Invoice Reference: ${inv.invoiceNumber}`, 50, 237);
+
+  const tableTop = 265;
+  doc.rect(50, tableTop, doc.page.width - 100, 22).fill(ACCENT);
+  doc.fillColor('#ffffff').fontSize(9).font('Helvetica-Bold')
+    .text('DATE', 60, tableTop + 6)
+    .text('DESCRIPTION', 150, tableTop + 6)
+    .text('HRS', 360, tableTop + 6, { width: 50, align: 'right' })
+    .text('RATE', 420, tableTop + 6, { width: 60, align: 'right' })
+    .text('AMOUNT', 490, tableTop + 6, { width: 65, align: 'right' });
+
+  let rowY = tableTop + 22;
+  inv.lines.forEach((l, i) => {
+    const amount = l.hours * l.rate;
+    if (i % 2 === 0) doc.rect(50, rowY, doc.page.width - 100, 20).fill('#f7f7f7');
+    doc.fillColor(GRAY).fontSize(9).font('Helvetica')
+      .text(l.date, 60, rowY + 5)
+      .text(l.description, 150, rowY + 5)
+      .text(l.hours.toString(), 360, rowY + 5, { width: 50, align: 'right' })
+      .text(`$${l.rate.toFixed(2)}`, 420, rowY + 5, { width: 60, align: 'right' })
+      .text(`$${amount.toFixed(2)}`, 490, rowY + 5, { width: 65, align: 'right' });
+    rowY += 20;
+  });
+
+  const totalsY = rowY + 15;
+  doc.moveTo(50, totalsY - 5).lineTo(doc.page.width - 50, totalsY - 5).strokeColor(LINE_COLOR).stroke();
+
+  doc.fillColor(DARK).fontSize(9).font('Helvetica-Bold')
+    .text('TOTAL HOURS', 400, totalsY, { width: 90, align: 'right' });
+  doc.fillColor(GRAY).font('Helvetica')
+    .text(totalHours.toString(), 490, totalsY, { width: 65, align: 'right' });
+
+  doc.fillColor(DARK).fontSize(9).font('Helvetica-Bold')
+    .text('SUBTOTAL', 400, totalsY + 16, { width: 90, align: 'right' });
+  doc.fillColor(GRAY).font('Helvetica')
+    .text(`$${subtotal.toFixed(2)}`, 490, totalsY + 16, { width: 65, align: 'right' });
+
+  const totalBoxY = totalsY + 38;
+  doc.rect(390, totalBoxY, doc.page.width - 440, 28).fill(ACCENT);
+  doc.fillColor('#ffffff').fontSize(11).font('Helvetica-Bold')
+    .text('TOTAL DUE', 400, totalBoxY + 7, { width: 90, align: 'right' })
+    .text(`$${total.toFixed(2)}`, 490, totalBoxY + 7, { width: 65, align: 'right' });
+
+  doc.fillColor(GRAY).fontSize(8).font('Helvetica')
+    .text('No GST charged. Payment accepted via cash or e-transfer. Please reference invoice number when paying.', 50, totalBoxY + 45);
+
+  const footerY = totalBoxY + 80;
+  doc.rect(50, footerY, doc.page.width - 100, 1).fillColor(LINE_COLOR).fill();
+  doc.fillColor(GRAY).fontSize(8).font('Helvetica')
+    .text('Damien Dalupang  |  damiendalupang@gmail.com  |  Thank you for your business.', 50, footerY + 8, { align: 'center', width: doc.page.width - 100 });
+
+  doc.end();
+  console.log('Generated:', outPath);
+}
