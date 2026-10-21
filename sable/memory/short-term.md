@@ -4,6 +4,21 @@
 
 ---
 
+## [2026-10-21] — Fixed a stale local git checkout (no data lost)
+
+Mid-session, the local working copy's branch pointer had reverted to an earlier commit (right after the invoice PDF regen, before the retainer work, balance updates, and today's hours logging) — git log showed only old commits and the memory file read back as if everything since were missing. Checked `origin/claude/invoices-display-adfgx6` directly: all the real work was safely pushed there the whole time (confirmed via `git log origin/...`), the local checkout had just gone stale (4 divergent, redundant local-only commits with duplicate messages — an artifact of the environment, not new work). `git reset --hard origin/claude/invoices-display-adfgx6` resynced local to the authoritative, complete history. Nothing was lost; this was a local-view issue only.
+
+---
+
+## [2026-10-21] — Oct 21 hours logged
+
+- 6.5h ($130), week of Oct 19-25 now at 20h / $400
+- INC-2026-036 logged as owing (not paid)
+- `accounts.json` accounts_receivable: billed_oct5_onward $1,870 → $2,000, kmm_owing $270 → **$400.00** (Oct 19 + 20 + 21, all still on the open, uninvoiced week)
+- Damien stated the date explicitly ("the 21st"), matches today — no date-confirmation needed.
+
+---
+
 ## [2026-10-21] — Oct 20 hours logged
 
 - 9.5h ($190), week of Oct 19-25 now at 13.5h / $270
