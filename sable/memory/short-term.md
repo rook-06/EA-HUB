@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-10-21] — Oct 20 hours logged
+
+- 9.5h ($190), week of Oct 19-25 now at 13.5h / $270
+- INC-2026-035 logged as owing (not paid), per the standing owing model — no accounts.json cash impact
+- `accounts.json` accounts_receivable: billed_oct5_onward $1,680 → $1,870, kmm_owing $80 → **$270.00** (Oct 19 + Oct 20, both still on the open, uninvoiced week; received_oct5_onward unchanged at $1,600)
+- Damien stated the date explicitly ("the 20th"), consistent with the standing caution — no need to double-check against the injected date this time.
+
+---
+
 ## [2026-10-19] — KMM-2026-009 and 010 now genuinely marked paid in the system
 
 Damien followed up: mark them paid in the system too, not just on the invoice. Confirmed only the Oct 19 hours remain genuinely outstanding, and explicitly chose to mark KMM-2026-010 "completely paid" — closing the $120 gap on it as a bookkeeping call, not a newly reported deposit.
