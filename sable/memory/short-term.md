@@ -4,6 +4,18 @@
 
 ---
 
+## [2026-10-23] — KMM paid in full, owing balance cleared to $0
+
+Damien: "Fully paid out today." Applied against the entire outstanding owing balance ($560, Oct 19-22 hours — nothing else was outstanding).
+
+- INC-2026-038 logged: $560, confirmed by Damien, dated 2026-10-23
+- `accounts.json` accounts_receivable: kmm_owing $560.00 → **$0.00**, received_oct5_onward $1,600 → $2,160 (now matches billed_oct5_onward exactly), last_payment_date → 2026-10-23
+- No real cash balances touched — that posting model stays retired (2026-10-19); Simplii/SCU balances only move via Damien's own weekly reports
+- This is a genuine confirmed payment, distinct from KMM-2026-010's earlier "marked paid as a bookkeeping decision" — flagged that distinction in the accounts.json note
+- Week of Oct 19-25 is still open (today's Thursday, week runs through Sunday) — no invoice generated yet, nothing to formally close out until Sunday's tally per the standing workflow
+
+---
+
 ## [2026-10-23] — Oct 22 hours logged
 
 - 8h ($160), week of Oct 19-25 now at 28h / $560
