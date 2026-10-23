@@ -6,10 +6,11 @@
   "entries": [
     { "date": "2026-10-19", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
     { "date": "2026-10-20", "hours": 9.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 190.00 },
-    { "date": "2026-10-21", "hours": 6.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 130.00 }
+    { "date": "2026-10-21", "hours": 6.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 130.00 },
+    { "date": "2026-10-22", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 }
   ],
-  "hours_to_date": 20,
-  "amount_to_date": 400.00,
+  "hours_to_date": 28,
+  "amount_to_date": 560.00,
   "status": "open",
   "notes": "Week of Oct 19-25, new week following the close of KMM-2026-010 (renumbered 2026-10-19 from INV-2026-009). Will become KMM-2026-011 once closed."
 }
