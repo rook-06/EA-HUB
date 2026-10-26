@@ -4,6 +4,17 @@
 
 ---
 
+## [2026-10-26] — KMM paid in full again, owing cleared to $0
+
+Damien: "I'm fully paid out currently." Applied against the entire outstanding balance ($350 — the remaining $200 on KMM-2026-011 plus the $150 Oct 26 hours).
+
+- INC-2026-041 logged: $350, confirmed by Damien, dated 2026-10-26
+- `accounts.json` accounts_receivable: kmm_owing $350.00 → **$0.00**, received_oct5_onward → $2,510.00 (now matches billed exactly), last_payment_date → 2026-10-26
+- KMM-2026-011 status updated to "paid" — the full week (Oct 19-25, $760) is now settled across two separate payments (Oct 23 and today)
+- No real cash balances touched, per standing practice
+
+---
+
 ## [2026-10-26] — Oct 24 and Oct 26 hours logged, week closed, rate change flagged
 
 Damien: 8h on the 24th and 6h on the 26th, both at **$25/h** — the first time this client has billed above the standard $20/h for plain general labour (not the half-rate quoting exception).

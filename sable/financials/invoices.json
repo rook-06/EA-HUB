@@ -246,10 +246,10 @@
           "subtotal": 760.0,
           "gst": 0,
           "amount": 760.0,
-          "status": "outstanding",
-          "date_paid": null,
+          "status": "paid",
+          "date_paid": "2026-10-26",
           "file": "invoices/KMM-2026-011.pdf",
-          "notes": "28h @ $20/h (Oct 19: 4h, 20: 9.5h, 21: 6.5h, 22: 8h) + 8h @ $25/h (Oct 24). No hours Oct 23, 25. Oct 19-22's $560 was already confirmed paid in full on 2026-10-23, before this invoice was formalized — only the Oct 24 portion ($200, at the new $25/h rate) is actually outstanding against this invoice. Rate change to $25/h not yet confirmed as permanent — flagged to Damien."
+          "notes": "28h @ $20/h (Oct 19: 4h, 20: 9.5h, 21: 6.5h, 22: 8h) + 8h @ $25/h (Oct 24). No hours Oct 23, 25. Oct 19-22's $560 was confirmed paid 2026-10-23; the remaining $200 (Oct 24) was confirmed paid 2026-10-26 (INC-2026-041, a lump payment that also covered the Oct 26 hours on the following week). Rate change to $25/h not yet confirmed as permanent — flagged to Damien."
         }
       ]
     }

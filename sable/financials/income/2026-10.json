@@ -388,7 +388,24 @@
         "chequing": 111.0
       },
       "notes": "First entry of the new week (Oct 26 - Nov 1). Posted to the owing balance — not paid. Billed at $25/h, same as Oct 24 — flagged to confirm whether this is a rate change going forward."
+    },
+    {
+      "id": "INC-2026-041",
+      "date": "2026-10-26",
+      "source": "KMM Property Maintenance",
+      "description": "Payment in full against Oct 5 onward owing balance",
+      "invoice": null,
+      "job_id": null,
+      "amount": 350.0,
+      "payment_method": "confirmed by Damien",
+      "business": "Independent",
+      "split": {
+        "savings": 35.0,
+        "tax_reserve": 56.0,
+        "chequing": 259.0
+      },
+      "notes": "Damien confirmed full payment 2026-10-26, clearing everything owing (the remaining $200 on KMM-2026-011, plus the $150 Oct 26 hours). kmm_owing now $0.00. split field is for reference only — not posted to accounts.json."
     }
   ],
-  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($480, Oct 16, corrected from an initial $495), total $1,480 received against $1,600 billed since Oct 5. KMM-2026-009 and KMM-2026-010 were later confirmed/marked fully paid in the system 2026-10-19 (see accounts.json accounts_receivable notes). Oct 19-25 week fully paid 2026-10-23 (INC-2026-038, $560), then closed 2026-10-26 as KMM-2026-011 with one more day added (Oct 24, $200 at a new $25/h rate) — that $200 is owing, not yet paid. Oct 26 opens a new week, also at $25/h. Invoice references use the KMM-2026-XXX series (see financials/invoices.json)."
+  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($480, Oct 16, corrected from an initial $495), total $1,480 received against $1,600 billed since Oct 5. KMM-2026-009 and KMM-2026-010 were later confirmed/marked fully paid in the system 2026-10-19 (see accounts.json accounts_receivable notes). Oct 19-25 week fully paid 2026-10-23 (INC-2026-038, $560), then closed 2026-10-26 as KMM-2026-011 with one more day added (Oct 24, $200 at a new $25/h rate). Oct 26 opens a new week, also at $25/h. Same day, Damien confirmed a second full payment (INC-2026-041, $350) clearing everything outstanding. Invoice references use the KMM-2026-XXX series (see financials/invoices.json)."
 }
