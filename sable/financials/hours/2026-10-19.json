@@ -7,10 +7,12 @@
     { "date": "2026-10-19", "hours": 4, "client": "KMM Property Maintenance", "rate": 20, "amount": 80.00 },
     { "date": "2026-10-20", "hours": 9.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 190.00 },
     { "date": "2026-10-21", "hours": 6.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 130.00 },
-    { "date": "2026-10-22", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 }
+    { "date": "2026-10-22", "hours": 8, "client": "KMM Property Maintenance", "rate": 20, "amount": 160.00 },
+    { "date": "2026-10-24", "hours": 8, "client": "KMM Property Maintenance", "rate": 25, "amount": 200.00 }
   ],
-  "hours_to_date": 28,
-  "amount_to_date": 560.00,
-  "status": "open",
-  "notes": "Week of Oct 19-25, new week following the close of KMM-2026-010 (renumbered 2026-10-19 from INV-2026-009). Will become KMM-2026-011 once closed."
+  "hours_to_date": 36,
+  "amount_to_date": 760.00,
+  "status": "closed",
+  "invoice": "KMM-2026-011",
+  "notes": "Week closed 2026-10-26 (a day late — Oct 25 itself had no hours logged). No hours Oct 23, 25. Tallied and invoiced per references/payment-workflow.md. Oct 24 billed at $25/h, not the standard $20/h — flagged to Damien to confirm whether this is a permanent rate change or specific to that day."
 }

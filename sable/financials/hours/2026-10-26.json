@@ -1,0 +1,13 @@
+{
+  "week_start": "2026-10-26",
+  "week_end": "2026-11-01",
+  "default_client": "KMM Property Maintenance",
+  "default_rate": 20,
+  "entries": [
+    { "date": "2026-10-26", "hours": 6, "client": "KMM Property Maintenance", "rate": 25, "amount": 150.00 }
+  ],
+  "hours_to_date": 6,
+  "amount_to_date": 150.00,
+  "status": "open",
+  "notes": "Week of Oct 26 - Nov 1, new week following the close of KMM-2026-011 (Oct 19-25). Billed at $25/h, same as Oct 24 — flagged to Damien to confirm whether $25/h is now the standard rate going forward."
+}

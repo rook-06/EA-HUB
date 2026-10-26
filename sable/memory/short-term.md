@@ -4,6 +4,19 @@
 
 ---
 
+## [2026-10-26] — Oct 24 and Oct 26 hours logged, week closed, rate change flagged
+
+Damien: 8h on the 24th and 6h on the 26th, both at **$25/h** — the first time this client has billed above the standard $20/h for plain general labour (not the half-rate quoting exception).
+
+- Oct 24 (8h/$200) closes out the Oct 19-25 week: 36h / $760 total, formalized as **KMM-2026-011** (issued Oct 25, due Nov 9). $560 of that was already paid in full on Oct 23, before this invoice existed — only the $200 Oct 24 portion is actually outstanding against it.
+- Oct 26 (6h/$150) opens the new week (Oct 26 - Nov 1), new file `financials/hours/2026-10-26.json`.
+- INC-2026-039 ($200, tied to KMM-2026-011) and INC-2026-040 ($150, open week) logged as owing.
+- `accounts.json` accounts_receivable: kmm_owing $0 → **$350.00** (the $200 + $150 at the new rate), billed_oct5_onward → $2,510.00, received_oct5_onward unchanged at $2,160.00.
+- Generated the KMM-2026-011 PDF (had to reinstall pdfkit — node_modules had been reset along with the environment, same kind of artifact as the earlier stale git checkout).
+- **Flagged, not assumed:** $25/h is noted everywhere as not-yet-confirmed-permanent. If Damien confirms it's the new standing rate, update `references/payment-workflow.md` and `default_rate` in future week files to match.
+
+---
+
 ## [2026-10-23] — KMM paid in full, owing balance cleared to $0
 
 Damien: "Fully paid out today." Applied against the entire outstanding owing balance ($560, Oct 19-22 hours — nothing else was outstanding).

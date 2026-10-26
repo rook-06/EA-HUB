@@ -352,7 +352,43 @@
         "chequing": 414.4
       },
       "notes": "Damien confirmed full payment 2026-10-23, clearing everything owing (Oct 19-22 hours, $560). kmm_owing now $0.00. split field is for reference only — not posted to accounts.json, since that allocation-posting model stays retired (2026-10-19). Real cash balances only move via Damien's own weekly reports."
+    },
+    {
+      "id": "INC-2026-039",
+      "date": "2026-10-24",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 8h @ $25/h",
+      "invoice": "KMM-2026-011",
+      "job_id": null,
+      "amount": 200.0,
+      "payment_method": "owing",
+      "paid": false,
+      "business": "Independent",
+      "split": {
+        "savings": 20.0,
+        "tax_reserve": 32.0,
+        "chequing": 148.0
+      },
+      "notes": "Closes out the Oct 19-25 week (36h / $760 total), formalized as KMM-2026-011. Posted to the owing balance — not paid. Billed at $25/h, not the standard $20/h — flagged to confirm whether this is a rate change going forward."
+    },
+    {
+      "id": "INC-2026-040",
+      "date": "2026-10-26",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 6h @ $25/h",
+      "invoice": null,
+      "job_id": null,
+      "amount": 150.0,
+      "payment_method": "owing",
+      "paid": false,
+      "business": "Independent",
+      "split": {
+        "savings": 15.0,
+        "tax_reserve": 24.0,
+        "chequing": 111.0
+      },
+      "notes": "First entry of the new week (Oct 26 - Nov 1). Posted to the owing balance — not paid. Billed at $25/h, same as Oct 24 — flagged to confirm whether this is a rate change going forward."
     }
   ],
-  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($480, Oct 16, corrected from an initial $495), total $1,480 received against $1,600 billed since Oct 5. KMM-2026-009 and KMM-2026-010 were later confirmed/marked fully paid in the system 2026-10-19 (see accounts.json accounts_receivable notes). Oct 19-25 is a new open week: Oct 19 ($80), Oct 20 ($190), Oct 21 ($130), Oct 22 ($160), all logged as owing, then fully paid 2026-10-23 (INC-2026-038, $560). Invoice references use the KMM-2026-XXX series (see financials/invoices.json)."
+  "notes": "CORRECTED 2026-10-16: the standing \"KMM pays day-of\" assumption was wrong. Updated 2026-10-19: two real payments now posted — INC-2026-025 ($1,000, Oct 14) and INC-2026-029 ($480, Oct 16, corrected from an initial $495), total $1,480 received against $1,600 billed since Oct 5. KMM-2026-009 and KMM-2026-010 were later confirmed/marked fully paid in the system 2026-10-19 (see accounts.json accounts_receivable notes). Oct 19-25 week fully paid 2026-10-23 (INC-2026-038, $560), then closed 2026-10-26 as KMM-2026-011 with one more day added (Oct 24, $200 at a new $25/h rate) — that $200 is owing, not yet paid. Oct 26 opens a new week, also at $25/h. Invoice references use the KMM-2026-XXX series (see financials/invoices.json)."
 }

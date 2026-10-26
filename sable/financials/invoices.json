@@ -1,6 +1,6 @@
 {
   "last_invoice_number": "INV-2026-002",
-  "last_kmm_labour_invoice_number": "KMM-2026-010",
+  "last_kmm_labour_invoice_number": "KMM-2026-011",
   "last_site_retainer_invoice_number": "SITE-2026-003",
   "numbering_note": "As of 2026-10-19: KMM general-labour hours get their own 'KMM-2026-XXX' series, starting at 001, separate from the shared 'INV-2026-XXX' series used for every other job/client. This was a deliberate fix — the old shared numbering collided between this branch and a parallel KMM dataset on master. The website retainer got its own series too (added 2026-10-19), 'SITE-2026-XXX' — same idea, so recurring retainer billing never collides with labour invoices or anything else. INV-2026-002 (the old one-off July retainer bill) stays on the shared series as a grandfathered historical record; the new monthly cadence starts fresh at SITE-2026-001.",
   "clients": [
@@ -236,6 +236,20 @@
           "date_paid": "2026-10-19",
           "file": "invoices/KMM-2026-010.pdf",
           "notes": "32.5h @ $20/h + 6h @ $10/h (half rate): Oct 12 (4h), 13 (7.5h), 15 (9h), 16 (9h), 18 (3h @ $20 + 6h @ $10). No hours Oct 14, 17. Renumbered from INV-2026-009 during the 2026-10-19 consolidation. MARKED PAID 2026-10-19 — initially invoice-only, then Damien explicitly instructed this invoice be marked completely paid in the system too, closing out the remaining $120 gap on it as a bookkeeping decision (not a newly reported deposit). accounts_receivable in accounts.json reflects this — only the Oct 19 hours (not part of this invoice) remain outstanding."
+        },
+        {
+          "id": "KMM-2026-011",
+          "job_id": null,
+          "description": "General labour, Oct 19-25, 2026 (week)",
+          "date_issued": "2026-10-25",
+          "due_date": "2026-11-09",
+          "subtotal": 760.0,
+          "gst": 0,
+          "amount": 760.0,
+          "status": "outstanding",
+          "date_paid": null,
+          "file": "invoices/KMM-2026-011.pdf",
+          "notes": "28h @ $20/h (Oct 19: 4h, 20: 9.5h, 21: 6.5h, 22: 8h) + 8h @ $25/h (Oct 24). No hours Oct 23, 25. Oct 19-22's $560 was already confirmed paid in full on 2026-10-23, before this invoice was formalized — only the Oct 24 portion ($200, at the new $25/h rate) is actually outstanding against this invoice. Rate change to $25/h not yet confirmed as permanent — flagged to Damien."
         }
       ]
     }
