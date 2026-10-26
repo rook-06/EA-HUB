@@ -369,7 +369,7 @@
         "tax_reserve": 32.0,
         "chequing": 148.0
       },
-      "notes": "Closes out the Oct 19-25 week (36h / $760 total), formalized as KMM-2026-011. Posted to the owing balance — not paid. Billed at $25/h, not the standard $20/h — flagged to confirm whether this is a rate change going forward."
+      "notes": "Closes out the Oct 19-25 week (36h / $760 total), formalized as KMM-2026-011. Billed at $25/h, not the standard $20/h — confirmed 2026-10-26 by Damien as a one-off, not a standing rate change."
     },
     {
       "id": "INC-2026-040",
@@ -387,7 +387,7 @@
         "tax_reserve": 24.0,
         "chequing": 111.0
       },
-      "notes": "First entry of the new week (Oct 26 - Nov 1). Posted to the owing balance — not paid. Billed at $25/h, same as Oct 24 — flagged to confirm whether this is a rate change going forward."
+      "notes": "First entry of the new week (Oct 26 - Nov 1). Billed at $25/h, same as Oct 24 — confirmed 2026-10-26 by Damien as a one-off, not a standing rate change. Standard rate stays $20/h going forward."
     },
     {
       "id": "INC-2026-041",

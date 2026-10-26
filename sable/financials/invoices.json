@@ -249,7 +249,7 @@
           "status": "paid",
           "date_paid": "2026-10-26",
           "file": "invoices/KMM-2026-011.pdf",
-          "notes": "28h @ $20/h (Oct 19: 4h, 20: 9.5h, 21: 6.5h, 22: 8h) + 8h @ $25/h (Oct 24). No hours Oct 23, 25. Oct 19-22's $560 was confirmed paid 2026-10-23; the remaining $200 (Oct 24) was confirmed paid 2026-10-26 (INC-2026-041, a lump payment that also covered the Oct 26 hours on the following week). Rate change to $25/h not yet confirmed as permanent — flagged to Damien."
+          "notes": "28h @ $20/h (Oct 19: 4h, 20: 9.5h, 21: 6.5h, 22: 8h) + 8h @ $25/h (Oct 24). No hours Oct 23, 25. Oct 19-22's $560 was confirmed paid 2026-10-23; the remaining $200 (Oct 24) was confirmed paid 2026-10-26 (INC-2026-041, a lump payment that also covered the Oct 26 hours on the following week). The $25/h on Oct 24 was confirmed 2026-10-26 by Damien as a one-off, not a standing rate change."
         }
       ]
     }

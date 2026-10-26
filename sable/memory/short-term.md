@@ -4,6 +4,12 @@
 
 ---
 
+## [2026-10-26] — Confirmed: $25/h was a one-off, standard rate stays $20/h
+
+Damien: "Just for these days." Resolved the open flag everywhere it was recorded (hours files 2026-10-19/26.json, income entries INC-2026-039/040, KMM-2026-011 in invoices.json) — Oct 24 and Oct 26 were a one-off at $25/h, not a standing change. No change to `references/payment-workflow.md` since the default rate never actually moved.
+
+---
+
 ## [2026-10-26] — KMM paid in full again, owing cleared to $0
 
 Damien: "I'm fully paid out currently." Applied against the entire outstanding balance ($350 — the remaining $200 on KMM-2026-011 plus the $150 Oct 26 hours).

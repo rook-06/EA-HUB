@@ -14,5 +14,5 @@
   "amount_to_date": 760.00,
   "status": "closed",
   "invoice": "KMM-2026-011",
-  "notes": "Week closed 2026-10-26 (a day late — Oct 25 itself had no hours logged). No hours Oct 23, 25. Tallied and invoiced per references/payment-workflow.md. Oct 24 billed at $25/h, not the standard $20/h — flagged to Damien to confirm whether this is a permanent rate change or specific to that day."
+  "notes": "Week closed 2026-10-26 (a day late — Oct 25 itself had no hours logged). No hours Oct 23, 25. Tallied and invoiced per references/payment-workflow.md. Oct 24 billed at $25/h, not the standard $20/h — confirmed 2026-10-26 by Damien as a one-off for that day, not a standing rate change. Standard rate stays $20/h."
 }
