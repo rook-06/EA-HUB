@@ -4,6 +4,14 @@
 
 ---
 
+## [2026-10-27] — Oct 27 hours logged, back to standard rate
+
+- 7.5h ($150) at the standard $20/h rate, week of Oct 26 - Nov 1 now at 13.5h / $300
+- INC-2026-042 logged as owing (not paid)
+- `accounts.json` accounts_receivable: billed_oct5_onward $2,510 → $2,660, kmm_owing $0 → **$150.00**
+
+---
+
 ## [2026-10-26] — Confirmed: $25/h was a one-off, standard rate stays $20/h
 
 Damien: "Just for these days." Resolved the open flag everywhere it was recorded (hours files 2026-10-19/26.json, income entries INC-2026-039/040, KMM-2026-011 in invoices.json) — Oct 24 and Oct 26 were a one-off at $25/h, not a standing change. No change to `references/payment-workflow.md` since the default rate never actually moved.
