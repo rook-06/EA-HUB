@@ -4,6 +4,14 @@
 
 ---
 
+## [2026-10-29] — Oct 28 and Oct 29 hours logged
+
+- 6.5h ($130) each day, both at the standard $20/h rate, week of Oct 26 - Nov 1 now at 26.5h / $560
+- INC-2026-043 (Oct 28) and INC-2026-044 (Oct 29) logged as owing (not paid)
+- `accounts.json` accounts_receivable: billed_oct5_onward $2,660 → $2,920, kmm_owing $150 → **$410.00**
+
+---
+
 ## [2026-10-27] — Oct 27 hours logged, back to standard rate
 
 - 7.5h ($150) at the standard $20/h rate, week of Oct 26 - Nov 1 now at 13.5h / $300

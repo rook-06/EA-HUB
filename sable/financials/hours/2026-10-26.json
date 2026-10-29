@@ -5,10 +5,12 @@
   "default_rate": 20,
   "entries": [
     { "date": "2026-10-26", "hours": 6, "client": "KMM Property Maintenance", "rate": 25, "amount": 150.00 },
-    { "date": "2026-10-27", "hours": 7.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 150.00 }
+    { "date": "2026-10-27", "hours": 7.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 150.00 },
+    { "date": "2026-10-28", "hours": 6.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 130.00 },
+    { "date": "2026-10-29", "hours": 6.5, "client": "KMM Property Maintenance", "rate": 20, "amount": 130.00 }
   ],
-  "hours_to_date": 13.5,
-  "amount_to_date": 300.00,
+  "hours_to_date": 26.5,
+  "amount_to_date": 560.00,
   "status": "open",
   "notes": "Week of Oct 26 - Nov 1, new week following the close of KMM-2026-011 (Oct 19-25). Billed at $25/h, same as Oct 24 — confirmed 2026-10-26 by Damien as a one-off for these two days, not a standing rate change. Standard rate stays $20/h for any further hours this week."
 }
