@@ -4,6 +4,16 @@
 
 ---
 
+## [2026-11-03] — Nov 1 hours logged, Oct 26 - Nov 1 week closed as KMM-2026-012
+
+- Nov 1: 7h ($140) + 1h at half rate ($10) = $150. No hours Oct 30, 31.
+- Closes the week: 34.5h / $710 total, formalized as **KMM-2026-012** (issued Nov 1, due Nov 16) — 6h @ $25/h (Oct 26, confirmed one-off), 21h @ $20/h, 1h @ $10/h (half rate).
+- New income entries INC-2026-045/046 logged in a new file, `financials/income/2026-11.json` (first entries of November).
+- `accounts.json` accounts_receivable: billed_oct5_onward $2,920 → $3,070, kmm_owing $410 → **$560.00**.
+- Generated the KMM-2026-012 PDF — pdfkit was already installed this time, no reinstall needed.
+
+---
+
 ## [2026-10-29] — Oct 28 and Oct 29 hours logged
 
 - 6.5h ($130) each day, both at the standard $20/h rate, week of Oct 26 - Nov 1 now at 26.5h / $560

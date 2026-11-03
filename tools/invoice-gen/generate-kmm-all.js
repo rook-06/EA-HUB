@@ -174,6 +174,22 @@ const invoices = [
     ]
   },
   {
+    invoiceNumber: 'KMM-2026-012',
+    invoiceDate: 'November 1, 2026',
+    dueDate: 'November 16, 2026',
+    client,
+    description: 'General Labour + Half-Rate Hours',
+    period: 'October 26 – November 1, 2026',
+    lines: [
+      { date: 'Oct 26', description: 'General labour', hours: 6, rate: 25 },
+      { date: 'Oct 27', description: 'General labour', hours: 7.5, rate: 20 },
+      { date: 'Oct 28', description: 'General labour', hours: 6.5, rate: 20 },
+      { date: 'Oct 29', description: 'General labour', hours: 6.5, rate: 20 },
+      { date: 'Nov 1', description: 'General labour', hours: 7, rate: 20 },
+      { date: 'Nov 1', description: 'Half-rate hours', hours: 1, rate: 10 }
+    ]
+  },
+  {
     invoiceNumber: 'INV-2026-002',
     invoiceDate: 'August 15, 2026',
     dueDate: 'August 30, 2026',

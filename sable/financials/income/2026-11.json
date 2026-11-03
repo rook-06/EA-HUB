@@ -1,0 +1,42 @@
+{
+  "month": "2026-11",
+  "entries": [
+    {
+      "id": "INC-2026-045",
+      "date": "2026-11-01",
+      "source": "KMM Property Maintenance",
+      "description": "General labour — 7h @ $20/h",
+      "invoice": "KMM-2026-012",
+      "job_id": null,
+      "amount": 140.0,
+      "payment_method": "owing",
+      "paid": false,
+      "business": "Independent",
+      "split": {
+        "savings": 14.0,
+        "tax_reserve": 22.4,
+        "chequing": 103.6
+      },
+      "notes": "Closes out the Oct 26 - Nov 1 week (34.5h / $710 total), formalized as KMM-2026-012. Posted to the owing balance — not paid."
+    },
+    {
+      "id": "INC-2026-046",
+      "date": "2026-11-01",
+      "source": "KMM Property Maintenance",
+      "description": "Half-rate hours — 1h @ $10/h",
+      "invoice": "KMM-2026-012",
+      "job_id": null,
+      "amount": 10.0,
+      "payment_method": "owing",
+      "paid": false,
+      "business": "Independent",
+      "split": {
+        "savings": 1.0,
+        "tax_reserve": 1.6,
+        "chequing": 7.4
+      },
+      "notes": "Closes out the Oct 26 - Nov 1 week (34.5h / $710 total), formalized as KMM-2026-012. Posted to the owing balance — not paid."
+    }
+  ],
+  "notes": "First entries of November. KMM-2026-012 closes the Oct 26 - Nov 1 week: 26.5h logged in October (Oct 26: INC-2026-040, Oct 27: INC-2026-042, Oct 28: INC-2026-043, Oct 29: INC-2026-044) + 8h logged Nov 1 (this file, INC-2026-045/046). See financials/invoices.json for the full week breakdown."
+}

@@ -1,6 +1,6 @@
 {
   "last_invoice_number": "INV-2026-002",
-  "last_kmm_labour_invoice_number": "KMM-2026-011",
+  "last_kmm_labour_invoice_number": "KMM-2026-012",
   "last_site_retainer_invoice_number": "SITE-2026-003",
   "numbering_note": "As of 2026-10-19: KMM general-labour hours get their own 'KMM-2026-XXX' series, starting at 001, separate from the shared 'INV-2026-XXX' series used for every other job/client. This was a deliberate fix — the old shared numbering collided between this branch and a parallel KMM dataset on master. The website retainer got its own series too (added 2026-10-19), 'SITE-2026-XXX' — same idea, so recurring retainer billing never collides with labour invoices or anything else. INV-2026-002 (the old one-off July retainer bill) stays on the shared series as a grandfathered historical record; the new monthly cadence starts fresh at SITE-2026-001.",
   "clients": [
@@ -250,6 +250,20 @@
           "date_paid": "2026-10-26",
           "file": "invoices/KMM-2026-011.pdf",
           "notes": "28h @ $20/h (Oct 19: 4h, 20: 9.5h, 21: 6.5h, 22: 8h) + 8h @ $25/h (Oct 24). No hours Oct 23, 25. Oct 19-22's $560 was confirmed paid 2026-10-23; the remaining $200 (Oct 24) was confirmed paid 2026-10-26 (INC-2026-041, a lump payment that also covered the Oct 26 hours on the following week). The $25/h on Oct 24 was confirmed 2026-10-26 by Damien as a one-off, not a standing rate change."
+        },
+        {
+          "id": "KMM-2026-012",
+          "job_id": null,
+          "description": "General labour + half-rate hours, Oct 26 - Nov 1, 2026 (week)",
+          "date_issued": "2026-11-01",
+          "due_date": "2026-11-16",
+          "subtotal": 710.0,
+          "gst": 0,
+          "amount": 710.0,
+          "status": "outstanding",
+          "date_paid": null,
+          "file": "invoices/KMM-2026-012.pdf",
+          "notes": "6h @ $25/h (Oct 26, one-off rate) + 21h @ $20/h (Oct 27: 7.5h, 28: 6.5h, 29: 6.5h, Nov 1: 7h) + 1h @ $10/h (Nov 1, half rate). No hours Oct 30, 31."
         }
       ]
     }
