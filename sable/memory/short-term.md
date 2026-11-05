@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-11-05] — Nov 3 hours logged (out of order), owing up to $850
+
+Damien logged Nov 3 (7.5h/$150) after already having Nov 5 on file — inserted in chronological order in `financials/hours/2026-11-02.json`, fixed the now-inaccurate "no hours Nov 2-4" note. Week now at 14.5h / $290.
+
+- INC-2026-048 (Nov 3) logged as owing, after INC-2026-047 (Nov 5) in the file but dated earlier — noted the out-of-order logging explicitly so it's not mistaken for a mistake later.
+- `accounts.json` accounts_receivable: billed_oct5_onward $3,210 → $3,360, kmm_owing $700 → **$850.00**
+
+---
+
 ## [2026-11-05] — Nov 5 hours logged, new week opened
 
 - 7h ($140), first entry of the new week (Nov 2-8), new file `financials/hours/2026-11-02.json`
