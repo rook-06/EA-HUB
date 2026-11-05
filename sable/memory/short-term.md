@@ -4,6 +4,16 @@
 
 ---
 
+## [2026-11-05] — Payment confirmed: Nov 5, same-day
+
+Damien: "I got paid today for today's work." Clears the last remaining balance (Nov 5, $140 — everything else was already settled by the Nov 3 payment above).
+
+- INC-2026-050 logged: $140, confirmed by Damien, dated 2026-11-05
+- `accounts.json` accounts_receivable: kmm_owing $140.00 → **$0.00**, received_oct5_onward → $3,360.00 (now matches billed exactly), last_payment_date → 2026-11-05
+- Everything billed since Oct 5 is now fully paid.
+
+---
+
 ## [2026-11-05] — Payment confirmed: Nov 3 and everything before it
 
 Damien: "I got paid on Nov 3 for that day and everything before that." Applied against Nov 3 ($150) plus the remaining unpaid balance of KMM-2026-012 (Oct 27-Nov 1, $560) — total $710. Nov 5 ($140) postdates Nov 3, so it's explicitly excluded and stays owing.

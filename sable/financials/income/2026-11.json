@@ -89,7 +89,24 @@
         "chequing": 525.4
       },
       "notes": "Damien confirmed payment 2026-11-05, covering Nov 3 (INC-2026-048, $150) plus everything billed before it still outstanding — the Oct 27-Nov 1 remainder of KMM-2026-012 ($560). Fully settles KMM-2026-012. Does NOT cover Nov 5 (INC-2026-047, $140), which postdates Nov 3 and remains owing. split field is for reference only — not posted to accounts.json."
+    },
+    {
+      "id": "INC-2026-050",
+      "date": "2026-11-05",
+      "source": "KMM Property Maintenance",
+      "description": "Payment in full for Nov 5 hours",
+      "invoice": null,
+      "job_id": null,
+      "amount": 140.0,
+      "payment_method": "confirmed by Damien",
+      "business": "Independent",
+      "split": {
+        "savings": 14.0,
+        "tax_reserve": 22.4,
+        "chequing": 103.6
+      },
+      "notes": "Damien confirmed same-day payment for Nov 5's work (INC-2026-047, $140). Clears everything owing — kmm_owing now $0.00. split field is for reference only — not posted to accounts.json."
     }
   ],
-  "notes": "First entries of November. KMM-2026-012 closes the Oct 26 - Nov 1 week: 26.5h logged in October (Oct 26: INC-2026-040, Oct 27: INC-2026-042, Oct 28: INC-2026-043, Oct 29: INC-2026-044) + 8h logged Nov 1 (INC-2026-045/046). Week of Nov 2-8: Nov 3 (INC-2026-048) and Nov 5 (INC-2026-047). Damien confirmed payment 2026-11-05 (INC-2026-049, $710) covering Nov 3 and everything before it — KMM-2026-012 now fully paid; only Nov 5's $140 remains owing. See financials/invoices.json for the full week breakdown."
+  "notes": "First entries of November. KMM-2026-012 closes the Oct 26 - Nov 1 week: 26.5h logged in October (Oct 26: INC-2026-040, Oct 27: INC-2026-042, Oct 28: INC-2026-043, Oct 29: INC-2026-044) + 8h logged Nov 1 (INC-2026-045/046). Week of Nov 2-8: Nov 3 (INC-2026-048) and Nov 5 (INC-2026-047). Damien confirmed two payments 2026-11-05: INC-2026-049 ($710, covers Nov 3 and everything before — KMM-2026-012 fully paid) and INC-2026-050 ($140, covers Nov 5 same-day). Everything billed through Nov 5 is now paid in full. See financials/invoices.json for the full week breakdown."
 }
