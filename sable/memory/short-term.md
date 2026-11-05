@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-11-05] — Nov 5 hours logged, new week opened
+
+- 7h ($140), first entry of the new week (Nov 2-8), new file `financials/hours/2026-11-02.json`
+- No hours Nov 2-4
+- INC-2026-047 logged as owing (not paid)
+- `accounts.json` accounts_receivable: billed_oct5_onward $3,070 → $3,210, kmm_owing $560 → **$700.00**
+
+---
+
 ## [2026-11-03] — Nov 1 hours logged, Oct 26 - Nov 1 week closed as KMM-2026-012
 
 - Nov 1: 7h ($140) + 1h at half rate ($10) = $150. No hours Oct 30, 31.
