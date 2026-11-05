@@ -260,10 +260,10 @@
           "subtotal": 710.0,
           "gst": 0,
           "amount": 710.0,
-          "status": "outstanding",
-          "date_paid": null,
+          "status": "paid",
+          "date_paid": "2026-11-03",
           "file": "invoices/KMM-2026-012.pdf",
-          "notes": "6h @ $25/h (Oct 26, one-off rate) + 21h @ $20/h (Oct 27: 7.5h, 28: 6.5h, 29: 6.5h, Nov 1: 7h) + 1h @ $10/h (Nov 1, half rate). No hours Oct 30, 31."
+          "notes": "6h @ $25/h (Oct 26, one-off rate) + 21h @ $20/h (Oct 27: 7.5h, 28: 6.5h, 29: 6.5h, Nov 1: 7h) + 1h @ $10/h (Nov 1, half rate). No hours Oct 30, 31. Oct 26's $150 was already paid 2026-10-26 (part of INC-2026-041). The remaining $560 (Oct 27-Nov 1) confirmed paid 2026-11-03, along with the separate Nov 3 hours — invoice now fully paid."
         }
       ]
     }

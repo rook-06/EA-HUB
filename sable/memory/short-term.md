@@ -4,6 +4,17 @@
 
 ---
 
+## [2026-11-05] — Payment confirmed: Nov 3 and everything before it
+
+Damien: "I got paid on Nov 3 for that day and everything before that." Applied against Nov 3 ($150) plus the remaining unpaid balance of KMM-2026-012 (Oct 27-Nov 1, $560) — total $710. Nov 5 ($140) postdates Nov 3, so it's explicitly excluded and stays owing.
+
+- INC-2026-049 logged: $710, confirmed by Damien, dated 2026-11-03, tied to KMM-2026-012
+- KMM-2026-012 status → "paid", date_paid 2026-11-03 (Oct 26's $150 was already covered by an earlier payment; this closes the rest)
+- `accounts.json` accounts_receivable: kmm_owing $850.00 → **$140.00**, received_oct5_onward → $3,220.00, last_payment_date → 2026-11-03
+- No real cash balances touched, per standing practice
+
+---
+
 ## [2026-11-05] — Nov 3 hours logged (out of order), owing up to $850
 
 Damien logged Nov 3 (7.5h/$150) after already having Nov 5 on file — inserted in chronological order in `financials/hours/2026-11-02.json`, fixed the now-inaccurate "no hours Nov 2-4" note. Week now at 14.5h / $290.

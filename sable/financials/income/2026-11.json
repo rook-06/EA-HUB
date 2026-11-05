@@ -72,7 +72,24 @@
         "chequing": 103.6
       },
       "notes": "Week of Nov 2-8. Posted to the owing balance — not paid."
+    },
+    {
+      "id": "INC-2026-049",
+      "date": "2026-11-03",
+      "source": "KMM Property Maintenance",
+      "description": "Payment covering Nov 3 and everything before it",
+      "invoice": "KMM-2026-012",
+      "job_id": null,
+      "amount": 710.0,
+      "payment_method": "confirmed by Damien",
+      "business": "Independent",
+      "split": {
+        "savings": 71.0,
+        "tax_reserve": 113.6,
+        "chequing": 525.4
+      },
+      "notes": "Damien confirmed payment 2026-11-05, covering Nov 3 (INC-2026-048, $150) plus everything billed before it still outstanding — the Oct 27-Nov 1 remainder of KMM-2026-012 ($560). Fully settles KMM-2026-012. Does NOT cover Nov 5 (INC-2026-047, $140), which postdates Nov 3 and remains owing. split field is for reference only — not posted to accounts.json."
     }
   ],
-  "notes": "First entries of November. KMM-2026-012 closes the Oct 26 - Nov 1 week: 26.5h logged in October (Oct 26: INC-2026-040, Oct 27: INC-2026-042, Oct 28: INC-2026-043, Oct 29: INC-2026-044) + 8h logged Nov 1 (INC-2026-045/046). Week of Nov 2-8: Nov 3 (INC-2026-048, logged after Nov 5's INC-2026-047 but earlier-dated) and Nov 5 (INC-2026-047). See financials/invoices.json for the full week breakdown."
+  "notes": "First entries of November. KMM-2026-012 closes the Oct 26 - Nov 1 week: 26.5h logged in October (Oct 26: INC-2026-040, Oct 27: INC-2026-042, Oct 28: INC-2026-043, Oct 29: INC-2026-044) + 8h logged Nov 1 (INC-2026-045/046). Week of Nov 2-8: Nov 3 (INC-2026-048) and Nov 5 (INC-2026-047). Damien confirmed payment 2026-11-05 (INC-2026-049, $710) covering Nov 3 and everything before it — KMM-2026-012 now fully paid; only Nov 5's $140 remains owing. See financials/invoices.json for the full week breakdown."
 }
